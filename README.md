@@ -13,3 +13,8 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - Cartella Utili dovo si possono mettere all'interno file/informazioni utili al progetto
 - Cartella Relazione dove saranno presenti tutti i file relativi alla relazione in LaTeX con la corrente versione compilata in pdf
 - Cartella OldVers che ha al suo interno tutte le versioni precedenti alla corrente relazione 
+
+# Testo Specifiche
+# TODO
+- Tutto !!!!
+# Problemi
