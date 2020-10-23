@@ -1,2 +1,1 @@
-# ProgettoBasiDiDatiLaboratorio
-Basi di dati Laboratorio
+# Progetto Basi Di Dati Laboratorio
