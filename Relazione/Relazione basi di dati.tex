@@ -1,0 +1,183 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\begin{document}
+
+
+\title{%
+\raggedright Progetto Basi di Dati \\ \large \bigskip Progettazione ed implementazione di una base di dati relazionale per la gestione delle assistenze di una ditta di gestione di impianti di riscaldamento.}
+\maketitle
+
+\begin{flushleft}
+\author{Brugnera Matteo 137370 \and \\ Parata Loris 144338 \and \\ Giovanni Rasera 143395}
+
+\end{flushleft}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Introduzione}
+\rule{\linewidth}{1.5pt}
+\subsection{Introduzione}
+Lo scopo del progetto è quello di implementare un sistema informativo, nello specifico una base di dati relazionale, in grado di gestire le prestazioni di un centro di assistenza per impianti di riscaldamento. 
+Le funzionalità che dovrà prevedere il sistema sono di seguito specificate.
+L'azienda deve permettere di gestire le richieste di assitenza, che sono a loro volta composte un insieme di interventi effettuati da tecnici specializzati.
+I servizi offerti sono usufruibili solo da clienti facenti parte di tre categorie ben specificate: aziende, enti pubblici o persone private.
+Ognuno di essi avrà un codice identificativo, grazie al quale si potrà risalire a tutti i loro dati. 
+In particolare, per le aziende si vuole tenere codice di Partita IVA, per gli Enti Pubblici il codice dell'ente, mentre per i privati il Codice Fiscale.
+Le assistenze vengono identificate univocamente dal codice di Assistenza. Ogni intervento è legato all'assistenza ed identificato univocamente da un numero progressivo. 
+Le richieste di assistenza o di intervento avvengono solo se quel determinato guasto è risolvibile da un tecnico competente.\\
+Per ogni intervento, si tiene traccia di:
+\medskip
+\begin{itemize}
+    \item cliente richiedente l'assistenza;
+    \item tipologia del guasto;
+    \item tecnico assegnato;
+    \item intervento di riferimento;
+    \item data intervento;
+    \item durata intervento.
+\end{itemize}
+
+
+\newpage
+\section{Raccolta e analisi dei requisiti}
+\rule{\linewidth}{1.5pt}
+\subsection{Tabella dei requisiti}
+Questa fase rappresenta l’inizio della realizzazione di un sistema informativo. Con essa si cerca di comprendere quali sono gli obiettivi che vengono richiesti. 
+È necessario porre particolare attenzione alla terminologia utilizzata, in modo tale da poter procedere alla formulazione dei requisiti.
+
+\subsection{Glossario dei termini}
+Il linguaggio naturale è ambiguo ecco perchè è necessario chiarire con precisione ogni termine utilizzato durante questa fase di progettazione.
+Per ogni termine introdotto si definiscono:
+\begin{itemize}
+    \item Descrizione : definizione semantica del termine
+    \item Sinonimi: eventuali sinonimi utilizzati per identificare lo stesso oggetto
+    \item Correlazioni: le relazioni esistenti tra i diversi oggetti
+\end{itemize}
+\medskip
+Il seguente glossario definisce i termini più rilevanti che saranno l’input della fase di progettazione concettuale.
+
+
+
+
+\subsection{Riscrittura dei requisiti}
+In questa fase vengono tradotte le richieste della consegna in requisiti da soddisfare e viene definito il ruolo delle entità all’interno della base di dati.
+
+\subsection{Caso di studio}
+Per la realizzazione del sistema informativo si è teorizzato di lavorare sulla commissione di un azienda di medie dimensioni che lavora a livello regionale. \\ Considerando
+\begin{itemize}
+    \item Una media di nuovi di clienti annuali di : 100;
+    \item Una lista clienti composta da 1000 unità;
+    \item Una lista dei tecnici composta da 30 unità;
+    \item Una media di 2 richieste di assitenza ogni anno per cliente;
+    \item Una media di circa 3 interventi per ogni assistenza richiesta.
+\end{itemize}
+Si considera un'azienda con esperienza decennale e con una crescita costante della clientela tra aziende, enti pubblici e privati.  Si presuppone che la maggior parte dei clienti è composta aziende e privati.
+
+\subsection{Requisiti operazionali}
+Le operazioni principali che verranno sviluppate sono:
+\begin{itemize}
+    \item Operazione 1: inserire un nuovo cliente ( circa 2 volte a settimana)
+    \item Operazione 2: creare una richiesta di assistenza, 20 a settimana
+    \item Operazione 3: creare una richiesta di intervento, 40 a settimana
+    \item Operazione 4: inserire un nuovo dipendente, 1 al mese
+    \item Operazione 5: visualizzare le richieste di assistenza di uno specifico cliente, 20 a settimana
+    \item Operazione 6: visualizzare il numero di guasti di un certo tipo per eventualmente far formare o assumere dei nuovi tecnici, 1 a settimana
+    \item Operazione 7: visualizzare quale tecnico ha eseguito il maggior numero di interventi e la durata complessiva degli interventi, 1 volta al giorno
+    \item Operazione 8: visualizzare lo storico degli interventi di un assistenza, 10 volte al giorno
+    \item Operazione 9: visualizzare il tempo complessivo degli interventi per ogni cliente per poter emettere la fattura, 1 volta al mese per ogni cliente che ha richiesto delle assistenze.
+\end{itemize}
+
+
+\newpage
+\section{Progettazione concettuale}
+\rule{\linewidth}{1.5pt}
+\subsection{Schema Entità-Relazione}
+Il modello Entità-Relazione (E-R) è il modello teorico utilizzato in questa fase di progettazione concettuale per la rappresentazione grafica e concettuale dello scenario di interesse. Questo permette di comprendere in modo semplice ed intuitivo quali sono i soggetti principali della scena e come sono relazionati tra di loro. 
+Modello E-R dell'azienda di assistenza:
+\subsubsection{Evidenziazione dello schema E-R}
+
+\subsection{Regole di derivazione}
+
+\subsection{Vincoli d'integrità}
+
+\subsection{Pattern di progettazione}
+
+\newpage
+\section{Progettazione logica}
+\rule{\linewidth}{1.5pt}
+
+\subsection{Carico applicativo}
+\subsubsection{Tabella dei volumi}
+\subsubsection{Tabella delle operazioni}
+
+\subsection{Analisi delle ridondanze}
+\subsubsection{Tabella dei volumi}
+\subsubsection{Tabella delle operazioni}
+\subsubsection{Tabella degli accessi: operazione 1}
+
+\subsection{Rimozione delle generalizzazioni}
+
+\subsection{Partizionamento /accorpamento}
+
+\subsection{Regole di derivazione}
+
+\subsection{Vincoli d'integrità}
+
+\subsection{Vincoli d'integrità aggiuntivi dello schema E-R ristrutturato}
+
+\subsection{Modello relazionale}
+
+
+\subsection{Regole di derivazione}
+
+\subsection{Vincoli d'integrità}
+
+\subsection{Vincoli d'integrità aggiuntivi del modello relazionale}
+
+\subsection{Normalizzazione}
+\subsubsection{Prima forma normale(1FN)}
+\subsubsection{Seconda forma normale(2FN)}
+\subsubsection{Terza forma normale(3FN)}
+
+\newpage
+\section{Progettazione fisica}
+\rule{\linewidth}{1.5pt}
+\subsection{Data Definition Language (DDL)}
+\subsection{Indici}
+\subsubsection{Indici implementati}
+\subsection{UDF}
+\subsection{Operazioni}
+\subsubsection{Operazione 1: inserisci cliente}
+\subsection{Trigger}
+\subsubsection{Evento 1}
+\subsection{Pulizia}
+\subsubsection{Implementazione}
+\newpage
+
+\section{Implementazione}
+\rule{\linewidth}{1.5pt}
+\subsection{Popolazione della base di dati}
+\subsection{Connessione alla base di dati}
+\subsection{Preparazione iniziale}
+\subsection{Cliente}
+
+...
+
+\subsection{Disconnessione dalla base dei dati}
+\newpage
+\section{Analisi dei dati}
+\rule{\linewidth}{1.5pt}
+
+\newpage
+
+\section{Bibliografia}
+\rule{\linewidth}{1.5pt}
+
+
+
+
+
+\end{document}
