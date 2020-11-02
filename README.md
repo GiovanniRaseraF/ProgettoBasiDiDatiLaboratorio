@@ -18,3 +18,6 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 # TODO
 - Tutto !!!!
 # Problemi
+- Prendere decisione per la modellazione del problema, per quanto riguarda i guasti legati all'assistenza per i vari problemi:
+	- Relazione di grado superiore ?
+	- Attributi duplicati ?
