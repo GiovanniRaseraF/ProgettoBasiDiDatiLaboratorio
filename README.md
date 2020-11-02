@@ -28,7 +28,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 	- Attributi duplicati ?
 - Problema sull'eliminazione completa o parziale di un cliente/dipendente (tramite flag di qualsiasi tipo)
 - Prendere una decisione sul tipo di modellazione da dare alla sezione dello schema che riguarda il punto 2 nel problema
-	- modellazione di cliente metodo 1 [Schema 1](https://ciao.com)
-	- modellazione di cliente metodo 2 [Schema 2](https://ciao2.com)
+	- modellazione di cliente metodo 1 [Schema 1](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Schema_1.png)
+	- modellazione di cliente metodo 2 [Schema 2](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Schema_2.png)
 
 # Risolti
