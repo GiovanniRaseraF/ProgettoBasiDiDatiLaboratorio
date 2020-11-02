@@ -20,7 +20,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 # TODO
 - Analisi generale dei requisiti
 - Analisi generale delle operazioni
-- Traduzione schme ER
+- Traduzione schama ER
 - Colloquio con il prof. Montanari per chiarimenti sui problemi sottostanti	-- Giovedì 05/11/2020
 
 # Problemi
