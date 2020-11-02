@@ -35,7 +35,7 @@ Per ogni intervento, si tiene traccia di:
 \medskip
 \begin{itemize}
     \item cliente richiedente l'assistenza;
-    \item tipologia del guasto;
+    \item tipologia del sistema e del guasto;
     \item tecnico assegnato;
     \item intervento di riferimento;
     \item data intervento;
@@ -68,15 +68,19 @@ Il seguente glossario definisce i termini più rilevanti che saranno l’input d
 \hline
 \textbf{Termine} & \textbf{Descrizione} & \textbf{Sinonimo} & \textbf{Correlazione} \\
 \hline
-Cliente & e' il soggetto che effettuera' una richiesta di assistenza all'azienda, puo' essere di tre tipologie diverse, azienda,privato o ente pubblico & Azienda\newline Ente Pubblico \newline Privato & Assistenza \\ \hline
+Cliente &  soggetto che effettua una richiesta di assistenza all'azienda & Persona Giuridica \newline Persona fisica & Assistenza \newline Guasto \\ \hline
+
+Persona fisica &  persona fisica che rappresenta se stesso e che effettuera' una richiesta di assistenza all'azienda di assistenza &  Singolo cittadino \newline Cliente &  Cliente \\ \hline
+
+Persona giuridica &  persona fisica che rappresenta un'azienda o un ente pubblico che effettuera' una richiesta di assistenza all'azienda di assistenza & Azienda \newline Ente Pubblico \newline Cliente &  Cliente \\ \hline
 
 Assistenza & inizializzazione di un nuovo contratto di assistenza tra un cliente e l'azienda di assistenza, ogni assistenza composta da almeno un intervento   &  & Cliente \newline Intervento \newline Guasto \\ \hline
 
 Intervento & prestazione eseguita da un tecnico per risolvere un guasto & Prestazione & Guasto \newline Tecnico \newline Guasto \\ \hline
 
-Tecnico    & dipendente specializzato dell'azienda di assistenza specializzato nella risoluzione di specifiche tipologie di guasti & Dipendente & Guasto \newline Intervento \\ \hline
+Tecnico  & dipendente specializzato dell'azienda di assistenza, specializzato nella risoluzione di guasti di un sistema specifico & Dipendente & Guasto \newline Intervento \\ \hline
 
-Guasto  & problematica di una specifica tipologia di un sistema specifico & Problema &  Tecnico \newline Intervento \newline Assistenza \\ \hline
+Guasto  & problematica di un'sistema specifico e di una specifica tipologia  & Problema &  Tecnico  \newline Cliente \newline Assistenza \\ \hline
 
 \end{tabular}
 
@@ -108,7 +112,7 @@ Le operazioni principali che verranno sviluppate sono:
     \item Operazione 6: visualizzare il numero di guasti per tipologia, 1 a settimana
     \item Operazione 7: visualizzare quale tecnico ha eseguito il maggior numero di interventi e la durata complessiva, 1 volta al mese
     \item Operazione 8: visualizzare lo storico degli interventi di un assistenza, 10 volte al giorno
-    \item Operazione 9: visualizzare il tempo complessivo degli interventi per ogni cliente, 1 volta al mese per ogni cliente.
+    \item Operazione 9: visualizzare il tempo complessivo degli interventi per ogni cliente, 1 volta al mese per ogni cliente che ha richiesto un'assistenza.
     \item Operazione 10: visualizzare gli interventi effettuati da ogni tecnico, 1 volta alla settimana.
 \end{itemize}
 
