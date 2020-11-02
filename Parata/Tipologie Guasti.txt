@@ -1,0 +1,37 @@
+Tipologie di sistema - Problematiche dei sistemi:
+- Caldaie
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro
+- Termosifoni
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro
+- Climatizzatori
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro
+- Impianti riscaldamento pavimenti
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro
+- Stufe a pellet
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro	
+- Caminetto artificiale
+	- Installazione
+	- Rimozione
+	- Manutenzione ordinaria
+	- Riparazione specifica
+	- Altro
