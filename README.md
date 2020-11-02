@@ -23,6 +23,14 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - Traduzione schama ER
 - Colloquio con il prof. Montanari per chiarimenti sui problemi sottostanti	-- Giovedì 05/11/2020
 
+(Per il 04/11/2020)
+- Brugnera
+	- Sezione tabella requisiti e volumi
+- Rasera
+	- Vincoli di integrità
+- Parata
+	- Riscrittura dei requisiti
+
 # Problemi
 - Prendere decisione per la modellazione del problema, per quanto riguarda i guasti legati all'assistenza per i vari problemi:
 	- Relazione di grado superiore ?
