@@ -15,6 +15,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - Cartella OldVers che ha al suo interno tutte le versioni precedenti alla corrente relazione 
 
 # Testo Specifiche
+- [TESTO](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Consegna.pdf)
 
 # TODO
 - Analisi generale dei requisiti
