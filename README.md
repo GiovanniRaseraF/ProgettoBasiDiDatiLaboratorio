@@ -31,6 +31,12 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - Chiedere della della sezione Guasto, E' entità debole in collegamento con la relazione Richiede
 	- [Schema 1](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_1.jpg)
 	- [Schema 2](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_2.jpg)
+- Richiedere la parte relativa ai guasti e alle assistenze collegate con le assistenze
+	- la perplessità riguarda il fatto un guasto può metterci più giorni per essere risolto quindi lo schema va bene come è
+	- se no fosse così e quindi il guasto deve essere per forza risolto in giornata, allora lo schema non andrebbe bene siccome la 1..N dalla parte di Assistenza verso Internvento non ha senso.
+- Come fa un Intervento ad essere aggiunto al database
+	- Viene aggiunto nel momento della creazione della richiesta dal parte dell'utente?
+	- Viene aggiunto ogni giorno se non ho ancora finito di risolvere il guasto
 
 # Risolti
 - [LA DECISIONE E' STATA QUELLA DI UTILIZZARE LO SCHEMA 2](- Prendere una decisione sul tipo di modellazione da dare alla sezione dello schema che riguarda il punto 2 nel problema
