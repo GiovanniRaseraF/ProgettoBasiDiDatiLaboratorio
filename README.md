@@ -27,6 +27,9 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 	- Relazione di grado superiore ?
 	- Attributi duplicati ?
 - Problema sull'eliminazione completa o parziale di un cliente/dipendente (tramite flag di qualsiasi tipo)
+- Chiedere della della sezione Guasto, E' entità debole in collegamento con la relazione Richiede
+	- [Schema 1](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_1.png)
+	- [Schema 2](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_2.png)
 
 # Risolti
 - [LA DECISIONE E' STATA QUELLA DI UTILIZZARE LO SCHEMA 2](- Prendere una decisione sul tipo di modellazione da dare alla sezione dello schema che riguarda il punto 2 nel problema
