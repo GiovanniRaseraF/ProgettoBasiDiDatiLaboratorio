@@ -23,12 +23,12 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - Traduzione schama ER
 - Colloquio con il prof. Montanari per chiarimenti sui problemi sottostanti	-- Giovedì 05/11/2020
 - (Per il 04/11/2020)
-- Brugnera
-	- Sezione tabella requisiti e volumi
-- Rasera
-	- Vincoli di integrità
-- Parata
-	- Riscrittura dei requisiti
+	- Brugnera
+		- Sezione tabella requisiti e volumi
+	- Rasera
+		- Vincoli di integrità
+	- Parata
+		- Riscrittura dei requisiti
 - IMPORTANTE!!
 	- Decidere come scrivere nomi degli attributi relazioni e entità
 		- camelizzazione fineDataIntervento
