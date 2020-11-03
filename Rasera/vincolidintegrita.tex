@@ -1,0 +1,21 @@
+\documentclass[legalpaper]{article}
+\usepackage[legalpaper, margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\begin{document}
+
+\section{Progettazione concettuale}
+
+\subsection{Vincoli d'integrità}
+I vincoli d'integrità sono tutte le proprietà di una base-di-dati, sono esprimibili 
+tramite dei predicati; questi devono essere veri per garantire la validità dello schema.\\
+\newline
+Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
+\begin{itemize}
+    \item L'attributo Assistenza->dataFineAssistenza deve essere maggiore o uguale\\ della proprietà richiede->data.
+    \item Se Assistenza->dataFineAssistenza non è NULL allora: il numero di Interventi appartenenti a un'Assistenza deve essere minore o uguale alla differenza (in giorni) tra \\richiede->data e Assistenza->dataFineAssistenza.\\Questo vincolo deriva dal fatto che è possibile fare un Intervento al giorno per singola Assistenza.
+ 
+\end{itemize}
+
+\end{document}
