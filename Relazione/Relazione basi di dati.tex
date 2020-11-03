@@ -16,9 +16,8 @@
 
 \end{flushleft}
 
-\footnote{Università degli studi di Udine \newline Relazione progetto Basi di Dati \newline 2020/2021,}
-
 \newpage
+
 \tableofcontents
 
 \newpage
@@ -166,11 +165,24 @@ Le operazioni principali che verranno sviluppate sono:
 \newpage
 \section{Progettazione concettuale}
 \rule{\linewidth}{1.5pt}
+
+\subsection{Definizione specifiche}
+Per scrivere il nostro schema e per descrivere le specifiche e realizzare la relazione abbiamo utilizzato questa convenzione:
+\begin{itemize}
+	\item Entità: prima lettera MAIUSCOLA e il resto minuscolo\\
+	Esempio: Assistenza, Cliente, Intervento.
+	\item Relazione: tutta la parola minuscola\\
+	Esempio: è capace di risolvere, composta da.
+	\item Attibuti delle entità e delle relazioni: prima lettera minuscola e il resto della parola cammellizzato\\
+	Esempio: dataFineAssistenza, numeroIntervento, dataAssunzione.
+	\item Rappresentazione di un attributo di un entità o di una relazione: utilizzato il simbolo      ->      tra l'entità e l'attributo\\
+	Esempio: Entità->attributoUno, Entità->attributoDue, Intervento->modalità.
+\end{itemize}
+\newpage
 \subsection{Schema Entità-Relazione}
 Il modello Entità-Relazione (E-R) è il modello teorico utilizzato in questa fase di progettazione concettuale per la rappresentazione grafica e concettuale dello scenario di interesse. Questo permette di comprendere in modo semplice ed intuitivo quali sono i soggetti principali della scena e come sono relazionati tra di loro. 
 Modello E-R dell'azienda di assistenza:
 \newline
-
 
 \begin{figure}[ht]
 	\centering
@@ -206,10 +218,23 @@ notiamo una doppia generalizzazione, in cui la Persona Giuridica può essere un'
 Ente Pubblico, e siamo in presenza di una generalizzazione parziale.
 Ma nel contempo un Cliente può essere una Persona Giuridica o un Singolo Cittadino, ma qui siamo in
 presenza di una generalizzazione totale, perché insieme comprendono tutte le istanze dell'entità Cliente
-
+\newpage
 \subsection{Regole di derivazione}
 
+
 \subsection{Vincoli d'integrità}
+I vincoli d'integrità sono tutte le proprietà di una base-di-dati, sono esprimibili 
+tramite dei predicati; questi devono essere veri per garantire la validità dello schema.\\
+\newline
+Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
+\begin{itemize}
+	\item L'attributo Assistenza->dataFineAssistenza deve essere maggiore o uguale\\ della proprietà richiede->data.
+	\item Se Assistenza->dataFineAssistenza non è NULL allora: il numero di Interventi appartenenti a un'Assistenza deve essere minore o uguale alla differenza (in giorni) tra \\richiede->data e Assistenza->dataFineAssistenza.\\Questo vincolo deriva dal fatto che è possibile fare un Intervento al giorno per singola Assistenza.
+	\item L'attributo Intervento->durata deve essere un valore nel dominio (0, 24).
+	Il valore della durata è rappresentato tramite il sistema orario a 24 ore.
+	\item Un Tecnico non deve essere assegnato a degli Interventi diversi nello stesso giorno.
+	
+\end{itemize}
 
 \subsection{Pattern di progettazione}
 
