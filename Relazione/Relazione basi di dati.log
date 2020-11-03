@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  3 NOV 2020 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  3 NOV 2020 22:17
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -277,11 +277,16 @@ line 209.
 (pdftex.def)             Requested size: 187.89914pt x 191.01996pt.
 [7 <../Parata/ER_prototipo_v2.png> <../Parata/relazione_livello_superiore.png> 
 <../Parata/generalizzazione_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 226--230
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
 
  []
 
-[8] [9] [10] [11] [12] [13] ("Relazione basi di dati.aux") ) 
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
+
+ []
+
+[9] [10] [11] [12] [13] ("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
  3104 strings out of 480236
  44700 string characters out of 2880557
@@ -289,19 +294,19 @@ Here is how much of TeX's memory you used:
  19643 multiletter control sequences out of 15000+200000
  544326 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,66p,394b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\loris\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\lo
-ris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Us
-ers\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> 
-<C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx144
-0.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-crm1000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
-i600\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecbx1728.pk>
-Output written on "Relazione basi di dati.pdf" (13 pages, 169901 bytes).
+ 60i,8n,66p,463b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\loris\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\
+loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\
+Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk
+> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
+000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx1728.pk>
+Output written on "Relazione basi di dati.pdf" (13 pages, 172062 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 326 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

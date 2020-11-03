@@ -212,12 +212,10 @@ Modello E-R dell'azienda di assistenza:
 	\end{minipage}
 \end{figure}
 \paragraph{Figura 2}
-notiamo la presenza di una relazione che lega 3 entità.
+lo schema mette in evidenza la presenza di una relazione ternaria tra le entità Cliente, Guasto ed Assistenza.
 \paragraph{Figura 3}
-notiamo una doppia generalizzazione, in cui la Persona Giuridica può essere un'Azienda o un
-Ente Pubblico, e siamo in presenza di una generalizzazione parziale.
-Ma nel contempo un Cliente può essere una Persona Giuridica o un Singolo Cittadino, ma qui siamo in
-presenza di una generalizzazione totale, perché insieme comprendono tutte le istanze dell'entità Cliente
+lo schema mette in evidenza la presenza di una generalizzazione parziale esclusiva tra le entità Azienda ed Ente Pubblico, le due entità che rappresentano due concetti diversi. Ma nel contempo sono rappresentati da una Persona Giuridica per legge.
+\paragraph{Figura 4} Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco legalmente. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
 \newpage
 \subsection{Regole di derivazione}
 
@@ -237,14 +235,28 @@ Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
 \end{itemize}
 
 \subsection{Pattern di progettazione}
+I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si elencano di seguito i pattern più utilizzati nella progettazione concettuale in basi di dati, applicati allo schema concettuale illustrato precedentemente:
+\begin{itemize}
+	\item Relazione "parte-di":\\
+	- Un'assitenza è composta da diversi interventi
+	
+	\item Semplificazione di reificazione di relazione ternaria\\
+	– Utilizzata per distinguere le richieste di Assistenza che effettua un determinato Cliente inerente ad un determinato Guasto. 
+	
+
+\end{itemize}
+	
 
 \newpage
 \section{Progettazione logica}
 \rule{\linewidth}{1.5pt}
+La progettazione logica ha come scopo la traduzione dello schema concettuale in schema logico, il quale lo rappresenta in modo fedele ed efficiente
 
 \subsection{Carico applicativo}
+E' necessario calcolare il carico applicativo per scegliere tra le varie tipologie di traduzione quale adottare. Esso viene calcolato ed analizzato mediante la tabella dei volumi e la tabella delle operazioni.
 \subsubsection{Tabella dei volumi}
 \subsubsection{Tabella delle operazioni}
+
 
 \subsection{Analisi delle ridondanze}
 \subsubsection{Tabella dei volumi}
@@ -252,6 +264,15 @@ Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
 \subsubsection{Tabella degli accessi: operazione 1}
 
 \subsection{Rimozione delle generalizzazioni}
+Per tradurre lo schema E-R bisogna rimuovere le varie generalizzazioni:\\
+\newline
+\textbf{Accopramento dei figli della generalizzazione nel genitore}
+\begin{itemize}
+	\item Le entità Azienda e Ente Pubblico vengono eliminate e le loro proprietà vengono aggiunte a Persona Giuridica. Per distinguerli viene aggiunto l'attributo tipo. \\Il suo valore è un carattere che assume "A" oppure "E", in cui il primo indica azienda ed il secondo ente pubblico.\\
+	Si effettua questo accorporamento perchè le attività svolte sono identiche. \\La superchiave P.Iva è la medesima, perciò non distingubili senza la presenza della tipologia.
+	\item Le entità Persona Giuridica e Singolo Cittadino vengono eliminate e le loro proprietà vengono aggiunte a Cliente. \\Per distinguerle viene utilizzato come superchiave la Partita Iva, nel caso in cui si tratta di una persona giuridica, e CodiceFiscale nel caso in cui si tratta di un singolo cittadino.\\ L'attributo tipo di Persona Giuridica diventa opzionale a seconda della tipologie di superchiave.\\
+	Si effettua questo accorporamento perchè le attività svolte sono identiche.
+\end{itemize}
 
 \subsection{Partizionamento /accorpamento}
 
