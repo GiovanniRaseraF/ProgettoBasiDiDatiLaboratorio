@@ -51,6 +51,8 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 	- Viene aggiunto nel momento della creazione della richiesta dal parte dell'utente?
 	- Viene aggiunto ogni giorno se non ho ancora finito di risolvere il guasto
 - Il guasto non è entità debole di assistenza
+- La relazione tra Guasto, Assistenza e Cliente non è reificata in modo corretto 
+	- sorge infatti il problema di non poter aggiungere un guasto uguale a due Assistenze diverse siccome Guasto compare come una (1,1) nella relazione
 
 # Risolti
 - [LA DECISIONE E' STATA QUELLA DI UTILIZZARE LO SCHEMA 2](- Prendere una decisione sul tipo di modellazione da dare alla sezione dello schema che riguarda il punto 2 nel problema
