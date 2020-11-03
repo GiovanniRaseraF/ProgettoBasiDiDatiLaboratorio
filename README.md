@@ -34,7 +34,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 		- camelizzazione fineDataIntervento
 		- underscore fine_data_intervento
 		- Lettera maiuscola per Entità (Intervento)
-		- Lettera minuscola per relaizone (richiede)
+		- Lettera minuscola per relazione (richiede)
 
 # Problemi
 - Prendere decisione per la modellazione del problema, per quanto riguarda i guasti legati all'assistenza per i vari problemi:
