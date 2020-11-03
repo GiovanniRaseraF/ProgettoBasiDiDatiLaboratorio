@@ -37,22 +37,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 		- Lettera minuscola per relazione (richiede)
 
 # Problemi
-- Prendere decisione per la modellazione del problema, per quanto riguarda i guasti legati all'assistenza per i vari problemi:
-	- Relazione di grado superiore ?
-	- Attributi duplicati ?
-- Problema sull'eliminazione completa o parziale di un cliente/dipendente (tramite flag di qualsiasi tipo)
-- Chiedere della della sezione Guasto, E' entità debole in collegamento con la relazione Richiede
-	- [Schema 1](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_1.jpg)
-	- [Schema 2](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Alternativa_2.jpg)
-- Richiedere la parte relativa ai guasti e alle assistenze collegate con le assistenze
-	- la perplessità riguarda il fatto un guasto può metterci più giorni per essere risolto quindi lo schema va bene come è
-	- se no fosse così e quindi il guasto deve essere per forza risolto in giornata, allora lo schema non andrebbe bene siccome la 1..N dalla parte di Assistenza verso Internvento non ha senso.
-- Come fa un Intervento ad essere aggiunto al database
-	- Viene aggiunto nel momento della creazione della richiesta dal parte dell'utente?
-	- Viene aggiunto ogni giorno se non ho ancora finito di risolvere il guasto
-- Il guasto non è entità debole di assistenza
-- La relazione tra Guasto, Assistenza e Cliente non è reificata in modo corretto 
-	- sorge infatti il problema di non poter aggiungere un guasto uguale a due Assistenze diverse siccome Guasto compare come una (1,1) nella relazione
+- [Issues](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues)
 
 # Risolti
 - [Modellazione del Cliente come entità giudiziaria o come aziende ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/6)
