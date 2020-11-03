@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
+\usepackage{graphicx}
 \begin{document}
 
 
@@ -15,6 +16,7 @@
 
 \end{flushleft}
 
+\footnote{Università degli studi di Udine \newline Relazione progetto Basi di Dati \newline 2020/2021,}
 
 \newpage
 \tableofcontents
@@ -167,7 +169,43 @@ Le operazioni principali che verranno sviluppate sono:
 \subsection{Schema Entità-Relazione}
 Il modello Entità-Relazione (E-R) è il modello teorico utilizzato in questa fase di progettazione concettuale per la rappresentazione grafica e concettuale dello scenario di interesse. Questo permette di comprendere in modo semplice ed intuitivo quali sono i soggetti principali della scena e come sono relazionati tra di loro. 
 Modello E-R dell'azienda di assistenza:
+\newline
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../Parata/ER_prototipo_v2}
+	\caption[]{Schema E/R complessivo}
+	\label{fig:erprototipov2}
+\end{figure}
+
+
 \subsubsection{Evidenziazione dello schema E-R}
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{../Parata/relazione_livello_superiore}
+			\caption{Relazione di livello superiore al secondo}
+		\label{fig:relazionelivellosuperiore}
+
+	\end{minipage}
+\hfill
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{../Parata/generalizzazione_diagram}
+		\caption{Generalizzazione}
+		\label{fig:generalizzazionediagram}
+	\end{minipage}
+\end{figure}
+\paragraph{Figura 2}
+notiamo la presenza di una relazione che lega 3 entità.
+\paragraph{Figura 3}
+notiamo una doppia generalizzazione, in cui la Persona Giuridica può essere un'Azienda o un
+Ente Pubblico, e siamo in presenza di una generalizzazione parziale.
+Ma nel contempo un Cliente può essere una Persona Giuridica o un Singolo Cittadino, ma qui siamo in
+presenza di una generalizzazione totale, perché insieme comprendono tutte le istanze dell'entità Cliente
 
 \subsection{Regole di derivazione}
 

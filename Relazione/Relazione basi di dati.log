@@ -1,27 +1,305 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  27 OCT 2020 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  3 NOV 2020 11:27
 entering extended mode
-**"C:/Users/loris/OneDrive/Documenti/GitHub/ProgettoBasiDiDatiLaboratorio/Relaz
-ione/Relazione basi di dati.tex"
-
-("C:/Users/loris/OneDrive/Documenti/GitHub/ProgettoBasiDiDatiLaboratorio/Relazi
-one/Relazione basi di dati.tex"
+**"./Relazione basi di dati.tex"
+("Relazione basi di dati.tex"
 LaTeX2e <2020-10-01> patch level 1
 L3 programming layer <2020-10-05> xparse <2020-03-03>
-! TeX capacity exceeded, sorry [parameter stack size=10000].
-\@onefilewithoptions #1[#2][#3]#4->
-                                   \pkgcls@debug {--- File loaded request (\...
-l.2 \usepackage[T1]
-                   {fontenc}
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
- 
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2020/10/06 3.50 The Babel package
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2020/10/06 3.50 Babel common definitions
+\babel@savecnt=\count186
+\U@D=\dimen147
+\l@babelnohyphens=\language79
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count187
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/babel-italian\italian.l
+df
+Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
+\it@lettering=\count188
+\it@doublequoteactive=\count189
+\it@ISOcompliance=\count190
+))
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count191
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count192
+\l__pdf_internal_box=\box47
+) ("Relazione basi di dati.aux")
+\openout1 = `"Relazione basi di dati.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: legalpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 867.24002pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=1011.78pt
+* \textwidth=469.75502pt
+* \textheight=867.24002pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \it@ocap on input line 7.
+LaTeX Info: Redefining \it@ccap on input line 7.
+
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count193
+\scratchdimen=\dimen150
+\scratchbox=\box48
+\nofMPsegments=\count194
+\nofMParguments=\count195
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count196
+\MPscratchDim=\dimen151
+\MPnumerator=\count197
+\makeMPintoPDFobject=\count198
+\everyMPtoPDFconversion=\toks20
+)
+(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 19.
+[1
+
+{C:/Users/loris/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+("Relazione basi di dati.toc")
+\tf@toc=\write3
+\openout3 = `"Relazione basi di dati.toc"'.
+
+ [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+[]\T1/cmr/m/n/10 Persona
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+[]\T1/cmr/m/n/10 Persona
+ []
+
+
+Overfull \hbox (2.75423pt too wide) in paragraph at lines 79--79
+[]\T1/cmr/m/n/10 Assistenza| 
+ []
+
+
+Overfull \hbox (2.05995pt too wide) in paragraph at lines 81--81
+[]\T1/cmr/m/n/10 Intervento| 
+ []
+
+
+Underfull \hbox (badness 3000) in paragraph at lines 85--85
+[]\T1/cmr/m/n/10 problematica di un'si-ste-ma spe-ci-fi-co e di una
+ []
+
+
+Overfull \hbox (20.03629pt too wide) in paragraph at lines 67--88
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
+
+
+Overfull \hbox (12.48906pt too wide) in paragraph at lines 94--138
+[][] 
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
+
+ []
+
+<../Parata/ER_prototipo_v2.png, id=27, 546.04pt x 351.3125pt>
+File: ../Parata/ER_prototipo_v2.png Graphic file (type png)
+<use ../Parata/ER_prototipo_v2.png>
+Package pdftex.def Info: ../Parata/ER_prototipo_v2.png  used on input line 177.
+
+(pdftex.def)             Requested size: 328.82707pt x 211.56104pt.
+<../Parata/relazione_livello_superiore.png, id=29, 563.10374pt x 277.035pt>
+File: ../Parata/relazione_livello_superiore.png Graphic file (type png)
+<use ../Parata/relazione_livello_superiore.png>
+Package pdftex.def Info: ../Parata/relazione_livello_superiore.png  used on inp
+ut line 190.
+(pdftex.def)             Requested size: 187.89914pt x 92.44058pt.
+<../Parata/generalizzazione_diagram.png, id=30, 482.80376pt x 490.83376pt>
+File: ../Parata/generalizzazione_diagram.png Graphic file (type png)
+<use ../Parata/generalizzazione_diagram.png>
+Package pdftex.def Info: ../Parata/generalizzazione_diagram.png  used on input 
+line 197.
+(pdftex.def)             Requested size: 187.89914pt x 191.01996pt.
+[6 <../Parata/ER_prototipo_v2.png> <../Parata/relazione_livello_superiore.png> 
+<../Parata/generalizzazione_diagram.png>] [7] [8] [9] [10] [11]
+("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
- 19 strings out of 480236
- 742 string characters out of 2880557
- 299393 words of memory out of 3000000
- 16674 multiletter control sequences out of 15000+200000
- 535088 words of font info for 29 fonts, out of 3000000 for 9000
+ 3110 strings out of 480236
+ 44760 string characters out of 2880557
+ 354680 words of memory out of 3000000
+ 19646 multiletter control sequences out of 15000+200000
+ 546624 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 4287i,0n,10003p,167b,10s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 60i,8n,66p,394b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\loris\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\loris\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\loris\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\loris\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\
+loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\
+Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk
+> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
+200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx1728.pk>
+Output written on "Relazione basi di dati.pdf" (11 pages, 176894 bytes).
+PDF statistics:
+ 355 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
