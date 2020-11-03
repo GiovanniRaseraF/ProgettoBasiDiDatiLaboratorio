@@ -55,8 +55,5 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 	- sorge infatti il problema di non poter aggiungere un guasto uguale a due Assistenze diverse siccome Guasto compare come una (1,1) nella relazione
 
 # Risolti
-- [LA DECISIONE E' STATA QUELLA DI UTILIZZARE LO SCHEMA 2](- Prendere una decisione sul tipo di modellazione da dare alla sezione dello schema che riguarda il punto 2 nel problema
-	- modellazione di cliente metodo 1 [Schema 1](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Schema_1.png)
-	- modellazione di cliente metodo 2 [Schema 2](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Parata/Schema_2.png)
-)
+- [Modellazione del Cliente come entità giudiziaria o come aziende ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/6)
 
