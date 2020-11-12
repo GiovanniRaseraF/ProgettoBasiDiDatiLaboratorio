@@ -37,22 +37,22 @@
 			\hline
 			\textbf{Entità/Relazione} & \textbf{Tipo} & \textbf{Volume} \\
 			\hline
-			Azienda & E & ... \\ \hline
-			Ente Pubblico & E & ... \\ \hline
-			Persona Giuridica & E & ... \\ \hline
-			Singolo Cittadino & E & ... \\ \hline
-			Cliente & E & ... \\ \hline
-			effettua & R & ... \\ \hline
-			Richiesta & E & ... \\ \hline
-			per & R & ... \\ \hline
-			Assistenza & E & ... \\ \hline
-			inerente & R & ... \\ \hline
-			Guasto & E & ... \\ \hline
-			composto da & R & ... \\ \hline
-			Intervento & E & ... \\ \hline
-			gestito da & R & ... \\ \hline
-			è capace di risolvere & R & ... \\ \hline
-			Tecnico & E & ... \\ \hline
+			Azienda & E & 700 \\ \hline
+			Ente Pubblico & E & 300 \\ \hline
+			Persona Giuridica & E & 1000 \\ \hline
+			Singolo Cittadino & E & 1000 \\ \hline
+			Cliente & E & 2000 \\ \hline
+			effettua & R & 40000 \\ \hline
+			Richiesta & E & 40000 \\ \hline
+			per & R & 40000 \\ \hline
+			Assistenza & E & 40000 \\ \hline
+			inerente & R & 40000 \\ \hline
+			Guasto & E & 40000 \\ \hline
+			composto da & R & 19000 \\ \hline
+			Intervento & E & 19000 \\ \hline
+			gestito da & R & 110 \\ \hline
+			è capace di risolvere & R & 40000 \\ \hline
+			Tecnico & E & 110 \\ \hline
 		\end{tabular}
 
 	
@@ -81,5 +81,16 @@
 			Operazione 10 & B & 1 volta a settimana \\ \hline
 		
 		\end{tabular}	
+	
+	Ipotizziamo altri 10 anni di vita dell'azienda.
+	il numero totale dei clienti è: 
+	Appunti vari: del 100 percento dei clienti, il 50 percento è ente pubblico e il resto è privato. Del 50 percento pubblico, il suo 70 percento fa riferimento alle aziende mentre il 30 percento agli enti pubblici.
+	
+	numero clienti dopo 10 anni: 1000 + 100*10 = 2000 clienti totali
+	1000 saranno privati mentre del resto 700 sono aziende e 300 sono enti pubblici.
+	
+	I clienti effettuano 2 richieste in media, quindi sarebbe 2000 * 2 ma arrotondiamo a 4000*10.
+	
+	Siccome ci vogliono in media 3 interventi per ogni assistenza, avremo 5000 * 3, arrotondato a 17000 
 			
 \end{document}
