@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  12 NOV 2020 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  13 NOV 2020 22:18
 entering extended mode
 **./ElementiDaAggiungereBDD.tex
 (ElementiDaAggiungereBDD.tex
@@ -270,13 +270,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--57
 [1
 
 {C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Schema P
-rog. Logica.png>] [2]
-Overfull \hbox (5.092pt too wide) in paragraph at lines 93--98
-\T1/cmr/m/n/10 clien-ti che fan-no ri-chie-ste an-che ne-gli an-ni suc-ces-si-v
-i). Quin-di nel-l'un-di-ce-si-mo an-no avrem-mo 3000+1000=4000
- []
-
-[3] (ElementiDaAggiungereBDD.aux) ) 
+rog. Logica.png>] [2] [3] (ElementiDaAggiungereBDD.aux) ) 
 Here is how much of TeX's memory you used:
  3183 strings out of 492484
  45068 string characters out of 3121149
@@ -285,16 +279,16 @@ Here is how much of TeX's memory you used:
  8262 words of font info for 20 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,8n,34p,811b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Matteo\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Matteo\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\
-Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk>
-<C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb>
-Output written on ElementiDaAggiungereBDD.pdf (3 pages, 92568 bytes).
+ <C:\Users\Matteo\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\
+Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
+ <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+crm1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecbx1440.pk><C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ElementiDaAggiungereBDD.pdf (3 pages, 105128 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
+ 196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
