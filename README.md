@@ -28,6 +28,9 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 
 # Risolti
 - [Modellazione del Cliente come entità giudiziaria o come aziende ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/6)
+- [Problema eliminazione cliente/dipendente](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/1)
+- [Aggiunta di un intervento, durante la creazione della richiesta, o ogni giorno?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/4)
+- [Attenzione ai nomi che non rispettano lo standard stabilito.](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/7)
 
 # Struttura della Repository
 - Una cartella per ogni partecipante in cui si può lavorare senza confondere il lavoro di altri
