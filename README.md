@@ -8,20 +8,10 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 
 # Testo Specifiche
 - [TESTO](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Consegna.pdf)
+- [RELAZIONE - CORRENTE](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Relazione/Relazione%20basi%20di%20dati.pdf)
 
 # TODO
-- Analisi generale dei requisiti
-- Analisi generale delle operazioni
-- Traduzione schama ER
-- Colloquio con il prof. Montanari per chiarimenti sui problemi sottostanti	-- Giovedì 05/11/2020
-- (Per il 04/11/2020)
-	- Brugnera
-		- Sezione tabella requisiti e volumi
-	- Rasera
-		- Vincoli di integrità
-		- Definizione delle specifiche di come scrivere i nomi 
-	- Parata
-		- Riscrittura dei requisiti
+- Da cambiare la sezione dei Vincoli d'integrità(Il nuovo schema non è compatibile con i vincoli precedenti)
 
 # Problemi
 - [Issues](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues)
