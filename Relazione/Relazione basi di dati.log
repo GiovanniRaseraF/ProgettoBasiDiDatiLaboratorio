@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  3 NOV 2020 22:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  16 NOV 2020 14:08
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -252,61 +252,72 @@ Overfull \hbox (12.48906pt too wide) in paragraph at lines 93--137
 [][] 
  []
 
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+[4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
-<../Parata/ER_prototipo_v2.png, id=27, 546.04pt x 351.3125pt>
-File: ../Parata/ER_prototipo_v2.png Graphic file (type png)
-<use ../Parata/ER_prototipo_v2.png>
-Package pdftex.def Info: ../Parata/ER_prototipo_v2.png  used on input line 189.
-
-(pdftex.def)             Requested size: 328.82707pt x 211.56104pt.
-<../Parata/relazione_livello_superiore.png, id=29, 563.10374pt x 277.035pt>
+<../Parata/ER_Assistenza.png, id=31, 1225.57875pt x 684.5575pt>
+File: ../Parata/ER_Assistenza.png Graphic file (type png)
+<use ../Parata/ER_Assistenza.png>
+Package pdftex.def Info: ../Parata/ER_Assistenza.png  used on input line 213.
+(pdftex.def)             Requested size: 328.82707pt x 183.66309pt.
+<../Parata/relazione_livello_superiore.png, id=33, 563.10374pt x 277.035pt>
 File: ../Parata/relazione_livello_superiore.png Graphic file (type png)
 <use ../Parata/relazione_livello_superiore.png>
 Package pdftex.def Info: ../Parata/relazione_livello_superiore.png  used on inp
-ut line 202.
+ut line 226.
 (pdftex.def)             Requested size: 187.89914pt x 92.44058pt.
-<../Parata/generalizzazione_diagram.png, id=30, 482.80376pt x 490.83376pt>
+<../Parata/generalizzazione_diagram.png, id=34, 482.80376pt x 490.83376pt>
 File: ../Parata/generalizzazione_diagram.png Graphic file (type png)
 <use ../Parata/generalizzazione_diagram.png>
 Package pdftex.def Info: ../Parata/generalizzazione_diagram.png  used on input 
-line 209.
+line 233.
 (pdftex.def)             Requested size: 187.89914pt x 191.01996pt.
-[7 <../Parata/ER_prototipo_v2.png> <../Parata/relazione_livello_superiore.png> 
-<../Parata/generalizzazione_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
+[8 <../Parata/ER_Assistenza.png> <../Parata/relazione_livello_superiore.png> <.
+./Parata/generalizzazione_diagram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
+[9]
+<../Parata/Schema Prog. Logica.png, id=44, 188.80537pt x 366.46913pt>
+File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
+<use ../Parata/Schema Prog. Logica.png>
+Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
+296.
+(pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--325
 
  []
 
-[9] [10] [11] [12] [13] ("Relazione basi di dati.aux") ) 
+[10 <../Parata/Schema Prog. Logica.png>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
+[12] [13] [14] [15] [16] ("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
- 3104 strings out of 480236
- 44700 string characters out of 2880557
- 354680 words of memory out of 3000000
- 19643 multiletter control sequences out of 15000+200000
+ 3114 strings out of 480236
+ 44978 string characters out of 2880557
+ 357680 words of memory out of 3000000
+ 19650 multiletter control sequences out of 15000+200000
  544326 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,66p,463b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\loris\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\
-loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\
-Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk
-> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
-000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx1728.pk>
-Output written on "Relazione basi di dati.pdf" (13 pages, 172062 bytes).
+ <C:\Users\loris\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris
+\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users
+\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:
+\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.p
+k> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+1000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecbx1728.pk>
+Output written on "Relazione basi di dati.pdf" (16 pages, 194744 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
+ 354 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
