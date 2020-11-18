@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  18 NOV 2020 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  18 NOV 2020 21:56
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -272,64 +272,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
-<../Parata/ER_Assistenza.png, id=31, 1225.57875pt x 684.5575pt>
-File: ../Parata/ER_Assistenza.png Graphic file (type png)
-<use ../Parata/ER_Assistenza.png>
-Package pdftex.def Info: ../Parata/ER_Assistenza.png  used on input line 213.
-(pdftex.def)             Requested size: 328.82707pt x 183.66309pt.
-<../Parata/relazione_livello_superiore.png, id=33, 563.10374pt x 277.035pt>
-File: ../Parata/relazione_livello_superiore.png Graphic file (type png)
-<use ../Parata/relazione_livello_superiore.png>
-Package pdftex.def Info: ../Parata/relazione_livello_superiore.png  used on inp
-ut line 226.
-(pdftex.def)             Requested size: 187.89914pt x 92.44058pt.
-<../Parata/generalizzazione_diagram.png, id=34, 482.80376pt x 490.83376pt>
-File: ../Parata/generalizzazione_diagram.png Graphic file (type png)
-<use ../Parata/generalizzazione_diagram.png>
-Package pdftex.def Info: ../Parata/generalizzazione_diagram.png  used on input 
-line 233.
-(pdftex.def)             Requested size: 187.89914pt x 191.01996pt.
-[8 <../Parata/ER_Assistenza.png> <../Parata/relazione_livello_superiore.png> <.
-./Parata/generalizzazione_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 248--252
+<image/schema_er.png, id=31, 1317.92375pt x 543.02875pt>
+File: image/schema_er.png Graphic file (type png)
+<use image/schema_er.png>
+Package pdftex.def Info: image/schema_er.png  used on input line 213.
+(pdftex.def)             Requested size: 516.73338pt x 212.91553pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 213--214
+ [][] 
+ []
+
+<image/ciclo.png, id=33, 813.0375pt x 462.72874pt>
+File: image/ciclo.png Graphic file (type png)
+<use image/ciclo.png>
+Package pdftex.def Info: image/ciclo.png  used on input line 226.
+(pdftex.def)             Requested size: 375.80544pt x 213.88159pt.
+[8 <./image/schema_er.png> <./image/ciclo.png>]
+<image/generalizzazione.png, id=39, 488.82625pt x 505.89pt>
+File: image/generalizzazione.png Graphic file (type png)
+<use image/generalizzazione.png>
+Package pdftex.def Info: image/generalizzazione.png  used on input line 241.
+(pdftex.def)             Requested size: 187.89914pt x 194.45561pt.
+<image/entita_debole.png, id=40, 578.16pt x 246.9225pt>
+File: image/entita_debole.png Graphic file (type png)
+<use image/entita_debole.png>
+Package pdftex.def Info: image/entita_debole.png  used on input line 247.
+(pdftex.def)             Requested size: 187.89914pt x 80.24886pt.
+ [9 <./image/generalizzazione.png> <./image/entita_debole.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 262--266
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 276--280
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--280
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
-<../Parata/Schema Prog. Logica.png, id=44, 188.80537pt x 366.46913pt>
+<../Parata/Schema Prog. Logica.png, id=49, 188.80537pt x 366.46913pt>
 File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
 <use ../Parata/Schema Prog. Logica.png>
 Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
-296.
+310.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--325
+Underfull \hbox (badness 10000) in paragraph at lines 313--339
 
  []
 
-[10 <../Parata/Schema Prog. Logica.png>] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 366--369
+[11 <../Parata/Schema Prog. Logica.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 380--383
 
  []
 
-[12] [13] [14] [15] [16] ("Relazione basi di dati.aux") ) 
+[13] [14] [15] [16] [17] ("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
- 3114 strings out of 480236
- 44978 string characters out of 2880557
- 356680 words of memory out of 3000000
+ 3116 strings out of 480236
+ 44662 string characters out of 2880557
+ 356688 words of memory out of 3000000
  19650 multiletter control sequences out of 15000+200000
  544326 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,66p,482b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,8n,66p,482b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\loris\AppDa
 ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris
 \AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users
@@ -339,9 +347,9 @@ k> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 1000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecbx1728.pk>
-Output written on "Relazione basi di dati.pdf" (16 pages, 194180 bytes).
+Output written on "Relazione basi di dati.pdf" (17 pages, 234249 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
+ 357 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

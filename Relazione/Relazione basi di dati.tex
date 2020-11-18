@@ -210,7 +210,7 @@ Modello E-R dell'azienda di assistenza:
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../Parata/ER_Assistenza}
+	\includegraphics[width=1.1\linewidth]{image/schema_er.png}
 	\caption[]{Schema E/R complessivo}
 	\label{fig:erprototipov2}
 \end{figure}
@@ -222,24 +222,38 @@ Modello E-R dell'azienda di assistenza:
 
 \begin{figure}[!ht]
 	\centering
-	\begin{minipage}[b]{0.4\textwidth}
-		\includegraphics[width=\linewidth]{../Parata/relazione_livello_superiore}
-			\caption{Relazione di livello superiore al secondo}
-		\label{fig:relazionelivellosuperiore}
+	\begin{minipage}[b]{0.8\textwidth}
+		\includegraphics[width=\linewidth]{image/ciclo.png}
+			\caption{Ciclo}
+		\label{fig:ciclo}
 
 	\end{minipage}
 \hfill
+
+\end{figure}
+
+\paragraph{Figura 2}
+lo schema mette in evidenza la presenza di una ciclo  tra le entità Cliente, Tipologia di guasto e Richiesta d'Assistenza.\pagebreak
+
+\begin{figure}
+		\centering
+		\begin{minipage}[b]{0.4\textwidth}
+			\includegraphics[width=\linewidth]{image/generalizzazione.png}
+				\caption{Generalizzazione}
+			\label{fig:generalizzazione}
+	\end{minipage}
+	\hfill
 	\begin{minipage}[b]{0.4\textwidth}
-		\includegraphics[width=\linewidth]{../Parata/generalizzazione_diagram}
-		\caption{Generalizzazione}
-		\label{fig:generalizzazionediagram}
+		\includegraphics[width=\linewidth]{image/entita_debole.png}
+		\caption{Entità debole}
+		\label{fig:enita_debole}
 	\end{minipage}
 \end{figure}
-\paragraph{Figura 2}
-lo schema mette in evidenza la presenza di una relazione ternaria tra le entità Cliente, Guasto ed Assistenza.
 \paragraph{Figura 3}
-lo schema mette in evidenza la presenza di una generalizzazione parziale esclusiva tra le entità Azienda ed Ente Pubblico, le due entità che rappresentano due concetti diversi. Ma nel contempo sono rappresentati da una Persona Giuridica per legge.
-\paragraph{Figura 4} Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco legalmente. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
+lo schema mette in evidenza la presenza di una generalizzazione totale disgiunta tra le entità Azienda ed Ente Pubblico, le due entità che rappresentano due concetti diversi. Ma nel contempo sono rappresentati da una Persona Giuridica per legge.\\
+Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco legalmente. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
+\paragraph{Figura 4} 
+Lo schema mette in evidenza la presenza di un'entità debole che necessita della presenza di una richiesta d'assistenza per poter essere distinta univocamente.
 \newpage
 \subsection{Regole di derivazione}
 
