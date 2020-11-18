@@ -29,16 +29,18 @@ Le funzionalità che dovrà prevedere il sistema sono di seguito specificate.
 L'azienda deve permettere di gestire le richieste di assitenza, che sono a loro volta composte un insieme di interventi effettuati da tecnici specializzati.
 I servizi offerti sono usufruibili solo da clienti facenti parte di due tipologie di persone giuridiche, che rappresentano aziende ed enti pubblici, o persone fisiche che rappresentano i singoli cittadini.
 Ognuno di essi avrà un codice identificativo generato dal sistema una volta divenuti clienti, grazie al quale si potrà risalire a tutti i loro dati. 
-In particolare, per le aziende e gli enti pubblici si vuole tenere codice di Partita IVA, mentre per i singoli cittadini il Codice Fiscale.
-Le assistenze vengono identificate univocamente dal codice di Assistenza. Ogni intervento è legato all'assistenza ed identificato univocamente da un numero progressivo. 
-Le richieste di assistenza vengono accettate solamente se la tipologia di problematica è presente nella lista di problematiche risolvibili. \\
+In particolare, per le aziende e gli enti pubblici si vuole tenere il codice di Partita IVA, mentre per i singoli cittadini il Codice Fiscale.
+Le assistenze vengono identificate univocamente dal codice di Richiesta d'Assistenza. Ogni intervento è legato all'assistenza ed identificato univocamente da un numero progressivo. 
+Le richieste di assistenza vengono accettate solamente se la tipologia del problema è presente nella lista di problematiche risolvibili. \\
 Per ogni intervento, si tiene traccia di:
 \medskip
 \begin{itemize}
     \item cliente richiedente l'assistenza;
-    \item tipologia del sistema e del guasto;
+    \item tipologia del guasto;
+    \item seriale del sistema di riferimento;
     \item tecnico assegnato;
-    \item intervento di riferimento;
+    \item codice identificativo dell'intervento;
+    \item modalità d'intervento;
     \item data intervento;
     \item durata intervento.
 \end{itemize}
@@ -52,7 +54,7 @@ Questa fase rappresenta l’inizio della realizzazione di un sistema informativo
 È necessario porre particolare attenzione alla terminologia utilizzata, in modo tale da poter procedere alla formulazione dei requisiti.
 
 \subsection{Glossario dei termini}
-Il linguaggio naturale è ambiguo ecco perchè è necessario chiarire con precisione ogni termine utilizzato durante questa fase di progettazione.
+Il linguaggio naturale è ambiguo, ecco perchè è necessario chiarire con precisione ogni termine utilizzato durante questa fase di progettazione.
 Per ogni termine introdotto si definiscono:
 \begin{itemize}
     \item Descrizione : definizione semantica del termine
@@ -63,28 +65,29 @@ Per ogni termine introdotto si definiscono:
 Il seguente glossario definisce i termini più rilevanti che saranno l’input della fase di progettazione concettuale.
 \medskip
 
-\begin{tabular}{ |p{1.5cm}|p{8cm}|p{3cm}|p{2.5cm}| }
+\begin{tabular}{ |p{1.8cm}|p{8cm}|p{3cm}|p{2.5cm}| }
 \hline
 \multicolumn{4}{|c|}{\textbf{Glossario}} \\
 \hline
 \textbf{Termine} & \textbf{Descrizione} & \textbf{Sinonimo} & \textbf{Correlazione} \\
 \hline
-Cliente &  soggetto che effettua una richiesta di assistenza all'azienda & Persona Giuridica \newline Persona fisica & Assistenza \newline Guasto \\ \hline
+Cliente &  soggetto che effettua una richiesta di assistenza all'azienda di assistenza & Persona Giuridica \newline Persona fisica & Assistenza\\
+\hline
 
-Persona fisica &  persona fisica che rappresenta se stesso e che effettuera' una richiesta di assistenza all'azienda di assistenza &  Singolo cittadino \newline Cliente &  Cliente \\ \hline
+Persona fisica &  soggetto che rappresenta se stesso e che effettuera' una richiesta di assistenza &  Singolo cittadino \newline Cliente &  Cliente \\ \hline
 
-Persona giuridica &  persona fisica che rappresenta un'azienda o un ente pubblico che effettuera' una richiesta di assistenza all'azienda di assistenza & Azienda \newline Ente Pubblico \newline Cliente &  Cliente \\ \hline
+Persona giuridica &  persona fisica che rappresenta un'azienda o un ente pubblico che effettuera' una richiesta di assistenza & Azienda \newline Ente Pubblico \newline Cliente &  Cliente \\ \hline
 
-Assistenza & inizializzazione di un nuovo contratto di assistenza tra un cliente e l'azienda di assistenza, ogni assistenza composta da almeno un intervento   &  & Cliente \newline Intervento \newline Guasto \\ \hline
+Riechiesta d'assistenza & inizializzazione di un nuovo contratto di assistenza tra un cliente e l'azienda di assistenza, ogni richiesta d'assistenza composta è da almeno un intervento   &  & Cliente \newline Intervento \newline Tipologia di guasto \\ \hline
 
-Intervento & prestazione eseguita da un tecnico per risolvere un guasto & Prestazione & Guasto \newline Tecnico \newline Guasto \\ \hline
+Intervento & prestazione eseguita da un tecnico per risolvere un guasto & Prestazione & Tipologia di guasto \newline Tecnico \\ \hline
 
-Tecnico  & dipendente specializzato dell'azienda di assistenza, specializzato nella risoluzione di guasti di un sistema specifico & Dipendente & Guasto \newline Intervento \\ \hline
+Tecnico  & dipendente dell'azienda di assistenza, specializzato nella risoluzione di varie tipologie di guasto & Dipendente & Tipologia di guasto \newline Intervento \\ \hline
 
-Guasto  & problematica di un'sistema specifico e di una specifica tipologia  & Problema &  Tecnico  \newline Cliente \newline Assistenza \\ \hline
+Tipologia di guasto  & problematica specifica da risolvere  & Problema &  Tecnico  \newline Cliente \newline Assistenza \\ \hline
 
 \end{tabular}
-
+\pagebreak
 
 \subsection{Riscrittura dei requisiti}
 In questa fase vengono tradotte le richieste della consegna in requisiti da soddisfare e viene definito il ruolo delle entità all’interno della base di dati.
@@ -100,38 +103,47 @@ In questa fase vengono tradotte le richieste della consegna in requisiti da sodd
 - Le assistenze possono essere richieste solamente per problemi risolvibili dai tecnici dell'azienda.\\ \hline
 \textbf{Frasi relative al cliente}  \\
 \hline
--  I clienti possono essere di diversa natura:  \newline persone giuridiche, che comprende aziende ed enti pubblici; \newline  singoli cittadini (persone fisiche). \newline
-- I clienti richiedono un'assistenza relativa ad un guasto specifico di un sistema specifico.\\
+-  I clienti possono essere di diversa natura:
+- Persona Giuridica, che a sua volta può essere un'azienda oppure un ente pubblico; \newline
+- Singolo cittadino, ovvero persona fisica; \newline
+- I clienti richiedono un'assistenza relativa ad una specifica tipologia di guasto, specificandone il seriale del sistema di riferimento .\\
 \hline
 \textbf{Frasi relative all'assistenza}  \\
 \hline
-- Un'assistenza è caratterizzata da un codice identificativo generato dal sistema. Nel momento in cui viene completata l'assitenza viene memorizzato il giorno di fine di assitenza\\
+- Un'assistenza è caratterizzata da un codice identificativo generato dal sistema. Nel momento in cui viene completata l'assistenza viene memorizzato la data dell'ultimo intervento.\\
 \hline
 \textbf{Frasi relative all'intervento}  \\
 \hline
-- Un intervento è identificato da un numero progressivo riferito all'assistenza di appartenenza. Inoltre, è caratterizzato dalla modalità con la quale può essere eseguito (da remoto o in sede), dalla data e dalla relativa durata del singolo intervento misurato in ore (0-24). Un solo intervento può essere eseguito durante la giornata lavorativa.\\
+- Un intervento è identificato da un numero progressivo riferito all'assistenza di appartenenza. Inoltre, è caratterizzato da: \newline
+- modalità con la quale può essere eseguito (da remoto o in sede)\newline
+- dalla data e dalla relativa durata del singolo intervento misurato in ore (0-24). \newline 
+Un solo intervento può essere eseguito durante l'arco della giornata lavorativa.\\
 \hline
 \textbf{Frasi relative al tecnico}  \\
 \hline
-- Un tecnico è identificato dal suo codice fiscale, dai suoi dati anagrafici, un recapito telefonico ed un email, una data di assunzione e indirizzo del domicilio.\\
+- Un tecnico è identificato dal suo codice fiscale, dai suoi dati anagrafici, un recapito telefonico, una data di assunzione e indirizzo del domicilio.\newline
+Inoltre sarà presente il conteggio mensile delle ore lavorate.
+\\
 \hline
 \textbf{Frasi relative al guasto}  \\
 \hline
-- Un guasto è rappresentato dalla combinazione tra sistema e tipologia di problema.\\
+- Una tipologia di guasto è rappresentata da: \\
+- codice univoco, \\
+- descrizione del problema.\\
 \hline
 \textbf{Frasi relative al coinvolgimento di cliente, assistenza e guasto}  \\
 \hline
-- Quando un cliente richiede un'assistenza relativa ad uno specifico guasto, per poter finalizzare e registrare la data di inizio assistenza è necessario che sia presente quella tipologia di guasto tra i guasti riparabili per quel sistema.\\
+- Quando un cliente richiede un'assistenza relativa ad uno specifico guasto, per poter finalizzare e registrare la data di inizio assistenza è necessario che sia presente quella tipologia di guasto tra i guasti riparabili e l'inserimento del numero seriale del sistema di riferimento.\\
 \hline
 \textbf{Frasi relative al coinvolgimento di tecnico e guasto}  \\
 \hline
-- Un tecnico può essere assunto se è capace di risolvere almeno una tipologia di guasti per un determinato sistema, ma nel tempo può ampliare le proprie competenze e risolvere problemi anche di tipologia diversa e sistemi diversi.\\
+- Un tecnico può essere assunto se è capace di risolvere almeno una tipologia di guasto , ma nel tempo può ampliare le proprie competenze e risolvere problemi anche di tipologia diversa.\\
 \hline
 
 
 \textbf{Frasi relative al coinvolgimento di assistenza, intervento, tecnico e guasto}  \\
 \hline
-- Una volta effettuata la richiesta di assistenza, si pianifica il primo intervento assegnando un tecnico competente per risolvere quel tipo di guasto, controllando che in quella data non ci sia un intervento programmato per lo stesso tecnico altrove.\\
+- Una volta effettuata la richiesta di assistenza, si pianifica il primo intervento assegnando un tecnico competente per risolvere quella tipologia di guasto, controllando che in quella data non ci sia un intervento programmato per lo stesso tecnico altrove.\\
 \hline
 \end{tabular}
 
@@ -158,32 +170,20 @@ In questa fase vengono tradotte le richieste della consegna in requisiti da sodd
 	\subsection{Requisiti operazionali}
 	Le operazioni principali che prenderemo in considerazione sono:
 	\begin{itemize}
-		\item operazione 1: inserire un nuovo cliente -> 19 volte a settimana;
-		\item operazione 2: creare una richiesta di assistenza -> 150 volte a settimana;
-		\item operazione 3: creare una richiesta di intervento -> 450 volte a settimana;
-		\item operazione 4: inserire un nuovo dipendente -> 6 all'anno;
-		\item operazione 5: visualizzare le richieste di assistenza di uno specifico cliente -> 30 a settimana;
-		\item operazione 6: visualizzare il numero di guasti per tipologia -> 1 a settimana. Questo dato può fornirci utili informazioni inerenti alle tipologie di sistemi meno affidabili; 
-		\item operazione 7: visualizzare quale tecnico ha eseguito il maggior numero di interventi e la durata complessiva -> 1 volta al mese. Questo dato può essere utilizzato per vedere in quali reparti ci sono carenze di tecnici, andando così a mirare l'assunzione/training dei nuovi dipendenti;
-		\item operazione 8: visualizzare lo storico degli interventi di un assistenza -> 10 volte al giorno, perchè si vuole monitorare il più possibile l'impiego dei tecnici, cioè chi è impegnato e dove;
-		\item operazione 9: visualizzare il tempo complessivo degli interventi per ogni cliente -> 1 volta a settimana per i soli clienti che hanno richiesto un'assistenza nel periodo immediato;
-		\item operazione 10: visualizzare gli interventi effettuati da ogni tecnico -> 3 volte a settimana;
+		\item operazione 1: date le informazioni di un nuovo cliente, inserirlo nella base di dati -> 19 volte a settimana;
+		\item operazione 2: date le informazioni necessarie fornite da un cliente, aggiungere una richiesta d'assistenza relativa ad una tipologia di problema -> 150 volte a settimana;
+		\item operazione 3: date le informazioni di una richiesta d'assistenza ed i tecnici disponibili, creare un nuovo intervento relativo alla richiesta d'assistenza -> 450 volte a settimana;
+		\item operazione 4: date le informazioni di un nuovo dipendente e delle tipologie di gusti che è capace di risolvere, aggiungerlo alla base di dati -> 6 all'anno;
+		\item operazione 5: dato il codice identificativo del cliente, visualizzare le relative richieste d'assistenza effettuate -> 30 a settimana;
+		\item operazione 6: 
+		  visualizzare il numero di ore mensili di lavoro effettuate da ogni tecnico -> 26 al mese
+		\item operazione 7: dato la tipologia di guasto, il numero di interventi eseguiti su di esso, ed i tecnici specializzati su quella tipologia, visualizzare per ogni tipologia guasto la relativa percentuale di forza lavoro disponibile a risolverla.  -> 1 volta all'anno. \\ Questo dato può essere utilizzato per vedere in quali reparti ci sono carenze di tecnici, andando così a mirare l'assunzione/training dei nuovi dipendenti;
+		\item operazione 8: dato il codice identificativo di un'assistenza, visualizzare lo storico degli interventi -> 10 volte al giorno, \\ Perché si vuole monitorare il più possibile l'impiego dei tecnici, cioè chi è impegnato e dove;
+		\item operazione 9: dato il codice identificativo di un cliente ed una data, visualizzare il tempo complessivo degli interventi effettuati da quel momento -> 1 volta a settimana;
+		
 	\end{itemize}
 
-\subsection{Requisiti operazionali}
-Le operazioni principali che verranno sviluppate sono:
-\begin{itemize}
-    \item Operazione 1: inserire un nuovo cliente ( circa 2 volte a settimana)
-    \item Operazione 2: creare una richiesta di assistenza, 40 a settimana
-    \item Operazione 3: creare una richiesta di intervento, 120 a settimana
-    \item Operazione 4: inserire un nuovo dipendente, 6 all' anno
-    \item Operazione 5: visualizzare le richieste di assistenza di uno specifico cliente, 20 a settimana
-    \item Operazione 6: visualizzare il numero di guasti per tipologia, 1 a settimana
-    \item Operazione 7: visualizzare quale tecnico ha eseguito il maggior numero di interventi e la durata complessiva, 1 volta al mese
-    \item Operazione 8: visualizzare lo storico degli interventi di un assistenza, 10 volte al giorno
-    \item Operazione 9: visualizzare il tempo complessivo degli interventi per ogni cliente, 1 volta al mese per ogni cliente che ha richiesto un'assistenza.
-    \item Operazione 10: visualizzare gli interventi effettuati da ogni tecnico, 1 volta alla settimana.
-\end{itemize}
+
 
 
 \newpage
@@ -255,6 +255,7 @@ Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
 	\item L'attributo Intervento->durata deve essere un valore nel dominio (0, 24).
 	Il valore della durata è rappresentato tramite il sistema orario a 24 ore.
 	\item Un Tecnico non deve essere assegnato a degli Interventi diversi nello stesso giorno.
+	\item Un Tecnico non deve essere assegnato a degli Interventi facenti parte di una richiesta d'Assistenza, relativa ad una determinata Tipologia di Guasto, da lui non risolvibili.
 	
 \end{itemize}
 
@@ -262,10 +263,9 @@ Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
 I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si elencano di seguito i pattern più utilizzati nella progettazione concettuale in basi di dati, applicati allo schema concettuale illustrato precedentemente:
 \begin{itemize}
 	\item Relazione "parte-di":\\
-	- Un'assitenza è composta da diversi interventi
+	- Un'assistenza è composta da diversi interventi
 	
-	\item Semplificazione di reificazione di relazione ternaria\\
-	– Utilizzata per distinguere le richieste di Assistenza che effettua un determinato Cliente inerente ad un determinato Guasto. 
+	\item BLA BLA BLA
 	
 
 \end{itemize}
@@ -274,7 +274,7 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 \newpage
 \section{Progettazione logica}
 \rule{\linewidth}{1.5pt}
-	\section{Progettazione logica}
+\\ \\ \\
 		Lo scopo della progettazione logica è di costruire uno schema relazionale che rappresenti in modo accurato, efficiente e soprattutto correttamente tutte le informazioni descritte da uno schema ER prodotto durante la fase precedente. \\
 		Questo non è una semplice trasformazione da un modello ad un altro per due motivi:
 		\begin{itemize}
@@ -342,11 +342,11 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 			Operazione 3 & I & 450 a settimana \\ \hline
 			Operazione 4 & B & 6 volte all'anno \\ \hline
 			Operazione 5 & I & 30 volte a settimana \\ \hline
-			Operazione 6 & B & 1 volta a settimana \\ \hline
-			Operazione 7 & B & 1 volta al mese \\ \hline
+			Operazione 6 & B & 1 al giorno\\ \hline
+			Operazione 7 & B & 1 volta all'anno \\ \hline
 			Operazione 8 & I & 10 volte al giorno \\ \hline
-			Operazione 9 & B & 1 volta al mese \\ \hline
-			Operazione 10 & B & 3 volta a settimana \\ \hline
+			Operazione 9 & B & 1 volta a settimana \\ \hline
+	
 		
 		\end{tabular}	
 
