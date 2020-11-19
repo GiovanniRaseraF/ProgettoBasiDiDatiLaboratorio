@@ -241,7 +241,7 @@ in questa porzione di schema ER troviamo un ciclo. Esso è composto dalle seguen
 			\item Tipologia Guasto;
 		\end{itemize}
 		
-		Intervento è relazionato a Tecnico tramite \textit{"gestito da"}, una relazione \textbf{uno a molti}. Infatti, un Intervento è gestito da un singolo Tecnico in giornata, mentre un Tecnico può gestire uno o più Interventi.\\
+		Intervento è relazionato a Tecnico tramite \textit{"gestito da"}, una relazione \textbf{uno a molti}. Infatti, un Intervento è gestito da un singolo Tecnico in giornata, mentre un Tecnico può gestire uno o più Interventi.\\	
 		Quest'ultimo però può risolvere solo un numero finito di tipologie di problemi, descritti dalla relazione \textbf{molti a molti} \textit{"è capace di risolvere"}, dove un Tecnico è in grado di risolvere più problemi, ed essi possono essere risolti da più Tecnici.\\
 		Quest'ultimo fa sì che il ciclo non sia problematico perché un Tecnico che non ha le conoscenze per riparare un Guasto non può farlo.\\
 		Infine, la Tipologia Guasto è legato con Richiesta d'Assistenza tramite la relazione \textbf{uno a molti} \textit{"inerente"}, dove una Tipologia Guasto può essere inerente a più Richieste d'Assistenza, mentre una Richiesta fa riferimento ad una sola Tipologia di Guasto.\pagebreak
@@ -261,8 +261,7 @@ in questa porzione di schema ER troviamo un ciclo. Esso è composto dalle seguen
 	\end{minipage}
 \end{figure}
 \paragraph{Figura 3}
-lo schema mette in evidenza la presenza di una generalizzazione totale disgiunta tra le entità Azienda ed Ente Pubblico, due entità che rappresentano due concetti diversi a cui fa le veci una Persona Giuridica per legge.\\
-Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
+lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
 L'entità Cliente mi rappresenta il sovrainsieme a cui facciamo riferimento. Esso viene poi classificato attraverso l'utilizzo di due specializzazioni, individuando così i suoi sottoinsiemi, ovvero tutti gli elementi che compongono l'insieme stesso. \\
 		Con la prima generalizzazione totale indichiamo che un Cliente deve essere una Persona Giuridica \textbf{o} un Singolo Cittadino (quindi persona fisica). Questa netta distinzione è data dalla totalità (indicata dalla freccia nera), partizionando l'insieme in due sottoinsiemi.\\
 		Analogo discorso viene fatto con la Persona Giuridica, specializzandola in Azienda ed Ente Pubblico.\\
@@ -276,10 +275,15 @@ Prima cosa da notare è la scelta di un attributo opzionale (dataFineAssistenza)
 		appartiene ad una sola specifica richiesta.\\
 \paragraph{Figura 5  DA METTERE LA FOTO DELLA SEZIONE DI RICHIESTA, INERENTE, TIPOLOGIA}
 in questa figura si nota la modellazione della relazione tra Richiesta d'Assistenza e Tipologia Guasto:\\
-E' stato deciso di collegare alla Richiesta d'Assistenza un seriale, cioè il numero di serie del sistema per il quale si vuole essere assistiti; non necessariamente a quest'ultimo deve far riferimento ad un sistema specifico, siccome ciò a cui siamo interessati è il tipo di guasto presente.\\
+E' stato deciso di collegare alla Richiesta d'Assistenza un seriale, cioè il numero di serie del sistema per il quale si vuole essere assistiti; non necessariamente a quest'ultimo deve far riferimento un sistema specifico, siccome ciò a cui siamo interessati è il tipo di guasto presente.\\
 Sarà compito di un livello di astrazione superiore il controllo dell'autenticità della Richiesta d'Assistenza.\\ 
 \subsection{Regole di derivazione}
-
+Le regole di deriavazione sono delle informazioni ottenute tramite concetti dello schema, oppure mediante delle deduzioni. Nel modello concettuale analizzato è presente un attributo derivato, 
+che permette ad ogni Tecnico di salvare il numero di ore lavorate mensilmente.\\
+Questo permette di non dover scansionare tutti gli Interventi presenti nella base di dati per ricavare l'informazione.
+L'attributo \textbf{Tecnico->oreLavorateMensilmente} sarà quindi aggiornato ogni volta che un Tecnico verrà assegnato ad un Intervento.\\
+E' possibile calcolarlo sommando tutti i valori di \textbf{Intervento->durata} che si riferiscono al Tecnico in questione e al mese corrente.\\
+Ogni volta che il mese finisce deve essere azzerato.\\
 
 \subsection{Vincoli d'integrità}
 I vincoli d'integrità sono tutte le proprietà di una base-di-dati, sono esprimibili 
@@ -287,12 +291,15 @@ tramite dei predicati; questi devono essere veri per garantire la validità dell
 \newline
 Di seguito sono riportati i vincoli d'integrità presenti nel modello E-R:
 \begin{itemize}
-	\item L'attributo Assistenza->dataFineAssistenza deve essere maggiore o uguale\\ della proprietà richiede->data.
-	\item Se Assistenza->dataFineAssistenza non è NULL allora: il numero di Interventi appartenenti a un'Assistenza deve essere minore o uguale alla differenza (in giorni) tra \\richiede->data e Assistenza->dataFineAssistenza.\\Questo vincolo deriva dal fatto che è possibile fare un Intervento al giorno per singola Assistenza.
-	\item L'attributo Intervento->durata deve essere un valore nel dominio (0, 24).
+	\item L'attributo  \textbf{Richiesta d'Assistenza->dataFineAssistenza} deve essere maggiore o uguale\\
+	alla proprietà \textbf{Richiesta d'Assistenza->data}
+	\item Se   \textbf{Richiesta d'Assistenza->dataFineAssistenza} non è \textbf{NULL} allora: il numero di Interventi appartenenti ad un'Assistenza deve essere minore o uguale alla differenza (in giorni) tra \\  \textbf{Richiesta d'Assistenza->data} e   \textbf{Richiesta d'Assistenza->dataFineAssistenza}.\\Questo vincolo deriva dal fatto che è possibile fare un Intervento al giorno per singola Richiesta d'Assistenza.
+	\item L'attributo  \textbf{Intervento->durata} deve essere un valore nel dominio (0, 24).
 	Il valore della durata è rappresentato tramite il sistema orario a 24 ore.
 	\item Un Tecnico non deve essere assegnato a degli Interventi diversi nello stesso giorno.
-	\item Un Tecnico non deve essere assegnato a degli Interventi facenti parte di una richiesta d'Assistenza, relativa ad una determinata Tipologia di Guasto, da lui non risolvibili.
+	\item Un Tecnico non deve essere assegnato a degli Interventi facenti parte di una Richiesta d'Assistenza, relativa ad una determinata Tipologia di Guasto, da lui non risolvibili.
+	\item L'attributo  \textbf{Tecnico->oreLavorateMensilmente} deve essere uguale alla somma di tutti i valori di  \textbf{Intervento->durata} a cui un Tecnico ha lavorato nel mese corrente.
+
 	
 \end{itemize}
 
