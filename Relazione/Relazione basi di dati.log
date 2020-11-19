@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 22:25
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -126,21 +126,415 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cormorantgaramond
+\CormorantGaramond.sty"
+Package: CormorantGaramond 2020/04/12 (Bob Tennent and autoinst) Style file for
+ Cormorant Garamond fonts.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifxetex.s
+ty"
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.
+sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.s
+ty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval
+.tex"
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutil
+s.tex"
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+)
+\XKV@depth=\count97
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty
+"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+ ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+ ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontaxes\fontaxes
+.sty"
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \scshape on input line 37.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mweights\mweights
+.sty"
+Package: mweights 2017/03/30 (Bob Tennent) Support package for multiple-weight 
+font packages. 
+LaTeX Info: Redefining \bfseries on input line 22.
+LaTeX Info: Redefining \mdseries on input line 30.
+LaTeX Info: Redefining \rmfamily on input line 38.
+LaTeX Info: Redefining \sffamily on input line 66.
+LaTeX Info: Redefining \ttfamily on input line 94.
+)
+LaTeX Info: Redefining \oldstylenums on input line 133.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titling\titling.s
+ty"
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip43
+\thanksmargin=\skip44
+\droptitle=\skip45
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref
+.sty"
+Package: hyperref 2019/11/10 v7.00c Hypertext links for LaTeX
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
+s.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftex
+cmds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
+err.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetk
+eys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
+ds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
+nekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdfesc
+ape.sty"
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\hycolor.
+sty"
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\xcolor-p
+atch.sty"
+Package: xcolor-patch 2016/05/16 xcolor patch
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\hopatch.
+sty"
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+)))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\letltxma
+cro.sty"
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.
+sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
+s.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count98
+\Hy@pagecounter=\count99
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.d
+ef"
+File: pd1enc.def 2019/11/10 v7.00c Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\intcal
+c.sty"
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count100
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref
+.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `linktocpage' set `true' on input line 4409.
+Package hyperref Info: Hyper figures OFF on input line 4535.
+Package hyperref Info: Link nesting OFF on input line 4540.
+Package hyperref Info: Hyper index ON on input line 4543.
+Package hyperref Info: Plain pages OFF on input line 4550.
+Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4788.
+\c@Hy@tempcnt=\count101
+ ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5147.
+\XeTeXLinkMargin=\dimen115
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\bitset
+.sty"
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\bigint
+calc.sty"
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count102
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6418.
+Package hyperref Info: Link nesting OFF on input line 6423.
+Package hyperref Info: Hyper index ON on input line 6426.
+Package hyperref Info: backreferencing OFF on input line 6433.
+Package hyperref Info: Link coloring OFF on input line 6438.
+Package hyperref Info: Link coloring with OCG OFF on input line 6443.
+Package hyperref Info: PDF/A mode OFF on input line 6448.
+LaTeX Info: Redefining \ref on input line 6488.
+LaTeX Info: Redefining \pageref on input line 6492.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\atbegs
+hi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifpdf.sty
+"
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+))
+\Hy@abspage=\count103
+\c@Item=\count104
+\c@Hfootnote=\count105
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.
+def"
+File: hpdftex.def 2019/11/10 v7.00c Hyperref driver for pdfTeX
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\atveryen
+d.sty"
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count106
+\c@bookmark@seq@number=\count107
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfil
+echeck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\unique
+counter.sty"
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip46
 ) ("Relazione basi di dati.aux")
 \openout1 = `"Relazione basi di dati.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+9.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Trying to load font information for T1+CormorantGaramond-LF
+ on input line 19.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cormorantgaramond
+\t1cormorantgaramond-lf.fd"
+File: T1CormorantGaramond-LF.fd 2019/12/11 (autoinst) Font definitions for T1/C
+ormorantGaramond-LF.
+)
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 19.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 10.0pt on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -176,67 +570,31 @@ LaTeX Font Info:    ... okay on input line 7.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 7.
-LaTeX Info: Redefining \it@ccap on input line 7.
+LaTeX Info: Redefining \it@ocap on input line 19.
+LaTeX Info: Redefining \it@ccap on input line 19.
 
 ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
 pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count97
-\scratchdimen=\dimen114
+\scratchcounter=\count108
+\scratchdimen=\dimen118
 \scratchbox=\box27
-\nofMPsegments=\count98
-\nofMParguments=\count99
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count100
-\MPscratchDim=\dimen115
-\MPnumerator=\count101
-\makeMPintoPDFobject=\count102
-\everyMPtoPDFconversion=\toks19
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen119
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks21
 )
 ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epst
 opdf-base.sty"
 Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
 
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
-err.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.s
 ty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
-nekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
-s.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
-s.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetk
-eys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
-ds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.
-sty"
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-))))
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftex
-cmds.sty"
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 42.
@@ -245,141 +603,197 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 460.
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
+\c@mv@tabular=\count114
+\c@mv@boldtabular=\count115
+\AtBeginShipoutBox=\box28
+Package hyperref Info: Link coloring OFF on input line 19.
 
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.
+sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-LaTeX Warning: No \author given.
-
-[1
-
-{C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("Relazione basi di dati.toc"
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\refcount
+.sty"
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 )
-\tf@toc=\write3
-\openout3 = `"Relazione basi di dati.toc"'.
-
- [2]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
-8.
-
-("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettit
+lestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+\c@section@level=\count116
+)
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
+ ("Relazione basi di dati.out") ("Relazione basi di dati.out")
+\@outlinefile=\write3
+\openout3 = `"Relazione basi di dati.out"'.
 
-[3]
-Underfull \hbox (badness 2119) in paragraph at lines 77--77
-[]\T1/cmr/m/n/10 Persona fi-
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 20.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 20.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 24.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 17.28pt on input line 24.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 24.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
+(Font)              scaled to size 17.28pt on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/it' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/regular/it' on input line 24.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/it' will be
+(Font)              scaled to size 12.0pt on input line 24.
+<image/Udine.jpg, id=231, 685.56125pt x 255.95625pt>
+File: image/Udine.jpg Graphic file (type jpg)
+<use image/Udine.jpg>
+Package pdftex.def Info: image/Udine.jpg  used on input line 26.
+(pdftex.def)             Requested size: 284.52756pt x 106.23157pt.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 30.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
+(Font)              scaled to size 12.0pt on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+CormorantGaramond-L
+F on input line 32.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cormorantgaramond
+\ts1cormorantgaramond-lf.fd"
+File: TS1CormorantGaramond-LF.fd 2019/12/11 (autoinst) Font definitions for TS1
+/CormorantGaramond-LF.
+)
+LaTeX Font Info:    Font shape `TS1/CormorantGaramond-LF/m/n' will be aliased
+(Font)              to `TS1/CormorantGaramond-LF/regular/n' on input line 32.
+LaTeX Font Info:    Font shape `TS1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 32.
+ [1
+
+{C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./image/Ud
+ine.jpg>]
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 38.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
+(Font)              scaled to size 14.4pt on input line 38.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 38.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
+(Font)              scaled to size 14.4pt on input line 38.
+ ("Relazione basi di dati.toc"
+[2])
+\tf@toc=\write4
+\openout4 = `"Relazione basi di dati.toc"'.
+
+ [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]\T1/CormorantGaramond-LF/regular/n/12 Persona
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
-[]\T1/cmr/m/n/10 Persona
+Underfull \hbox (badness 1371) in paragraph at lines 96--96
+\T1/CormorantGaramond-LF/regular/n/12 en-te pub-bli-co che ef-fet-tue-ra' una r
+i-chie-sta di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
-[]\T1/cmr/m/n/10 Riechiesta
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]\T1/CormorantGaramond-LF/regular/n/12 Riechiesta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
-\T1/cmr/m/n/10 d'as-si-sten-
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\T1/CormorantGaramond-LF/regular/n/12 d'as-si-sten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
-\T1/cmr/m/n/10 Tipologia di
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]\T1/cmr/m/n/10 Tipologia di
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
-[]\T1/cmr/m/n/10 Tipologia di
+Underfull \hbox (badness 3323) in paragraph at lines 102--102
+[]\T1/CormorantGaramond-LF/regular/n/12 dipendente del-l'a-zien-da di as-si-ste
+n-za, spe-cia-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]\T1/cmr/m/n/10 Tipologia
+Underfull \hbox (badness 2042) in paragraph at lines 102--102
+\T1/CormorantGaramond-LF/regular/n/12 liz-za-to nel-la ri-so-lu-zio-ne di va-ri
+e ti-po-lo-gie di
  []
 
 
-Overfull \hbox (28.5722pt too wide) in paragraph at lines 68--91
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia
+ []
+
+
+Overfull \hbox (28.5722pt too wide) in paragraph at lines 85--108
 [][]
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
 
-Overfull \hbox (12.48906pt too wide) in paragraph at lines 96--149
+Overfull \hbox (12.48906pt too wide) in paragraph at lines 113--166
 [][] 
  []
 
-[5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 224--227
 
  []
 
-<image/schema_er.png, id=31, 1317.92375pt x 543.02875pt>
+<image/schema_er.png, id=328, 1317.92375pt x 543.02875pt>
 File: image/schema_er.png Graphic file (type png)
 <use image/schema_er.png>
-Package pdftex.def Info: image/schema_er.png  used on input line 213.
+Package pdftex.def Info: image/schema_er.png  used on input line 230.
 (pdftex.def)             Requested size: 516.73338pt x 212.91553pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 213--214
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 230--231
  [][] 
  []
 
-<image/ciclo.png, id=33, 813.0375pt x 462.72874pt>
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 236.
+LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 236.
+<image/ciclo.png, id=330, 813.0375pt x 462.72874pt>
 File: image/ciclo.png Graphic file (type png)
 <use image/ciclo.png>
-Package pdftex.def Info: image/ciclo.png  used on input line 226.
+Package pdftex.def Info: image/ciclo.png  used on input line 243.
 (pdftex.def)             Requested size: 375.80544pt x 213.88159pt.
-[8 <./image/schema_er.png> <./image/ciclo.png>]
-<image/generalizzazione.png, id=40, 488.82625pt x 505.89pt>
+[9 <./image/schema_er.png> <./image/ciclo.png>] [10]
+<image/generalizzazione.png, id=344, 488.82625pt x 505.89pt>
 File: image/generalizzazione.png Graphic file (type png)
 <use image/generalizzazione.png>
-Package pdftex.def Info: image/generalizzazione.png  used on input line 252.
+Package pdftex.def Info: image/generalizzazione.png  used on input line 269.
 (pdftex.def)             Requested size: 187.89914pt x 194.45561pt.
-<image/entita_debole.png, id=41, 577.15625pt x 246.9225pt>
+<image/entita_debole.png, id=345, 577.15625pt x 246.9225pt>
 File: image/entita_debole.png Graphic file (type png)
 <use image/entita_debole.png>
-Package pdftex.def Info: image/entita_debole.png  used on input line 258.
+Package pdftex.def Info: image/entita_debole.png  used on input line 275.
 (pdftex.def)             Requested size: 187.89914pt x 80.38826pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--271
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--287
+Underfull \hbox (badness 10000) in paragraph at lines 281--288
 
  []
 
@@ -388,54 +802,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
  []
 
-[9 <./image/generalizzazione.png> <./image/entita_debole.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 320--324
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--324
+Underfull \hbox (badness 10000) in paragraph at lines 298--304
 
  []
 
-<../Parata/Schema Prog. Logica.png, id=50, 188.80537pt x 366.46913pt>
+[11 <./image/generalizzazione.png> <./image/entita_debole.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 306--310
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
+
+ []
+
+<../Parata/Schema Prog. Logica.png, id=361, 188.80537pt x 366.46913pt>
 File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
 <use ../Parata/Schema Prog. Logica.png>
 Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
-340.
+357.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--367
+Underfull \hbox (badness 10000) in paragraph at lines 360--384
 
  []
 
-[11 <../Parata/Schema Prog. Logica.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 408--411
+[13 <../Parata/Schema Prog. Logica.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
-[12] [13] [14] [15] [16] [17] ("Relazione basi di dati.aux") ) 
+[15] [16] [17] [18] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
+ ("Relazione basi di dati.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
+Package rerunfilecheck Info: File `"Relazione basi di dati".out' has not change
+d.
+(rerunfilecheck)             Checksum: 3A7A5A376BDC65E9ED4F28C808BBC1FB;4127.
+ ) 
 Here is how much of TeX's memory you used:
- 3248 strings out of 492484
- 46252 string characters out of 3121149
- 138407 words of memory out of 3000000
- 7540 multiletter control sequences out of 15000+200000
- 13229 words of font info for 32 fonts, out of 3000000 for 9000
+ 8132 strings out of 492484
+ 128575 string characters out of 3121149
+ 229436 words of memory out of 3000000
+ 12216 multiletter control sequences out of 15000+200000
+ 52730 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,8n,34p,812b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Matteo
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\U
-sers\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx120
-0.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
-600\ecbx1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecbx1440.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.
-9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Matteo\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/Matteo/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione basi di dati.pdf" (17 pages, 231748 bytes).
+ 39i,8n,39p,812b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cormorantg
+aramond/cgrm_v7t4yx.enc}{C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/font
+s/enc/dvips/cormorantgaramond/cgrm_xwhmgi.enc}{C:/Users/Matteo/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/enc/dvips/cormorantgaramond/cgrm_yah5fp.enc}<C:/Users/M
+atteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/catharsis/cormorantgaramond
+/CormorantGaramond-Bold.pfb><C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb><C:/Users/
+Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/catharsis/cormorantgaramon
+d/CormorantGaramond-Regular.pfb>
+Output written on "Relazione basi di dati.pdf" (20 pages, 456803 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 487 words of extra memory for PDF output out of 10000 (max. 10000000)
 

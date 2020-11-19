@@ -4,18 +4,35 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
+\usepackage{Cormorant Garamond}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+	\posttitle{%
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}%
+}
+\usepackage[linktocpage=true]{hyperref}
+
+
+
 \begin{document}
-
-
-\title{%
-\raggedright \textbf{Progetto Basi di Dati} \\ \large \bigskip Progettazione ed implementazione di una base di dati relazionale per la gestione delle assistenze di una ditta di gestione di impianti di riscaldamento.}
+\title{\textbf{PROGETTO BASI DI DATI}} \large
+\subtitle{Progettazione ed implementazione di una base di dati relazionale per la gestione delle assistenze di una ditta di gestione di impianti di riscaldamento.}
+\author{\textit{Parata Loris 144338} \and \textit{Brugnera Matteo 137370} \and \textit{Rasera Giovanni 143395}}
 \maketitle
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{image/Udine}
+	\label{Udine}
+\end{figure}
 
-\begin{flushleft}
-\author{Brugnera Matteo 137370 \and \\ Parata Loris 144338 \and \\ Giovanni Rasera 143395}
-
-\end{flushleft}
-
+\textbf{Contatti:}
+\begin{itemize}
+	\item \textit{144338@spes.uniud.it}
+	\item \textit{137370@spes.uniud.it}
+	\item \textit{143395@spes.uniud.it}
+\end{itemize}
 \newpage
 
 \tableofcontents
