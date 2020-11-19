@@ -1,131 +1,141 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  18 NOV 2020 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 21:21
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
-LaTeX2e <2020-10-01> patch level 1
-L3 programming layer <2020-10-05> xparse <2020-03-03>
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+LaTeX2e <2019-10-01> patch level 3
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
 )
-\c@part=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
-\c@figure=\count181
-\c@table=\count182
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
+.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.s
+ty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.st
+y"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
+"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\Gm@cnth=\count183
-\Gm@cntv=\count184
-\c@Gm@tempcnt=\count185
-\Gm@bindingoffset=\dimen139
-\Gm@wd@mp=\dimen140
-\Gm@odd@mp=\dimen141
-\Gm@even@mp=\dimen142
-\Gm@layoutwidth=\dimen143
-\Gm@layoutheight=\dimen144
-\Gm@layouthoffset=\dimen145
-\Gm@layoutvoffset=\dimen146
-\Gm@dimlist=\toks16
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
+.cfg"))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.
+sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty
+"
+Package: babel 2019/11/14 3.36 The Babel package
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.de
+f"
+File: switch.def 2019/11/14 3.36 Babel switching mechanism
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2020/10/06 3.50 The Babel package
-
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2020/10/06 3.50 Babel common definitions
-\babel@savecnt=\count186
-\U@D=\dimen147
-\l@babelnohyphens=\language79
-
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-)
-\bbl@dirlevel=\count187
-
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg
+"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/babel-italian\italian.l
-df
-Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count188
-\it@doublequoteactive=\count189
-\it@ISOcompliance=\count190
-))
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count191
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-italian\ita
+lian.ldf"
+Language: italian 2019/11/16 v.1.4.03 Italian support for the babel system
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def
+"
+File: babel.def 2019/11/14 3.36 Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen111
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.
+def")
+\bbl@dirlevel=\count92
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+\it@lettering=\count93
+\it@doublequoteactive=\count94
+\it@ISOcompliance=\count95
+))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox
+.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count96
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx
+.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics
+.sty"
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
+"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\grap
+hics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdft
+ex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen148
-\Gin@req@width=\dimen149
-)
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count192
-\l__pdf_internal_box=\box47
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 ) ("Relazione basi di dati.aux")
 \openout1 = `"Relazione basi di dati.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -169,26 +179,71 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Info: Redefining \it@ocap on input line 7.
 LaTeX Info: Redefining \it@ccap on input line 7.
 
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
+pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count193
-\scratchdimen=\dimen150
-\scratchbox=\box48
-\nofMPsegments=\count194
-\nofMParguments=\count195
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count196
-\MPscratchDim=\dimen151
-\MPnumerator=\count197
-\makeMPintoPDFobject=\count198
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count97
+\scratchdimen=\dimen114
+\scratchbox=\box27
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen115
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks19
 )
-(C:\Users\loris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epst
+opdf-base.sty"
+Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
+err.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.s
+ty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
+nekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
+s.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
+s.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetk
+eys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
+ds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.
+sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))))
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftex
+cmds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+42.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 460.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 12.
@@ -202,7 +257,7 @@ LaTeX Warning: No \author given.
 
 [1
 
-{C:/Users/loris/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("Relazione basi di dati.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 4.
@@ -212,7 +267,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `"Relazione basi di dati.toc"'.
 
- [2] [3]
+ [2]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
+8.
+
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+
+[3]
 Underfull \hbox (badness 2119) in paragraph at lines 77--77
 []\T1/cmr/m/n/10 Persona fi-
  []
@@ -288,68 +353,89 @@ File: image/ciclo.png Graphic file (type png)
 Package pdftex.def Info: image/ciclo.png  used on input line 226.
 (pdftex.def)             Requested size: 375.80544pt x 213.88159pt.
 [8 <./image/schema_er.png> <./image/ciclo.png>]
-<image/generalizzazione.png, id=39, 488.82625pt x 505.89pt>
+<image/generalizzazione.png, id=40, 488.82625pt x 505.89pt>
 File: image/generalizzazione.png Graphic file (type png)
 <use image/generalizzazione.png>
-Package pdftex.def Info: image/generalizzazione.png  used on input line 241.
+Package pdftex.def Info: image/generalizzazione.png  used on input line 252.
 (pdftex.def)             Requested size: 187.89914pt x 194.45561pt.
-<image/entita_debole.png, id=40, 578.16pt x 246.9225pt>
+<image/entita_debole.png, id=41, 577.15625pt x 246.9225pt>
 File: image/entita_debole.png Graphic file (type png)
 <use image/entita_debole.png>
-Package pdftex.def Info: image/entita_debole.png  used on input line 247.
-(pdftex.def)             Requested size: 187.89914pt x 80.24886pt.
- [9 <./image/generalizzazione.png> <./image/entita_debole.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
+Package pdftex.def Info: image/entita_debole.png  used on input line 258.
+(pdftex.def)             Requested size: 187.89914pt x 80.38826pt.
 
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+Underfull \hbox (badness 10000) in paragraph at lines 264--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--294
+Underfull \hbox (badness 10000) in paragraph at lines 272--276
 
  []
 
-<../Parata/Schema Prog. Logica.png, id=49, 188.80537pt x 366.46913pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
+
+ []
+
+[9 <./image/generalizzazione.png> <./image/entita_debole.png>] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 320--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--324
+
+ []
+
+<../Parata/Schema Prog. Logica.png, id=50, 188.80537pt x 366.46913pt>
 File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
 <use ../Parata/Schema Prog. Logica.png>
 Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
-310.
+340.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--339
+Underfull \hbox (badness 10000) in paragraph at lines 343--369
 
  []
 
 [11 <../Parata/Schema Prog. Logica.png>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 380--383
+Underfull \hbox (badness 10000) in paragraph at lines 410--413
 
  []
 
 [13] [14] [15] [16] [17] ("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
- 3116 strings out of 480236
- 44662 string characters out of 2880557
- 356688 words of memory out of 3000000
- 19650 multiletter control sequences out of 15000+200000
- 544326 words of font info for 47 fonts, out of 3000000 for 9000
+ 3249 strings out of 492484
+ 46265 string characters out of 3121149
+ 137411 words of memory out of 3000000
+ 7541 multiletter control sequences out of 15000+200000
+ 13229 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,66p,482b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\loris\AppDa
-ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\loris
-\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users
-\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:
-\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.p
-k> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-1000.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1200.pk> <C:\Users\loris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecbx1728.pk>
-Output written on "Relazione basi di dati.pdf" (17 pages, 234249 bytes).
+ 51i,8n,34p,812b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Matteo\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\
+Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
+ <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecbx1440.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Matteo\AppData\Local\MiK
+TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/Matteo/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Relazione basi di dati.pdf" (17 pages, 231788 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
+ 379 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
