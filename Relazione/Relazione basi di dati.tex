@@ -233,7 +233,18 @@ Modello E-R dell'azienda di assistenza:
 \end{figure}
 
 \paragraph{Figura 2}
-lo schema mette in evidenza la presenza di una ciclo  tra le entità Cliente, Tipologia di guasto e Richiesta d'Assistenza.\pagebreak
+in questa porzione di schema ER troviamo un ciclo. Esso è composto dalle seguenti Entità: 
+		\begin{itemize}
+			\item Richiesta d'Assistenza;
+			\item Intervento;
+			\item Tecnico;
+			\item Tipologia Guasto;
+		\end{itemize}
+		
+		Intervento è relazionato a Tecnico tramite \textit{"gestito da"}, una relazione \textbf{uno a molti}. Infatti, un Intervento è gestito da un singolo Tecnico in giornata, mentre un Tecnico può gestire uno o più Interventi.\\
+		Quest'ultimo però può risolvere solo un numero finito di tipologie di problemi, descritti dalla relazione \textbf{molti a molti} \textit{"è capace di risolvere"}, dove un Tecnico è in grado di risolvere più problemi, ed essi possono essere risolti da più Tecnici.\\
+		Quest'ultimo fa sì che il ciclo non sia problematico perché un Tecnico che non ha le conoscenze per riparare un Guasto non può farlo.\\
+		Infine, la Tipologia Guasto è legato con Richiesta d'Assistenza tramite la relazione \textbf{uno a molti} \textit{"inerente"}, dove una Tipologia Guasto può essere inerente a più Richieste d'Assistenza, mentre una Richiesta fa riferimento ad una sola Tipologia di Guasto.\pagebreak
 
 \begin{figure}
 		\centering
@@ -250,11 +261,23 @@ lo schema mette in evidenza la presenza di una ciclo  tra le entità Cliente, Ti
 	\end{minipage}
 \end{figure}
 \paragraph{Figura 3}
-lo schema mette in evidenza la presenza di una generalizzazione totale disgiunta tra le entità Azienda ed Ente Pubblico, le due entità che rappresentano due concetti diversi. Ma nel contempo sono rappresentati da una Persona Giuridica per legge.\\
-Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco legalmente. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
+lo schema mette in evidenza la presenza di una generalizzazione totale disgiunta tra le entità Azienda ed Ente Pubblico, due entità che rappresentano due concetti diversi a cui fa le veci una Persona Giuridica per legge.\\
+Lo schema mette in evidenza la presenza di una generalizzazione esclusiva totale tra le entità Persona Giuridica e Singolo Cittadino che differiscono per codice identificativo univoco. Una Persona Giuridica viene distinta tramite Partita Iva, mentre un Singolo Cittadino dal proprio CodiceFiscale.
+L'entità Cliente mi rappresenta il sovrainsieme a cui facciamo riferimento. Esso viene poi classificato attraverso l'utilizzo di due specializzazioni, individuando così i suoi sottoinsiemi, ovvero tutti gli elementi che compongono l'insieme stesso. \\
+		Con la prima generalizzazione totale indichiamo che un Cliente deve essere una Persona Giuridica \textbf{o} un Singolo Cittadino (quindi persona fisica). Questa netta distinzione è data dalla totalità (indicata dalla freccia nera), partizionando l'insieme in due sottoinsiemi.\\
+		Analogo discorso viene fatto con la Persona Giuridica, specializzandola in Azienda ed Ente Pubblico.\\
+		Inoltre, entrambe le specializzazioni sono DISGIUNTE perché non può succedere che una persona giuridica sia allo stesso tempo una persona fisica.\\
+		Un caso critico che si può presentare a causa della sua forma (gerarchie di specializzazione) riguarda l'ereditarietà multipla. Questo problema però non viene riscontrato in questo tipo di schema in quanto non abbiamo entità che appartengono a più gerarchie di specializzazione.\\
+		Infine, è importante notare come tutte le entità ereditino gli attributi da cui derivano, più in particolare tutti gli attributi di Cliente verranno ereditati da qualsiasi entità appartenente a questa porzione di schema e le entità Azienda ed Ente Pubblico vengono individuate univocamente dagli attributi derivanti da Persona Giuridica.\\
 \paragraph{Figura 4} 
-Lo schema mette in evidenza la presenza di un'entità debole che necessita della presenza di una richiesta d'assistenza per poter essere distinta univocamente.
-\newpage
+lo schema mette in evidenza la presenza di un'entità debole che necessita della presenza di una richiesta d'assistenza per poter essere distinta univocamente.
+Prima cosa da notare è la scelta di un attributo opzionale (dataFineAssistenza) in quanto esso verrà aggiunto una volta terminato l'ultimo intervento.
+		Inoltre, la relazione \textit{"composta da"} è una relazione \textbf{molti a uno} perché una Richiesta di Assistenza può essere composta da molti interventi, mentre un intervento 
+		appartiene ad una sola specifica richiesta.\\
+\paragraph{Figura 5  DA METTERE LA FOTO DELLA SEZIONE DI RICHIESTA, INERENTE, TIPOLOGIA}
+in questa figura si nota la modellazione della relazione tra Richiesta d'Assistenza e Tipologia Guasto:\\
+E' stato deciso di collegare alla Richiesta d'Assistenza un seriale, cioè il numero di serie del sistema per il quale si vuole essere assistiti; non necessariamente a quest'ultimo deve far riferimento ad un sistema specifico, siccome ciò a cui siamo interessati è il tipo di guasto presente.\\
+Sarà compito di un livello di astrazione superiore il controllo dell'autenticità della Richiesta d'Assistenza.\\ 
 \subsection{Regole di derivazione}
 
 
