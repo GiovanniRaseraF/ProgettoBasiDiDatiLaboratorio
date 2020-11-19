@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 23:39
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -677,179 +677,164 @@ LaTeX Font Info:    Font shape `TS1/CormorantGaramond-LF/regular/n' will be
 {C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./image/Ud
 ine.jpg>]
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/n' will be aliased
-(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 38.
+(Font)              to `T1/CormorantGaramond-LF/regular/n' on input line 43.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 43.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
-(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 38.
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 43.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 38.
+(Font)              scaled to size 14.4pt on input line 43.
  ("Relazione basi di dati.toc"
 [2])
 \tf@toc=\write4
 \openout4 = `"Relazione basi di dati.toc"'.
 
- [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]\T1/CormorantGaramond-LF/regular/n/12 Persona
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
+
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 96--96
-\T1/CormorantGaramond-LF/regular/n/12 en-te pub-bli-co che ef-fet-tue-ra' una r
-i-chie-sta di
+Underfull \hbox (badness 10000) in paragraph at lines 49--59
+
+ []
+
+[4]
+Underfull \hbox (badness 1748) in paragraph at lines 102--102
+\T1/CormorantGaramond-LF/regular/n/12 en-te pub-bli-co che ef-fet-tue-rà una ri
+-chie-sta di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-[]\T1/CormorantGaramond-LF/regular/n/12 Riechiesta
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]\T1/CormorantGaramond-LF/regular/it/12 Richiesta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-\T1/CormorantGaramond-LF/regular/n/12 d'as-si-sten-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
- []
-
-
-Underfull \hbox (badness 3323) in paragraph at lines 102--102
+Underfull \hbox (badness 3323) in paragraph at lines 108--108
 []\T1/CormorantGaramond-LF/regular/n/12 dipendente del-l'a-zien-da di as-si-ste
 n-za, spe-cia-
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 102--102
+Underfull \hbox (badness 2042) in paragraph at lines 108--108
 \T1/CormorantGaramond-LF/regular/n/12 liz-za-to nel-la ri-so-lu-zio-ne di va-ri
 e ti-po-lo-gie di
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
-[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia di
+Underfull \hbox (badness 10000) in paragraph at lines 88--114
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]\T1/CormorantGaramond-LF/regular/n/12 Tipologia
+Overfull \hbox (16.5362pt too wide) in paragraph at lines 88--114
  []
-
-
-Overfull \hbox (28.5722pt too wide) in paragraph at lines 85--108
-[][]
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 110--112
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
 
-Overfull \hbox (12.48906pt too wide) in paragraph at lines 113--166
+Overfull \hbox (12.48906pt too wide) in paragraph at lines 119--172
 [][] 
  []
 
 [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 224--227
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
 
  []
 
-<image/schema_er.png, id=328, 1317.92375pt x 543.02875pt>
+<image/schema_er.png, id=329, 1317.92375pt x 543.02875pt>
 File: image/schema_er.png Graphic file (type png)
 <use image/schema_er.png>
-Package pdftex.def Info: image/schema_er.png  used on input line 230.
+Package pdftex.def Info: image/schema_er.png  used on input line 236.
 (pdftex.def)             Requested size: 516.73338pt x 212.91553pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 230--231
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 236--237
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' will be aliased
-(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 236.
+(Font)              to `T1/CormorantGaramond-LF/bold/n' on input line 242.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 236.
-<image/ciclo.png, id=330, 813.0375pt x 462.72874pt>
+(Font)              scaled to size 10.0pt on input line 242.
+<image/ciclo.png, id=331, 813.0375pt x 462.72874pt>
 File: image/ciclo.png Graphic file (type png)
 <use image/ciclo.png>
-Package pdftex.def Info: image/ciclo.png  used on input line 243.
+Package pdftex.def Info: image/ciclo.png  used on input line 249.
 (pdftex.def)             Requested size: 375.80544pt x 213.88159pt.
 [9 <./image/schema_er.png> <./image/ciclo.png>] [10]
-<image/generalizzazione.png, id=344, 488.82625pt x 505.89pt>
+<image/generalizzazione.png, id=345, 488.82625pt x 505.89pt>
 File: image/generalizzazione.png Graphic file (type png)
 <use image/generalizzazione.png>
-Package pdftex.def Info: image/generalizzazione.png  used on input line 269.
+Package pdftex.def Info: image/generalizzazione.png  used on input line 275.
 (pdftex.def)             Requested size: 187.89914pt x 194.45561pt.
-<image/entita_debole.png, id=345, 577.15625pt x 246.9225pt>
+<image/entita_debole.png, id=346, 577.15625pt x 246.9225pt>
 File: image/entita_debole.png Graphic file (type png)
 <use image/entita_debole.png>
-Package pdftex.def Info: image/entita_debole.png  used on input line 275.
+Package pdftex.def Info: image/entita_debole.png  used on input line 281.
 (pdftex.def)             Requested size: 187.89914pt x 80.38826pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--288
+Underfull \hbox (badness 10000) in paragraph at lines 287--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--293
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
 [11 <./image/generalizzazione.png> <./image/entita_debole.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 306--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--316
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 337--341
+Underfull \hbox (badness 10000) in paragraph at lines 343--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--341
+Underfull \hbox (badness 10000) in paragraph at lines 343--347
 
  []
 
-<../Parata/Schema Prog. Logica.png, id=361, 188.80537pt x 366.46913pt>
+<../Parata/Schema Prog. Logica.png, id=362, 188.80537pt x 366.46913pt>
 File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
 <use ../Parata/Schema Prog. Logica.png>
 Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
-357.
+363.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--384
+Underfull \hbox (badness 10000) in paragraph at lines 366--390
 
  []
 
 [13 <../Parata/Schema Prog. Logica.png>] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 425--428
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
 
  []
 
 [15] [16] [17] [18] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
  [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
  ("Relazione basi di dati.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
 Package rerunfilecheck Info: File `"Relazione basi di dati".out' has not change
 d.
 (rerunfilecheck)             Checksum: 3A7A5A376BDC65E9ED4F28C808BBC1FB;4127.
@@ -871,9 +856,9 @@ atteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/catharsis/cormorantgaramond
 fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb><C:/Users/
 Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/catharsis/cormorantgaramon
 d/CormorantGaramond-Regular.pfb>
-Output written on "Relazione basi di dati.pdf" (20 pages, 456803 bytes).
+Output written on "Relazione basi di dati.pdf" (20 pages, 460742 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
+ 434 PDF objects out of 1000 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
  487 words of extra memory for PDF output out of 10000 (max. 10000000)
 
