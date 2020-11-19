@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  19 NOV 2020 21:29
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -405,35 +405,35 @@ Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line
 340.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--369
+Underfull \hbox (badness 10000) in paragraph at lines 343--367
 
  []
 
-[11 <../Parata/Schema Prog. Logica.png>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+[11 <../Parata/Schema Prog. Logica.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 408--411
 
  []
 
-[13] [14] [15] [16] [17] ("Relazione basi di dati.aux") ) 
+[12] [13] [14] [15] [16] [17] ("Relazione basi di dati.aux") ) 
 Here is how much of TeX's memory you used:
- 3249 strings out of 492484
- 46265 string characters out of 3121149
- 137411 words of memory out of 3000000
- 7541 multiletter control sequences out of 15000+200000
+ 3248 strings out of 492484
+ 46252 string characters out of 3121149
+ 138407 words of memory out of 3000000
+ 7540 multiletter control sequences out of 15000+200000
  13229 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,8n,34p,812b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Matteo\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\
-Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
- <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1440.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Matteo\AppData\Local\MiK
-TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/Matteo/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione basi di dati.pdf" (17 pages, 231788 bytes).
+ <C:\Users\Matteo
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\U
+sers\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx120
+0.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecbx1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1440.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppData\Local\MiKTeX\2.
+9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Matteo\AppData\Loca
+l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/Matteo/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Relazione basi di dati.pdf" (17 pages, 231748 bytes).
 PDF statistics:
  379 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
