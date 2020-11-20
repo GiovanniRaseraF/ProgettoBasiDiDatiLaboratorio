@@ -113,9 +113,9 @@ Il seguente glossario definisce i termini più rilevanti che saranno l’input d
 \pagebreak
 
 \subsection{Riscrittura dei requisiti}
-In questa fase vengono tradotte le richieste della consegna in requisiti da soddisfare e viene definito il ruolo delle entità all’interno della base di dati.
+In questa fase vengono \textbf{tradotte le richieste della consegna in requisiti da soddisfare} e viene definito il ruolo delle entità all'interno della base di dati.\\
 \newline
-
+\renewcommand\arraystretch{1,5}
 \begin{tabular}{ |p{16 cm}| }
 \hline
 \multicolumn{1}{|c|}{\textbf{Riscrittura dei requisiti}} \\
@@ -169,40 +169,39 @@ Inoltre sarà presente il conteggio mensile delle ore lavorate.
 - Una volta effettuata la richiesta di assistenza, si pianifica il primo intervento assegnando un tecnico competente per risolvere quella tipologia di guasto, controllando che in quella data non ci sia un intervento programmato per lo stesso tecnico altrove.\\
 \hline
 \end{tabular}
+\newpage
 
 \subsection{Caso di studio} 
-	Per la realizzazione del sistema informativo è stato teorizzato un business-plan di un'azienda di piccole/medie dimensioni che opera a livello regionale.
+	Per la realizzazione del sistema informativo è stato \textit{teorizzato un business-plan} di un'azienda di piccole/medie dimensioni che opera a livello regionale.
 	Consideriamo la seguente situazione dopo 10 anni di attività:
 	\begin{itemize}
-		\item numero clienti totale: 10000 (fedeli e non);
-		\item numero tecnici totali: 75;
-		\item media clienti annuali: 1000;
-		\item media di 2 richieste di assistenza per cliente all'anno;
-		\item media di 3 interventi per ogni assistenza richiesta;
-		\item in media 300 clienti rimangono fedeli al nostro servizio;
-		\textbf{NB: DEVI INSERIRE LA DEFINIZIONE DI FEDELI NELLA TABELLA DEI TERMINI !!!!!!! ---> per fedeli si intende tutti quei clienti che faranno rifermento a noi come aziende per qualsiasi guasto negli anni a venire}
+		\item numero \textbf{clienti totale}: 10.000 (fedeli e non) \footnote[1]{\textbf{per fedeli si intende tutti quei clienti che faranno rifermento a noi come aziende per qualsiasi guasto negli anni a venire}};
+		\item numero \textbf{tecnici totali}: 75;
+		\item media \textbf{clienti annuali}: 10.00;
+		\item \textbf{media di 2 richieste di assistenza} per cliente all'anno;
+		\item \textbf{media di 3 interventi per ogni assistenza} richiesta;
+		\item in \textbf{media 300 clienti rimangono fedeli} al nostro servizio;
 	\end{itemize}
-	Supponiamo che dei 10000 clienti avuti in 10 anni, 300 siano rimasti fedeli a noi. Di conseguenza l'undicesimo anno operativo dell'azienda otterrà 3000+1000=4000 clienti (fedeli + nuovi clienti annuali, fedeli e non). Facendo così, avremo 4000*2=8000 assistenze totali  e quindi ciò implica 24000 interventi.\\
+	Supponiamo che dei 10.000 clienti avuti in 10 anni, 300 siano rimasti fedeli a noi. Di conseguenza l'undicesimo anno operativo dell'azienda otterrà 3.000+1.000=4.000 clienti (fedeli + nuovi clienti annuali, fedeli e non). Facendo così, avremo 4.000*2=8.000 assistenze totali e quindi 24.000 interventi.\\
 	Quest'ultimi vengono divisi tra i 75 tecnici, facendo sì che ognuno di essi abbia in media 320 interventi da eseguire in un anno.\\
-	Nel dodicesimo anno otteniamo un totale di 3300 clienti fedeli, arrivando a fine anno con 4300 clienti e 25800 interventi fatti, ovvero 344 a tecnico. Tutto ciò risulta essere troppo oppressivo per un lavoratore, quindi dobbiamo aumentare il numero di tecnici da assumere a fronte dell'aumento della clientela, aumentando così il volume dell'azienda stessa.\\
+	Nel dodicesimo anno otteniamo un totale di 3.300 clienti fedeli, arrivando a fine anno con 4.300 clienti e 25.800 interventi fatti, ovvero 344 a tecnico. Tutto ciò risulta essere troppo oppressivo per un lavoratore, quindi dobbiamo aumentare il numero di tecnici da assumere a fronte dell'aumento della clientela, aumentando così il volume dell'azienda stessa.\\
 	Se supponiamo che ogni anno vengono assunti e/o formati 6 nuovi dipendenti, abbiamo che il rapporto interventi/tecnici rimane sempre intorno ai 320 (ovvero ogni tecnico avrà 320 interventi all'anno).\\
 	Ad esempio il tredicesimo anno avremmo 87 operai con 27.600 interventi, cioè intorno ai 317 interventi per operaio.\\
 	Ultimo appunto importante riguarda la distinzione che è possibile fare tra i vari clienti.
 	Più in particolare del 100\% dei clienti, il 50\% risulta essere un ente pubblico mentre il restante 50\% è privato. Del 50\% pubblico, il suo 70\% fa riferimento alle aziende, mentre il 30\% agli enti pubblici.
 	
 	\subsection{Requisiti operazionali}
-	Le operazioni principali che prenderemo in considerazione sono:
+	Le \textbf{operazioni principali} che prenderemo in considerazione sono:
 	\begin{itemize}
-		\item operazione 1: date le informazioni di un nuovo cliente, inserirlo nella base di dati -> 19 volte a settimana;
-		\item operazione 2: date le informazioni necessarie fornite da un cliente, aggiungere una richiesta d'assistenza relativa ad una tipologia di problema -> 150 volte a settimana;
-		\item operazione 3: date le informazioni di una richiesta d'assistenza ed i tecnici disponibili, creare un nuovo intervento relativo alla richiesta d'assistenza -> 450 volte a settimana;
-		\item operazione 4: date le informazioni di un nuovo dipendente e delle tipologie di gusti che è capace di risolvere, aggiungerlo alla base di dati -> 6 all'anno;
-		\item operazione 5: dato il codice identificativo del cliente, visualizzare le relative richieste d'assistenza effettuate -> 30 a settimana;
-		\item operazione 6: 
-		  visualizzare il numero di ore mensili di lavoro effettuate da ogni tecnico -> 26 al mese
-		\item operazione 7: dato la tipologia di guasto, il numero di interventi eseguiti su di esso, ed i tecnici specializzati su quella tipologia, visualizzare per ogni tipologia guasto la relativa percentuale di forza lavoro disponibile a risolverla.  -> 1 volta all'anno. \\ Questo dato può essere utilizzato per vedere in quali reparti ci sono carenze di tecnici, andando così a mirare l'assunzione/training dei nuovi dipendenti;
-		\item operazione 8: dato il codice identificativo di un'assistenza, visualizzare lo storico degli interventi -> 10 volte al giorno, \\ Perché si vuole monitorare il più possibile l'impiego dei tecnici, cioè chi è impegnato e dove;
-		\item operazione 9: dato il codice identificativo di un cliente ed una data, visualizzare il tempo complessivo degli interventi effettuati da quel momento -> 1 volta a settimana;
+		\item \textbf{operazione 1}: date le informazioni di un nuovo cliente, inserirlo nella base di dati --> \textit{19 volte a settimana};
+		\item \textbf{operazione 2}: date le informazioni necessarie fornite da un cliente, aggiungere una richiesta d'assistenza relativa ad una tipologia di problema --> \textit{150 volte a settimana};
+		\item \textbf{operazione 3}: date le informazioni di una richiesta d'assistenza ed i tecnici disponibili, creare un nuovo intervento relativo alla richiesta d'assistenza --> \textit{450 volte a settimana};
+		\item \textbf{operazione 4}: date le informazioni di un nuovo dipendente e delle tipologie di gusti che è capace di risolvere, aggiungerlo alla base di dati --> \textit{6 all'anno};
+		\item \textbf{operazione 5}: dato il codice identificativo del cliente, visualizzare le relative richieste d'assistenza effettuate --> \textit{30 a settimana};
+		\item \textbf{operazione 6}: visualizzare il numero di ore mensili di lavoro effettuate da ogni tecnico --> \textit{26 al mese};
+		\item \textbf{operazione 7}: dato la tipologia di guasto, il numero di interventi eseguiti su di esso, ed i tecnici specializzati su quella tipologia, visualizzare per ogni tipologia guasto la relativa percentuale di forza lavoro disponibile a risolverla.  --> \textit{1 volta all'anno}. \\ Questo dato può essere utilizzato per vedere in quali reparti ci sono carenze di tecnici, andando così a mirare l'assunzione/training dei nuovi dipendenti;
+		\item \textbf{operazione 8}: dato il codice identificativo di una richiesta di assistenza, visualizzare lo storico degli interventi --> \textit{10 volte al giorno}. \\Si vuole monitorare il più possibile l'impiego dei tecnici, cioè chi è impegnato e dove;
+		\item \textbf{operazione 9}: dato il codice identificativo di un cliente ed una data, visualizzare il tempo complessivo degli interventi effettuati da quel momento --> \textit{1 volta a settimana};
 		
 	\end{itemize}
 
