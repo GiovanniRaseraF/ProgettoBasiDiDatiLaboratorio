@@ -6,32 +6,27 @@
 \usepackage{graphicx}
 
 \begin{document}
-	\subsection{Analisi schema ER NB DA AGGIUNGERE AL PUNTO 3.2!!!!!!!!!!!!!!!!!!!!}
-		Analisi della generalizzazione(VA BENE GIA QUELLO SCRITTO ---> AGGIUNTA ANALISI SCHEMA): l'entità Cliente mi rappresenta il sovrainsieme a cui facciamo riferimento. Esso viene poi classificato attraverso l'utilizzo di due specializzazioni, individuando così i suoi sottoinsiemi, ovvero tutti gli elementi che compongono l'insieme stesso. \\
-		Con la prima generalizzazione totale indichiamo che un Cliente deve essere una Persona Giuridica \textbf{o} un Singolo Cittadino (quindi persona fisica). Questa netta distinzione è data dalla totalità (indicata dalla freccia nera), partizionando l'insieme in due sottoinsiemi.\\
-		Analogo discorso viene fatto con la Persona Giuridica, specializzandola in Azienda ed Ente Pubblico.\\
-		Inoltre, entrambe le specializzazioni sono DISGIUNTE perché non può succedere che una persona giuridica sia allo stesso tempo una persona fisica.\\
-		Un caso critico che si può presentare a causa della sua forma (gerarchie di specializzazione) riguarda l'ereditarietà multipla. Questo problema però non viene riscontrato in questo tipo di schema in quanto non abbiamo entità che appartengono a più gerarchie di specializzazione.\\
-		Infine, è importante notare come tutte le entità ereditino gli attributi da cui derivano, più in particolare tutti gli attributi di Cliente verranno ereditati da qualsiasi entità appartenente a questa porzione di schema e le entità Azienda ed Ente Pubblico vengono individuate univocamente dagli attributi derivanti da Persona Giuridica.\\
+	\subsection{Analisi delle ridondanze ---> 4.4!!!!}
+	Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le ridondanze risultano essere utili perché possono essere informazioni più efficienti da ricavare direttamente invece che utilizzare apposite query per la loro determinazione. Essendo quindi derivabili, bisogna tenere aggiornata questa informazione.\\
+	Per tenere una ridondanza presente all'interno dello schema, dobbiamo analizzare tutti i costi relativi ad esso e confrontarli con quelli che si ottengono qualora si ottenesse quella informazione in modo derivato.
 	
-		Analisi entità debole (VA BENE GIA QUELLO SCRITTO ---> AGGIUNTA ANALISI SCHEMA)
-		Prima cosa da notare è la scelta di un attributo opzionale (dataFineAssistenza) in quanto esso verrà aggiunto una volta terminato l'ultimo intervento.
-		Inoltre, la relazione \textit{"composta da"} è una relazione \textbf{molti a uno} perché una Richiesta di Assistenza può essere composta da molti interventi, mentre un intervento 
-		appartiene ad una sola specifica richiesta.\\
+	\subsubsection{Tabella dei volumi}
+	Analizziamo tutte le componenti che si interfacciano con la ridondanza: \\ \newline
+	\medskip
+	\renewcommand\arraystretch{1,5}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Elementi coinvolti}}\\
+		\hline
+		Tecnico & \centering{E} & .\\
+		\hline
+		gestito da & \centering{R} & .\\
+		\hline
+		Intervento & \centering{E} & .\\
+		\hline
 		
-		Analisi ciclo: in questa porzione di schema ER troviamo un ciclo. Esso è composto dalle seguenti Entità: 
-		\begin{itemize}
-			\item Richiesta d'Assistenza;
-			\item Intervento;
-			\item Tecnico;
-			\item Tipologia Guasto;
-		\end{itemize}
 		
-		Intervento è relazionato a Tecnico tramite \textit{"gestito da"}, una relazione \textbf{uno a molti}. Infatti, un Intervento è gestito da un singolo Tecnico in giornata, mentre un Tecnico può gestire uno o più Interventi.\\
-		Quest'ultimo però può risolvere solo un numero finito di tipologie di problemi, descritti dalla relazione \textbf{molti a molti} \textit{"è capace di risolvere"}, dove un Tecnico è in grado di risolvere più problemi, ed essi possono essere risolti da più Tecnici.\\
-		Quest'ultimo fa sì che il ciclo non sia problematico perché un Tecnico che non ha le conoscenze per riparare un Guasto non può farlo.\\
-		Infine, la Tipologia Guasto è legato con Richiesta d'Assistenza tramite la relazione \textbf{uno a molti} \textit{"inerente"}, dove una Tipologia Guasto può essere inerente a più Richieste d'Assistenza, mentre una Richiesta fa riferimento ad una sola Tipologia di Guasto.
-	
-	
+		
+	\end{tabular}
 			
 \end{document}
