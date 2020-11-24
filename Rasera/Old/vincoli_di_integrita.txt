@@ -1,0 +1,5 @@
+I vincoli d'integrità sono tutte le proprietà di una base di dati esprimibili 
+tramite dei predicati che devono essere veri per garantire la validità dello schema.
+Di seguito sono riportati i vincoli d'integrità presenti nel modello ER:
+
+- 
