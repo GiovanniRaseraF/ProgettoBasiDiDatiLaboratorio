@@ -391,8 +391,10 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 	\subsection{Tabella delle operazioni}
 	Per ogni operazione indicata precedentemente, andiamo a definire la frequenza con la quale essa viene eseguita e la sua tipologia:
 	\begin{itemize}
-		\item \textbf{Batch}: operazioni che si possono "ignorare", ovvero vengono svolte quando il sistema non lavora in pieno regime (ad esempio tarda sera). Facendo così, si lascia spazio alle operazioni più importanti;
-		\item \textbf{Interactive}: operazioni più importanti, dove la velocità di esecuzione deve essere veloce. Il tempo di risposta quindi deve essere veloce.
+		\item \textbf{Batch}: operazioni che si possono "ignorare", ovvero vengono svolte quando il sistema non lavora in pieno regime (ad esempio tarda sera). Facendo così, si lascia spazio alle operazioni più importanti;\\
+\textbf{Utilizzeremo una " B "}.
+		\item \textbf{Interactive}: operazioni più importanti, dove la velocità di esecuzione deve essere veloce. Il tempo di risposta quindi deve essere veloce.\\
+\textbf{Utilizzeremo una " I "}.
 	\end{itemize}
 		\renewcommand\arraystretch{2}
 		\begin{tabular}{ |p{5cm}|p{2cm}|p{5cm}| }
@@ -422,6 +424,132 @@ E' necessario calcolare il carico applicativo per scegliere tra le varie tipolog
 
 
 \subsection{Analisi delle ridondanze}
+Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le ridondanze risultano essere utili perché possono essere informazioni più efficienti da ricavare direttamente invece che utilizzare apposite query per la loro determinazione. Essendo quindi derivabili, bisogna tenere aggiornata questa informazione.\\
+	Per tenere una ridondanza presente all'interno dello schema, dobbiamo analizzare tutti i costi relativi ad esso e confrontarli con quelli che si ottengono qualora si ottenesse quella informazione in modo derivato.
+	
+	\subsubsection{Tabella dei volumi}
+	Analizziamo tutte le componenti che si interfacciano con la ridondanza: \\ \newline
+	\medskip
+	\renewcommand\arraystretch{1,5}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Elementi coinvolti}}\\
+		\hline
+		Tecnico & \centering{E} & 75\\
+		\hline
+		gestito da & \centering{R} & 600.000\\
+		\hline
+		Intervento & \centering{E} & 600.000\\
+		\hline
+	\end{tabular}
+	
+	\subsubsection{Tabella delle operazioni}	
+	Analizziamo tutte le operazioni che agiscono direttamente con la ridondanza: \\ \newline
+	\medskip
+	\renewcommand\arraystretch{1,5}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Operazioni coinvolte}}\\
+		\hline
+		Operazione 3 & I & 450 a settimana\\
+		\hline
+		Operazione 6 & B & 1 al giorno\\
+		\hline
+	\end{tabular}
+
+	\subsubsection{Tabella degli accessi in riferimento all'operazione 3}
+	Il costo di una operazione (calcolato usando una tabella dei volumi) e lo schema di navigazione possono essere riassunti nella tabella degli accessi: \\ \newline
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi senza la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & E & 1 & R \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & W \\
+		\hline
+	\end{tabular} \\
+	\newline
+	\textbf{Analizziamo ora i costi:}
+	\begin{itemize}
+		\item 75 * 2 = 150 (costi in riferimento all'accesso a Tecnico e gestito da)
+		\item 75 * 2 = 150 (costi in riferimento alla scrittura in Intervento)
+		\item 150 + 150 = 300 (costo totale giornaliero dell'operazione)
+	\end{itemize}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi con la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & E & 1 & W \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & W \\
+		\hline
+	\end{tabular} \\
+	\newline
+	\textbf{Analizziamo ora i costi:}
+	\begin{itemize}
+		\item 75 * 2 = 150 (costi in riferimento ala modifica di Tecnico)
+		\item 75 (costi in riferimento alla relazione gestito da)
+		\item 75 * 2 = 150 (costi in riferimento alla scrittura in Intervento)
+		\item 150 + 75 + 150 = 375 (costo totale giornaliero dell'operazione)
+	\end{itemize}
+	
+	Come possiamo notare, il costo con la presenza di ridondanza è leggermente maggiore (esattamente del 25\%), ma come vedremo nella prossima operazione, questo ci comporterà un beneficio.
+	
+	\subsubsection{Tabella degli accessi in riferimento all'operazione 6}
+	Il costo di una operazione (calcolato usando una tabella dei volumi) e lo schema di navigazione possono essere riassunti nella tabella degli accessi: \\ 
+	\newline
+	\medskip
+	\renewcommand\arraystretch{1,5}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi in presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & E & 1 & R \\
+		\hline
+	\end{tabular}\\
+	\newline
+	Tenendo in considerazione che il costo di una operazione di read è uguale ad un accesso, con la presenza della ridondanza, ottenere l'informazione derivabile (Tecnico->oreLavorateMensilmente) ci viene a costare esattamente 75 accessi al giorno cioè:
+	\begin{itemize}
+		\item 75 * 1 = 75 accessi giornalieri
+		\item 75 * 26 = 1950 accessi totali mensili
+	\end{itemize}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi senza la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & E & 1 & R \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & R \\
+		\hline
+	\end{tabular} \\
+	\newline
+	Senza la presenza della ridondanza, è necessario:
+	\begin{itemize}
+		\item 75 * 3 = 225 accessi al giorno
+		\item 225 * 26 = 5850 accessi mensili
+	\end{itemize}
+	\textbf{Conclusioni:}
+	\begin{itemize}
+		\item dall'analisi svolta, vediamo come la presenza della ridondanza risulti conveniente in quanto il numero di accessi è inferiore del 67\%
+		\item inoltre, c'è da tenere in considerazione che ogni volta che si effettua l'accesso alla tabella degli Interventi, bisogna filtrare 600.000 righe
+	\end{itemize}
+	
+
+
 \subsubsection{Tabella dei volumi}
 \subsubsection{Tabella delle operazioni}
 \subsubsection{Tabella degli accessi: operazione 1}
@@ -436,13 +564,29 @@ Per tradurre lo schema E-R bisogna rimuovere le varie generalizzazioni:\\
 	\item Le entità Persona Giuridica e Singolo Cittadino vengono eliminate e le loro proprietà vengono aggiunte a Cliente. \\Per distinguerle viene utilizzato come superchiave la Partita Iva, nel caso in cui si tratta di una persona giuridica, e CodiceFiscale nel caso in cui si tratta di un singolo cittadino.\\ L'attributo tipo di Persona Giuridica diventa opzionale a seconda della tipologie di superchiave.\\
 	Si effettua questo accorporamento perchè le attività svolte sono identiche.
 \end{itemize}
-PULLO
 
 \subsection{Partizionamento /accorpamento}
 
 \subsection{Regole di derivazione}
-
+\textbf{Tecnico->oreLavorateMensilmente:} attributo derivato che contiene la somma delle ore che un Tecnico ha lavorato nel mese corrente ed è un valore che deve essere maggiore o uguale a zero.\\
+Vale sempre che: 
+\begin{itemize}
+	\item  0 <= \textbf{Tecnico->oreLavorateMensilmente}
+		\begin{itemize}\item sarà zero nel momento in cui il Tecnico non ha ancora lavorate nel mese corrente\end{itemize}
+	\item Somma(\textbf{Intervento->durata} inerente al tecnico interessato) = \textbf{Tecnico->oreLavorateMensilmente}
+		\begin{itemize}
+		\item verrà aggiornato ogni volta che viene aggiunto un Intervento a qui un Tecnico lavorerà
+		\end{itemize}
+\end{itemize}
 \subsection{Vincoli d'integrità}
+	\begin{enumerate}
+	\item Nel ciclo tra [Richiesta d'Assistenza, Intervento, Tecnico, Tipologia Guasto]
+		\begin{itemize}
+		\item Un Tecnico non deve essere assegnato ad un Intervento che fa riferimento ad una Richiesta d'Assistenza inerente ad una Tipologia Guasto che quel determinato tecnico non sa risolvere
+		\end{itemize}
+	\item Dopo che ho asseganto un valore all'attibuto \textbf{Richiesta d'Assistenza->dataFineAssistenza} non possono esistere degli Interventi inerenti a quella Richiesta che hanno l'attributo\\
+\textbf{Intervento->data} maggiore di \textbf{Richiesta d'Assistenza->dataFineAssistenza}
+\end{enumerate}
 
 \subsection{Vincoli d'integrità aggiuntivi dello schema E-R ristrutturato}
 
