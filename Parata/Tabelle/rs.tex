@@ -1,0 +1,58 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[total={170mm,267mm},top=15mm,bottom=15mm,left=21mm,right=21mm]{geometry}
+% Please add the following required packages to your document preamble:
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. 
+
+\begin{document}
+
+	\begin{table}[]
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Utente}}}                                                               \\ \hline
+			\multicolumn{4}{|l|}{}                                                                                                                    \\
+			\multicolumn{4}{|l|}{\multirow{-2}{*}{Utente(\underline{codiceFiscale},\underline{partitaIva},indirizzo,recapitoTelefonico,codiceFiscaleReferente,nome,cognome)}} \\
+			\multicolumn{4}{|l|}{Unique--\textgreater codiceFiscaleReferente}                                                                         \\
+			\multicolumn{4}{|l|}{}                                                                                                         \\
+			\multicolumn{4}{|l|}{}                                                                                                         \\ 
+			\multicolumn{4}{|l|}{}                                                                                                       \\             
+			\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater indirizzo, recapitoTelefonico}}                                               \\ \hline
+		\end{tabular}
+	\end{table}
+
+
+	\begin{table}[]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Richiesta d'Assistenza}}}                                                               \\ \hline
+		\multicolumn{4}{|l|}{}                                                                                                                    \\
+		\multicolumn{4}{|l|}{\multirow{-2}{*}{Richiesta d'Assistenza(\underline{codiceRichiesta},data,dataFineAssistenza,\textit{codiceCliente*},\textit{codiceGuasto*}, seriale)}} \\                                                                       
+		\multicolumn{4}{|l|}{}                                                                                                         \\
+		\multicolumn{4}{|l|}{}                                                                                                         \\ 
+		\multicolumn{4}{|l|}{}                                          \\
+		\multicolumn{4}{|l|}{}                                          \\                         
+		\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater data, seriale}} \\
+		\multicolumn{4}{|l|}{\multirow{-6}{*}{codiceCliente FK--\textgreater Cliente.codiceFiscale OR Cliente.partitaIva, seriale}}                                                       \\  
+		\multicolumn{4}{|l|}{\multirow{-6}{*}{codiceGuasto FK--\textgreater TipologiaGuasto.codiceGuasto}}                                              
+		\\ \hline
+	\end{tabular}
+\end{table}	
+\begin{table}[]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Intervento}}}                                                               \\ \hline
+		\multicolumn{4}{|l|}{}                                                                                                                    \\
+		\multicolumn{4}{|l|}{\multirow{-2}{*}{Intervento(\underline{codiceRichiesta},\underline{numeroIntervento},modalità,data,durata,\textit{cfTecnico*})}} \\                                                                       
+		\multicolumn{4}{|l|}{}                                                                                                         \\
+		\multicolumn{4}{|l|}{}                                                                                                         \\ 
+		\multicolumn{4}{|l|}{}                                          \\
+		\multicolumn{4}{|l|}{}                                          \\                         
+		\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater modalità,data,durata}} \\
+		\multicolumn{4}{|l|}{\multirow{-6}{*}{cfTecnico FK--\textgreater Tecnico.codiceFiscale}}                        \\  
+	 \hline
+	\end{tabular}
+\end{table}	
+\end{document}
