@@ -17,6 +17,10 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - [Issues](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues)
 
 # Risolti
+- [Problema reificazione della relazione di Guasto, Assistenza, Cliente](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/5)
+- [Durata della risoluzione di un Guasto ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/3)
+- [Sezione Guasto è entità debole ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/2)
+
 - [Modellazione del Cliente come entità giudiziaria o come aziende ?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/6)
 - [Problema eliminazione cliente/dipendente](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/1)
 - [Aggiunta di un intervento, durante la creazione della richiesta, o ogni giorno?](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/4)
