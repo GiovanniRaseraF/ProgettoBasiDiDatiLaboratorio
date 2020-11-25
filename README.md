@@ -11,7 +11,7 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - [RELAZIONE - CORRENTE](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Relazione/Relazione%20basi%20di%20dati.pdf)
 
 # TODO
-- Da cambiare la sezione dei Vincoli d'integrità(Il nuovo schema non è compatibile con i vincoli precedenti)
+- Progetto Logico
 
 # Problemi
 - [Issues](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues)
