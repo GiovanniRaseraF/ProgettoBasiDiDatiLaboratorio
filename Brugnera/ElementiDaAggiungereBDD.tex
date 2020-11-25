@@ -30,15 +30,109 @@
 	Analizziamo tutte le operazioni che agiscono direttamente con la ridondanza: \\ \newline
 	\medskip
 	\renewcommand\arraystretch{1,5}
-	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|}
 		\hline
-		\multicolumn{4}{|c|}{\textbf{Operazioni coinvolte}}\\
+		\multicolumn{3}{|c|}{\textbf{Operazioni coinvolte}}\\
+		Operazione 3 & I & 450 a settimana\\
 		\hline
-		Operazione 3 & \centering{I} & 450 a settimana & perché ogni volta che assegno un incarico ad un tecnico, sommo le ore totali\\
-		\hline
-		Operazione 6 & \centering{B} & 1 al giorno & perché è un'operazione svolta per ottenere l'informazione ridondante\\
+		Operazione 6 & \centering{B} & 1 al giorno\\
 		\hline
 	\end{tabular}
+
+	\subsubsection{Tabella degli accessi in riferimento all'operazione 3}
+	Il costo di una operazione (calcolato usando una tabella dei volumi) e lo schema di navigazione possono essere riassunti nella tabella degli accessi: \\ \newline
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi senza la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & \centering{E} & 1 & R \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & W \\
+		\hline
+	\end{tabular} \\
+	Analizziamo ora i costi:
+	\begin{itemize}
+		\item 75 * 2 = 150 (costi in riferimento all'accesso a Tecnico e gestito da)
+		\item 75 * 2 = 150 (costi in riferimento alla scrittura in Intervento)
+		\item 150 + 150 = 300 (costo totale giornaliero dell'operazione)
+	\end{itemize}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi con la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & \centering{E} & 1 & W \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & W \\
+		\hline
+	\end{tabular} \\
+	Analizziamo ora i costi:
+	\begin{itemize}
+		\item 75 * 2 = 150 (costi in riferimento ala modifica di Tecnico)
+		\item 75 (costi in riferimento alla relazione gestito da)
+		\item 75 * 2 = 150 (costi in riferimento alla scrittura in Intervento)
+		\item 150 + 75 +150 = 375 (costo totale giornaliero dell'operazione)
+	\end{itemize}
+	
+	Come possiamo notare, il costo con la presenza di ridondanza è leggermente maggiore (esattamente del 25\%), ma come vedremo nella prossima operazione, questo ci comporterà un beneficio.
+	
+	\subsubsection{Tabella degli accessi in riferimento all'operazione 6}
+	Il costo di una operazione (calcolato usando una tabella dei volumi) e lo schema di navigazione possono essere riassunti nella tabella degli accessi: \\ \newline
+	\medskip
+	\renewcommand\arraystretch{1,5}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi in presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & \centering{E} & 1 & R \\
+		\hline
+	\end{tabular}\\
+	\newline
+	Tenendo in considerazione che il costo di una operazione di read è uguale ad un accesso, con la presenza della ridondanza, ottenere l'informazione derivabile (Tecnico->oreLavorateMensilmente) ci viene a costare esattamente 75 accessi al giorno cioè:
+	\begin{itemize}
+		\item 75 * 1 = 75 accessi giornalieri
+		\item 75 * 26 = 1950 accessi totali mensili
+	\end{itemize}
+	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Tabella degli accessi senza la presenza di ridondanza}}\\
+		\hline
+		Concept & Type & Accesses & Type \\
+		\hline
+		Tecnico & \centering{E} & 1 & R \\
+		\hline
+		gestito da & R & 1 & R \\ 
+		\hline
+		Intervento & E & 1 & R \\
+		\hline
+	\end{tabular} \\
+	\newline
+	Senza la presenza della ridondanza, è necessario:
+	\begin{itemize}
+		\item 75 * 3 = 225 accessi al giorno
+		\item 225 * 26 = 5850 accessi mensili
+	\end{itemize}
+	
+	Conclusioni: vista l'analisi svolta, è facile capire come la presenza della ridondanza risulti conveniente in quanto il numero di accessi è inferiore del 67\%.\\
+	Inoltre, c'è da tenere in considerazione che ogni volta che si effettua l'accesso alla tabella degli Interventi, bisogna filtrare 600.000 righe.
+	
+
+
+
+	
+	
+	
+	
+	
 	
 			
 \end{document}

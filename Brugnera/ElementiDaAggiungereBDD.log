@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  24 NOV 2020 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  25 NOV 2020 16:23
 entering extended mode
 **./ElementiDaAggiungereBDD.tex
 (ElementiDaAggiungereBDD.tex
@@ -255,44 +255,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--28
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 37--38
-\T1/cmr/m/n/10 tec-ni-co, som-mo le ore
- []
-
-
-Underfull \hbox (badness 7486) in paragraph at lines 39--40
-[]\T1/cmr/m/n/10 perché è un'o-pe-ra-zio-ne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--42
+Underfull \hbox (badness 10000) in paragraph at lines 30--41
 
  []
 
 
-Overfull \hbox (37.377pt too wide) in paragraph at lines 30--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--58
+
+ []
+
+
+Overfull \hbox (33.48906pt too wide) in paragraph at lines 43--58
+[] 
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+9.
+("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
+
+Overfull \hbox (33.48906pt too wide) in paragraph at lines 63--77
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--101
+
+ []
+
+
+Overfull \hbox (37.377pt too wide) in paragraph at lines 87--101
  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--101
+
  []
 
 [1
 
 {C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(ElementiDaAggiungereBDD.aux) ) 
+Overfull \hbox (33.48906pt too wide) in paragraph at lines 105--120
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--120
+
+ []
+
+[2] (ElementiDaAggiungereBDD.aux) ) 
 Here is how much of TeX's memory you used:
- 3150 strings out of 492484
- 44453 string characters out of 3121149
- 129375 words of memory out of 3000000
- 7471 multiletter control sequences out of 15000+200000
+ 3168 strings out of 492484
+ 44793 string characters out of 3121149
+ 137375 words of memory out of 3000000
+ 7486 multiletter control sequences out of 15000+200000
  6719 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,8n,34p,811b,134s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Matteo\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppData\
-Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
-Output written on ElementiDaAggiungereBDD.pdf (1 page, 31945 bytes).
+ 51i,8n,34p,811b,144s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Matteo\AppData\Local\MiKTeX\2.9\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Matteo\AppData\Local\M
+iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Matteo\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/M
+atteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb>
+Output written on ElementiDaAggiungereBDD.pdf (2 pages, 49918 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
