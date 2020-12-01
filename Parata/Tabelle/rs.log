@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  25 NOV 2020 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.2.3)  1 DEC 2020 10:59
 entering extended mode
 **./rs.tex
 (rs.tex
@@ -234,55 +234,55 @@ pdf.mkii"
 )
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 12.
+               Default added (so using `tbp') on input line 13.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 13.
+(Font)              <10.95> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
+(Font)              <6> on input line 14.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-8.
+9.
 ("C:\Users\Matteo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 18.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 19.
 
-Overfull \hbox (5.12715pt too wide) in paragraph at lines 13--24
+Overfull \hbox (34.93552pt too wide) in paragraph at lines 14--25
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 27.
+               Default added (so using `tbp') on input line 28.
 
 
-Overfull \hbox (19.6864pt too wide) in paragraph at lines 28--42
+Overfull \hbox (19.6864pt too wide) in paragraph at lines 29--43
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 43.
+               Default added (so using `tbp') on input line 44.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 58.
+               Default added (so using `tbp') on input line 59.
 
 
-Overfull \hbox (40.68425pt too wide) in paragraph at lines 59--71
+Overfull \hbox (40.68425pt too wide) in paragraph at lines 60--72
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 72.
+               Default added (so using `tbp') on input line 73.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 85.
+               Default added (so using `tbp') on input line 86.
 
 [1{C:/Users/Matteo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (rs.aux)
  ) 
@@ -299,7 +299,7 @@ s/cm/cmbx10.pfb><C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmmi10.pfb><C:/Users/Matteo/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Matteo/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on rs.pdf (1 page, 54400 bytes).
+Output written on rs.pdf (1 page, 54436 bytes).
 PDF statistics:
  22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
