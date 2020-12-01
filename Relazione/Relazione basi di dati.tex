@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
 \usepackage{Cormorant Garamond}
 \usepackage{titling}
 \newcommand{\subtitle}[1]{%
@@ -591,7 +593,90 @@ Vale sempre che:
 \subsection{Vincoli d'integrità aggiuntivi dello schema E-R ristrutturato}
 
 \subsection{Modello relazionale}
-
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Cliente}}}
+	\\
+	\hline
+	\\                       
+	Cliente(\underline{codiceFiscale/partitaIva},indirizzo,recapitoTelefonico,codiceFiscaleReferente,nome,cognome, tipo) \newline  \\               
+	Unique--\textgreater codiceFiscaleReferente
+	\\
+	NotNull--\textgreater indirizzo, recapitoTelefonico
+	\\
+	\\
+	\hline
+\end{tabular}
+\\ \\ \\
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Richiesta d'Assistenza}}}
+	\\
+	\hline  
+	\\               
+	Richiesta d'Assistenza(\underline{codiceRichiesta},data,dataFineAssistenza,\textit{codiceCliente*},\textit{codiceGuasto*}, seriale) \\               
+	NotNull--\textgreater data, seriale \\ 
+	codiceCliente FK--\textgreater Cliente.partitaIva/codiceFiscale \\
+	codiceGuasto FK--\textgreater TipologiaGuasto.codiceGuasto
+	\\
+	\\
+	\hline
+\end{tabular}
+\\ \\ \\
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Intervento}}}
+	\\
+	\hline
+	\\                       
+	Intervento(\underline{codiceRichiesta},\underline{numeroIntervento},modalità,data,durata,\textit{cfTecnico*}
+	\\               
+	NotNull--\textgreater modalità,data,durata
+	\\
+	cfTecnico FK--\textgreater Tecnico.codiceFiscale
+	\\ \\
+	\hline
+\end{tabular}
+\\ \\ \\
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Tecnico}}}
+	\\
+	\hline
+	\\                       
+	Tecnico(\underline{codiceFiscale},nome,cognome,indirizzo,recapitoTelefonico,dataAssunione,\\oreLavorateMensilmente)
+	\\               
+	NotNull--\textgreater nome,cognome,indirizzo,recapitoTelefonico,dataAssunione,oreLavorateMensilmente
+	\\
+	cfTecnico FK--\textgreater Tecnico.codiceFiscale
+	\\ \\
+	\hline
+\end{tabular}
+\\ \\ \\
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{è capace di risolvere}}}
+	\\
+	\hline
+	\\                       
+	è capace di risolvere(\underline{codiceFiscale},\underline{codiceGuasto}
+	\\ \\
+	\hline
+\end{tabular}
+\\ \\ \\
+\begin{tabular}{|p{\textwidth}|}
+	\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Tipologia Guasto}}}
+	\\
+	\hline
+	\\                       
+	Tipologia Guasto(\underline{codiceGuasto},descrizione) 
+	\\               
+	NotNull--\textgreater descrizione
+	\\
+	\\
+	\hline
+\end{tabular}
 
 \subsection{Regole di derivazione}
 

@@ -1,6 +1,8 @@
 \documentclass[a4paper,11pt]{report}
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
 \usepackage[total={170mm,267mm},top=15mm,bottom=15mm,left=21mm,right=21mm]{geometry}
 % Please add the following required packages to your document preamble:
 \usepackage{multirow}
@@ -9,9 +11,9 @@
 
 \begin{document}
 
-	
+
 	\begin{table}[]
-		\begin{tabular}{|l|l|l|l|}
+	\begin{tabularx}{\textwidth}{|l|l|l|l|X}
 			\hline
 			\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Cliente}}}                                                               \\ \hline
 			\multicolumn{4}{|l|}{}                                                                                                                    \\
@@ -21,12 +23,11 @@
 			\multicolumn{4}{|l|}{}                                                                                                         \\ 
 			\multicolumn{4}{|l|}{}                                                                                                       \\             
 			\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater indirizzo, recapitoTelefonico}}                                               \\ \hline
-		\end{tabular}
+		\end{tabularx}
 	\end{table}
 
-
 	\begin{table}[]
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabularx}{\textwidth}{|l|l|l|l|X}
 		\hline
 		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Richiesta d'Assistenza}}}                                                               \\ \hline
 		\multicolumn{4}{|l|}{}                                                                                                                    \\
@@ -39,10 +40,11 @@
 		\multicolumn{4}{|l|}{\multirow{-6}{*}{codiceCliente FK--\textgreater Cliente.codiceFiscale OR Cliente.partitaIva, seriale}}                                                       \\  
 		\multicolumn{4}{|l|}{\multirow{-6}{*}{codiceGuasto FK--\textgreater TipologiaGuasto.codiceGuasto}}                                              
 		\\ \hline
-	\end{tabular}
+	\end{tabularx}
 \end{table}	
 \begin{table}[]
-	\begin{tabular}{|l|l|l|l|}
+	
+\begin{tabularx}{\textwidth}{|l|l|l|l|X}
 		\hline
 		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Intervento}}}                                                               \\ \hline
 		\multicolumn{4}{|l|}{}                                                                                                                    \\
@@ -54,10 +56,10 @@
 		\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater modalità,data,durata}} \\
 		\multicolumn{4}{|l|}{\multirow{-6}{*}{cfTecnico FK--\textgreater Tecnico.codiceFiscale}}                        \\  
 	 \hline
-	\end{tabular}
+	\end{tabularx}
 \end{table}	
 \begin{table}[]
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabularx}{\textwidth}{|l|l|l|l|X}
 		\hline
 		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Tecnico}}}                                                               \\ \hline
 		\multicolumn{4}{|l|}{}                                                                                                                    \\
@@ -68,10 +70,10 @@
 		\multicolumn{4}{|l|}{}                                          \\                         
 		\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater nome,cognome,indirizzo,recapitoTelefonico,dataAssunione,oreLavorateMensilmente}} \\ 
 		\hline
-	\end{tabular}
+	\end{tabularx}
 \end{table}
 \begin{table}[]
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabularx}{\textwidth}{|l|l|l|l|X}
 		\hline
 		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{è capace di risolvere}}}                                                               \\ \hline
 		\multicolumn{4}{|l|}{}                                                                                                                    \\
@@ -81,20 +83,19 @@
 		\multicolumn{4}{|l|}{}                                          \\
 		\multicolumn{4}{|l|}{}                                          \\                          
 		\hline
-	\end{tabular}
+	\end{tabularx}
 \end{table}
-\begin{table}[]
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		\multicolumn{4}{|l|}{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Tipologia Guasto}}}                                                               \\ \hline
-		\multicolumn{4}{|l|}{}                                                                                                                    \\
-		\multicolumn{4}{|l|}{\multirow{-2}{*}{Tipologia Guasto(\underline{codiceGuasto},descrizione)}} \\                                                                       
-		\multicolumn{4}{|l|}{}                                                                                                         \\
-		\multicolumn{4}{|l|}{}                                                                                                         \\ 
-		\multicolumn{4}{|l|}{}                                          \\
-		\multicolumn{4}{|l|}{}                                          \\                         
-		\multicolumn{4}{|l|}{\multirow{-6}{*}{NotNull--\textgreater descrizione}} \\ 
-		\hline
-	\end{tabular}
-\end{table}
+
+\begin{tabular}{|p{\textwidth}|}
+\hline
+	{\cellcolor[HTML]{a3cbf8}{\color[HTML]{000000} \textbf{Tipologia Guasto}}}
+	\\
+	\\                       
+	Tipologia Guasto(\underline{codiceGuasto},descrizione) \newline \\ \\               
+	NotNull--\textgreater descrizione
+	\\
+	\\
+\hline
+\end{tabular}
+
 \end{document}
