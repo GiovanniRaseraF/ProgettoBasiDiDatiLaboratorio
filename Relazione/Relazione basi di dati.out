@@ -42,20 +42,21 @@
 \BOOKMARK [3][-]{subsubsection.4.14.3}{Terza forma normale\(3FN\)}{subsection.4.14}% 42
 \BOOKMARK [1][-]{section.5}{Progettazione fisica}{}% 43
 \BOOKMARK [2][-]{subsection.5.1}{Data Definition Language \(DDL\)}{section.5}% 44
-\BOOKMARK [2][-]{subsection.5.2}{Indici}{section.5}% 45
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Indici implementati}{subsection.5.2}% 46
-\BOOKMARK [2][-]{subsection.5.3}{UDF}{section.5}% 47
-\BOOKMARK [2][-]{subsection.5.4}{Operazioni}{section.5}% 48
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Operazione 1: inserisci cliente}{subsection.5.4}% 49
-\BOOKMARK [2][-]{subsection.5.5}{Trigger}{section.5}% 50
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Evento 1}{subsection.5.5}% 51
-\BOOKMARK [2][-]{subsection.5.6}{Pulizia}{section.5}% 52
-\BOOKMARK [3][-]{subsubsection.5.6.1}{Implementazione}{subsection.5.6}% 53
-\BOOKMARK [1][-]{section.6}{Implementazione}{}% 54
-\BOOKMARK [2][-]{subsection.6.1}{Popolazione della base di dati}{section.6}% 55
-\BOOKMARK [2][-]{subsection.6.2}{Connessione alla base di dati}{section.6}% 56
-\BOOKMARK [2][-]{subsection.6.3}{Preparazione iniziale}{section.6}% 57
-\BOOKMARK [2][-]{subsection.6.4}{Cliente}{section.6}% 58
-\BOOKMARK [2][-]{subsection.6.5}{Disconnessione dalla base dei dati}{section.6}% 59
-\BOOKMARK [1][-]{section.7}{Analisi dei dati}{}% 60
-\BOOKMARK [1][-]{section.8}{Bibliografia}{}% 61
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Clienti}{subsection.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.2}{Indici}{section.5}% 46
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Indici implementati}{subsection.5.2}% 47
+\BOOKMARK [2][-]{subsection.5.3}{UDF}{section.5}% 48
+\BOOKMARK [2][-]{subsection.5.4}{Operazioni}{section.5}% 49
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Operazione 1: inserisci cliente}{subsection.5.4}% 50
+\BOOKMARK [2][-]{subsection.5.5}{Trigger}{section.5}% 51
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Evento 1}{subsection.5.5}% 52
+\BOOKMARK [2][-]{subsection.5.6}{Pulizia}{section.5}% 53
+\BOOKMARK [3][-]{subsubsection.5.6.1}{Implementazione}{subsection.5.6}% 54
+\BOOKMARK [1][-]{section.6}{Implementazione}{}% 55
+\BOOKMARK [2][-]{subsection.6.1}{Popolazione della base di dati}{section.6}% 56
+\BOOKMARK [2][-]{subsection.6.2}{Connessione alla base di dati}{section.6}% 57
+\BOOKMARK [2][-]{subsection.6.3}{Preparazione iniziale}{section.6}% 58
+\BOOKMARK [2][-]{subsection.6.4}{Cliente}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.5}{Disconnessione dalla base dei dati}{section.6}% 60
+\BOOKMARK [1][-]{section.7}{Analisi dei dati}{}% 61
+\BOOKMARK [1][-]{section.8}{Bibliografia}{}% 62

@@ -693,13 +693,28 @@ Vale sempre che:
 
 \subsection{Normalizzazione}
 \subsubsection{Prima forma normale(1FN)}
+	Per vedere se è in Prima Forma Normale, dobbiamo semplicemente controllare che tutti gli attributi dello schema abbiano domini "atomici", ovvero che non siano composti o multivalore. \\
+	E' questo il caso.
 \subsubsection{Seconda forma normale(2FN)}
+	Il modello logico relazionale è in Seconda Forma Normale perché ogni attributo non-primo, cioè non appartenente a nessuna chiave, dipende completamente da ogni chiave (ovvero non dipende solamente da una parte di chiave).
 \subsubsection{Terza forma normale(3FN)}
-
+	Il modello risulta essere in Terza Forma Normale in quanto, per ogni dipendenza funzionale (non banale) Y-->Z definita su di esso, Y è una superchiave oppure ogni attributo in Z è primo, cioè contenuto in almeno una chiave del modello.
 \newpage
 \section{Progettazione fisica}
 \rule{\linewidth}{1.5pt}
 \subsection{Data Definition Language (DDL)}
+	Nell'SQL, la definizione dei dati o DDL è una sintassi per creare e modificare oggetti nel database come tabelle, indici e utenti. Esso è legato alla creazione del dizionario dei dati e l'eventuale definizione delle strutture di memorizzazione e dei metodi di accesso ai dati e rappresenta il primo passo della progettazione fisica.	\\
+	Di seguito elencheremo tutti strutture ottenute tramite DDL:
+	
+	\subsubsection{Clienti}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{Immagini SQL/Clienti}
+			\caption{Definizione tabella Clienti in SQL}
+			\label{clientisql}
+		\end{figure}
+		Di seguito viene effettuata un'analisi del codice. \\
+		
 \subsection{Indici}
 \subsubsection{Indici implementati}
 \subsection{UDF}
