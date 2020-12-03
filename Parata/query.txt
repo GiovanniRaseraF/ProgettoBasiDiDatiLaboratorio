@@ -1,0 +1,72 @@
+CREATE TABLE "assistenzaGuasti"."tipologiaGuasto"
+(
+    "codiceGuasto" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
+    descrizione text NOT NULL,
+    PRIMARY KEY ("codiceGuasto")
+);
+	
+	
+CREATE TABLE "assistenzaGuasti".tecnico
+(
+    "codiceFiscale" character varying(16) NOT NULL,
+    nome character varying(20) NOT NULL,
+    cognome character varying(20) NOT NULL,
+    indirizzo character varying(50) NOT NULL,
+    "recapitoTelefonico" character varying(10) NOT NULL,
+    "dataAssunzione" timestamp without time zone NOT NULL,
+    PRIMARY KEY ("codiceFiscale")
+);
+
+	
+	CREATE TABLE "assistenzaGuasti"."capaceDiRisolvere"
+(
+    "cfTecnico" character varying(16) NOT NULL,
+    PRIMARY KEY ("codiceGuasto", "cfTecnico"),
+    CONSTRAINT "codiceGuasto" FOREIGN KEY ("codiceGuasto")
+        REFERENCES "assistenzaGuasti"."tipologiaGuasto" ("codiceGuasto") MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT "cfTecnico" FOREIGN KEY ("cfTecnico")
+        REFERENCES "assistenzaGuasti".tecnico ("codiceFiscale") MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+);
+
+CREATE TABLE "assistenzaGuasti"."richiestaDAssistenza"
+(
+    "codiceRichiesta" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
+   	"data" timestamp without time zone NOT NULL,
+	"seriale" character varying(10) NOT NULL,
+	"dataFineAssistenza" date,
+	"codiceCliente" character varying(16) NOT NULL,
+	CONSTRAINT "codiceCliente" FOREIGN KEY ("codiceCliente")
+	REFERENCES "assistenzaGuasti"."clienti" ("codiceFiscale/partitaIva") MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION
+        NOT VALID
+    PRIMARY KEY ("codiceRichiesta")
+);
+
+
+CREATE TABLE "assistenzaGuasti"."interventi"
+(
+    "numeroIntervento" integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 ),
+	"data" timestamp without time zone NOT NULL,
+	"durata" integer NOT NULL,
+	"modalita" char NOT NULL,
+	"codiceRichiesta" integer NOT NULL,
+	"cfTecnico" character varying(16) NOT NULL,
+	CONSTRAINT "codiceRichiesta" FOREIGN KEY ("codiceRichiesta")
+	REFERENCES "assistenzaGuasti"."richiestaDAssistenza" ("codiceRichiesta") MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+	CONSTRAINT "cfTecnico" FOREIGN KEY ("cfTecnico")
+	REFERENCES "assistenzaGuasti"."tecnico" ("codiceFiscale") MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    PRIMARY KEY ("codiceRichiesta","numeroIntervento")
+);
