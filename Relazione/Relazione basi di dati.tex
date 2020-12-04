@@ -226,7 +226,7 @@ Per scrivere il nostro schema e per descrivere le specifiche e realizzare la rel
 	\item Rappresentazione di un attributo di un entità o di una relazione: utilizzato il simbolo      ->      tra l'entità e l'attributo\\
 	Esempio: Entità->attributoUno, Entità->attributoDue, Intervento->modalità.
 \end{itemize}
-\newpage
+
 \subsection{Schema Entità-Relazione}
 Il modello Entità-Relazione (E-R) è il modello teorico utilizzato in questa fase di progettazione concettuale per la rappresentazione grafica e concettuale dello scenario di interesse. Questo permette di comprendere in modo semplice ed intuitivo quali sono i soggetti principali della scena e come sono relazionati tra di loro. 
 Modello E-R dell'azienda di assistenza:
@@ -268,7 +268,7 @@ in questa porzione di schema ER troviamo un ciclo. Esso è composto dalle seguen
 		Intervento è relazionato a Tecnico tramite \textit{"gestito da"}, una relazione \textbf{uno a molti}. Infatti, un Intervento è gestito da un singolo Tecnico in giornata, mentre un Tecnico può gestire uno o più Interventi.\\	
 		Quest'ultimo però può risolvere solo un numero finito di tipologie di problemi, descritti dalla relazione \textbf{molti a molti} \textit{"è capace di risolvere"}, dove un Tecnico è in grado di risolvere più problemi, ed essi possono essere risolti da più Tecnici.\\
 		Quest'ultimo fa sì che il ciclo non sia problematico perché un Tecnico che non ha le conoscenze per riparare un Guasto non può farlo.\\
-		Infine, la Tipologia Guasto è legato con Richiesta d'Assistenza tramite la relazione \textbf{uno a molti} \textit{"inerente"}, dove una Tipologia Guasto può essere inerente a più Richieste d'Assistenza, mentre una Richiesta fa riferimento ad una sola Tipologia di Guasto.\pagebreak
+		Infine, la Tipologia Guasto è legato con Richiesta d'Assistenza tramite la relazione \textbf{uno a molti} \textit{"inerente"}, dove una Tipologia Guasto può essere inerente a più Richieste d'Assistenza, mentre una Richiesta fa riferimento ad una sola Tipologia di Guasto.
 
 \begin{figure}
 		\centering
@@ -606,10 +606,10 @@ Vale sempre che:
 	\\
 	\hline
 	\\                       
-	Cliente(\underline{codiceFiscale/partitaIva},indirizzo,recapitoTelefonico,codiceFiscaleReferente,nome,cognome, tipo) \newline  \\               
+	Cliente(\underline{codiceFiscale/partitaIva},indirizzo,citta,recapitoTelefonico,ragioneSociale,\\codiceFiscaleReferente,nome,cognome, tipo) \newline  \\               
 	Unique--\textgreater codiceFiscaleReferente
 	\\
-	NotNull--\textgreater indirizzo, recapitoTelefonico
+	NotNull--\textgreater indirizzo,citta, recapitoTelefonico
 	\\
 	\\
 	\hline
