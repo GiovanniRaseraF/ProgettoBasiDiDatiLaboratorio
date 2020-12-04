@@ -1,7 +1,7 @@
 import os
 import sys
 
-file1 = open('../Parata/CSV/dati_anagrafici_clienti.csv', 'r')
+file1 = open('../Parata/Python/CSV/dati_anagrafici_clienti.csv', 'r')
 righe = file1.readlines()
 
 
