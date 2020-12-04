@@ -1,4 +1,4 @@
-INSERT INTO VALUES
+INSERT INTO clienti(nome, cognome, codiceFiscale/partitaIva, indirizzo, via?????, tipo?????, codiceFiscaleReferente) VALUES
 ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago','Via Tiziano vecellio 32'),
 ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli','Piazza Guglielmo marconi 14'),
 ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio','Via Forchiat 11'),
