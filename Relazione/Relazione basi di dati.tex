@@ -728,6 +728,28 @@ Vale sempre che:
 
 \section{Implementazione}
 \rule{\linewidth}{1.5pt}
+\subsection{Hardware e Tecnologie Utilizzate}
+Per testare e condividre il database a tutti i membri abbiamo creato un server utilizzando un \textbf{Raspberry Pi 3} con all'interno \textbf{Raspbian}.
+\begin{itemize}
+	\item CPU: Arm Cortex-A7
+	\item RAM: 1GB
+\end{itemize}
+Dopo aver installato il sistema operativo abbiamo potuto interfacciarci tramite \textbf{openssh-server}.\\
+A questo punto abbiamo installato \textbf{postgresql-11} seguendo le istruzioni riportate dalla guida ufficiale.
+\begin{itemize}
+	\item Installazione: https://www.postgresql.org/download/linux/ubuntu/
+\end{itemize}
+Abbiamo quindi a disposizione la console di postgres che ci permette di eseguire le query simile all'interazione \textbf{tty}; abbiamo quindi deciso di permettere a postgres di accettare le connessioni
+da parte di client \textbf{pgAdmin4}.\newline
+Per farlo c'è bisogno di modificare i file di conficurazioni iniziale di postgresql; nel nostro caso si trovano in \\ \textbf{/etc/postgresql/11/main},
+più precisamente dobbiamo modificare i file:
+\begin{itemize}
+	\item \textbf{pg\_hba.conf}: Nello specifico va inserita un riga che specifica quali sono gli indirizzi IP di cui postgres può fidarsi.
+	\item \textbf{postgresql.conf}: Nello specifico va aggunta la riga \textbf{listen\_addresses = '*'}.
+\end{itemize}
+E' importante sottolineare che: \underline{!QUESTE IMPOSTAZIONI DEL SERVER SERVONO A FAR SI CHE}\\ 
+\underline{L'ACCESSO E IL TESTING SIA PIU' VOLCE, NON E' PER NULLA SICURO USARE QUESTE}\\
+\underline{IMPOSTAZIONI IN UN PRODOTTO FINALE!}
 \subsection{Popolazione della base di dati}
 \subsection{Connessione alla base di dati}
 \subsection{Preparazione iniziale}
