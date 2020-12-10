@@ -128,45 +128,46 @@ In questa fase vengono \textbf{tradotte le richieste della consegna in requisiti
 - Le assistenze possono essere richieste solamente per problemi risolvibili dai tecnici dell'azienda.\\ \hline
 \textbf{Frasi relative al cliente}  \\
 \hline
--  I clienti possono essere di diversa natura:
+-  I clienti possono essere di diversa natura:\newline
 - Persona Giuridica, che a sua volta può essere un'azienda oppure un ente pubblico; \newline
 - Singolo cittadino, ovvero persona fisica; \newline
-- I clienti richiedono un'assistenza relativa ad una specifica tipologia di guasto, specificandone il seriale del sistema di riferimento .\\
+- I clienti richiedono un'assistenza relativa ad una specifica tipologia di guasto, specificandone il seriale del sistema di riferimento .\newline
+- I clienti sono identificati univocamente dal proprio codice fiscale o partita Iva, in base alla tipologia del cliente e dai relativi dati anagrafici del cliente stesso o del referente aziendale, un recapito telefonico, un indirizzo e la città in cui risiede.\\
 \hline
-\textbf{Frasi relative all'assistenza}  \\
+\textbf{Frasi relative alla richiesta d'assistenza}  \\
 \hline
-- Un'assistenza è caratterizzata da un codice identificativo generato dal sistema. Nel momento in cui viene completata l'assistenza viene memorizzato la data dell'ultimo intervento.\\
+- Un'assistenza è caratterizzata da un codice identificativo generato dal sistema. Nel momento in cui viene completata l'assistenza viene memorizzata la data dell'ultimo intervento.\\
 \hline
 \textbf{Frasi relative all'intervento}  \\
 \hline
-- Un intervento è identificato da un numero progressivo riferito all'assistenza di appartenenza. Inoltre, è caratterizzato da: \newline
+- Un intervento è caratterizzato da :\newline 
+- un numero progressivo, che fa riferimento alla richiesta d'assistenza a cui appartiene: \newline
 - modalità con la quale può essere eseguito (da remoto o in sede)\newline
 - dalla data e dalla relativa durata del singolo intervento misurato in ore (0-24). \newline 
-Un solo intervento può essere eseguito durante l'arco della giornata lavorativa.\\
+- Un solo intervento può essere eseguito durante l'arco della giornata lavorativa.\\
 \hline
 \textbf{Frasi relative al tecnico}  \\
 \hline
 - Un tecnico è identificato dal suo codice fiscale, dai suoi dati anagrafici, un recapito telefonico, una data di assunzione e indirizzo del domicilio.\newline
-Inoltre sarà presente il conteggio mensile delle ore lavorate.
+-Inoltre sarà presente il conteggio mensile delle ore lavorate.
 \\
 \hline
 \textbf{Frasi relative al guasto}  \\
 \hline
-- Una tipologia di guasto è rappresentata da: \\
-- codice univoco, \\
+- Una tipologia di guasto è rappresentata da: \newline
+- codice univoco, \newline
 - descrizione del problema.\\
 \hline
-\textbf{Frasi relative al coinvolgimento di cliente, assistenza e guasto}  \\
+\textbf{Frasi relative al coinvolgimento di cliente, assistenza e tipologia guasto}  \\
 \hline
 - Quando un cliente richiede un'assistenza relativa ad uno specifico guasto, per poter finalizzare e registrare la data di inizio assistenza è necessario che sia presente quella tipologia di guasto tra i guasti riparabili e l'inserimento del numero seriale del sistema di riferimento.\\
 \hline
-\textbf{Frasi relative al coinvolgimento di tecnico e guasto}  \\
+\textbf{Frasi relative al coinvolgimento di tecnico e tipologia guasto}  \\
 \hline
 - Un tecnico può essere assunto se è capace di risolvere almeno una tipologia di guasto , ma nel tempo può ampliare le proprie competenze e risolvere problemi anche di tipologia diversa.\\
 \hline
 
-
-\textbf{Frasi relative al coinvolgimento di assistenza, intervento, tecnico e guasto}  \\
+\textbf{Frasi relative al coinvolgimento di assistenza, intervento, tecnico e tipologia guasto}  \\
 \hline
 - Una volta effettuata la richiesta di assistenza, si pianifica il primo intervento assegnando un tecnico competente per risolvere quella tipologia di guasto, controllando che in quella data non ci sia un intervento programmato per lo stesso tecnico altrove.\\
 \hline
@@ -206,8 +207,6 @@ Inoltre sarà presente il conteggio mensile delle ore lavorate.
 		\item \textbf{operazione 9}: dato il codice identificativo di un cliente ed una data, visualizzare il tempo complessivo degli interventi effettuati da quel momento --> \textit{1 volta a settimana};
 		
 	\end{itemize}
-
-
 
 
 \newpage
@@ -297,7 +296,18 @@ lo schema mette in evidenza la presenza di un'entità debole che necessita della
 Prima cosa da notare è la scelta di un attributo opzionale (dataFineAssistenza) in quanto esso verrà aggiunto una volta terminato l'ultimo intervento.
 		Inoltre, la relazione \textit{"composta da"} è una relazione \textbf{molti a uno} perché una Richiesta di Assistenza può essere composta da molti interventi, mentre un intervento 
 		appartiene ad una sola specifica richiesta.\\
-\paragraph{Figura 5  DA METTERE LA FOTO DELLA SEZIONE DI RICHIESTA, INERENTE, TIPOLOGIA}
+		
+\begin{figure}[!ht]
+	\centering
+	\begin{minipage}[b]{0.4\textwidth}
+		\includegraphics[width=\linewidth]{image/assistGuasto.png}
+		\caption{Richiesta d'Assistenza inerente ad una tipologia di guasto}
+		\label{fig:RichiestaInerenteGuasto}
+	\end{minipage}
+	\hfill
+	
+\end{figure}
+\paragraph{Figura 5}
 in questa figura si nota la modellazione della relazione tra Richiesta d'Assistenza e Tipologia Guasto:\\
 E' stato deciso di collegare alla Richiesta d'Assistenza un seriale, cioè il numero di serie del sistema per il quale si vuole essere assistiti; non necessariamente a quest'ultimo deve far riferimento un sistema specifico, siccome ciò a cui siamo interessati è il tipo di guasto presente.\\
 Sarà compito di un livello di astrazione superiore il controllo dell'autenticità della Richiesta d'Assistenza.\\ 
@@ -332,9 +342,6 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 \begin{itemize}
 	\item Relazione "parte-di":\\
 	- Un'assistenza è composta da diversi interventi
-	
-	\item BLA BLA BLA
-	
 
 \end{itemize}
 	
@@ -559,15 +566,15 @@ Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le rido
 \subsection{Rimozione delle generalizzazioni}
 Per tradurre lo schema E-R bisogna rimuovere le varie generalizzazioni:\\
 \newline
-\textbf{Accopramento dei figli della generalizzazione nel genitore}
+\textbf{Accorpamento dei figli della generalizzazione nel genitore}
 \begin{itemize}
-	\item Le entità Azienda e Ente Pubblico vengono eliminate e le loro proprietà vengono aggiunte a Persona Giuridica. Per distinguerli viene aggiunto l'attributo tipo. \\Il suo valore è un carattere che assume "A" oppure "E", in cui il primo indica azienda ed il secondo ente pubblico.\\
-	Si effettua questo accorporamento perchè le attività svolte sono identiche. \\La superchiave P.Iva è la medesima, perciò non distingubili senza la presenza della tipologia.
-	\item Le entità Persona Giuridica e Singolo Cittadino vengono eliminate e le loro proprietà vengono aggiunte a Cliente. \\Per distinguerle viene utilizzato come superchiave la Partita Iva, nel caso in cui si tratta di una persona giuridica, e CodiceFiscale nel caso in cui si tratta di un singolo cittadino.\\ L'attributo tipo di Persona Giuridica diventa opzionale a seconda della tipologie di superchiave.\\
-	Si effettua questo accorporamento perchè le attività svolte sono identiche.
+	\item Le entità Azienda e Ente Pubblico vengono eliminate e le loro proprietà vengono aggiunte a Persona Giuridica. Per distinguerli viene aggiunto l'attributo \textbf{tipo}. \\Il suo valore è un carattere che assume \textbf{A} oppure \textbf{E}, in cui il primo indica azienda ed il secondo ente pubblico.\\
+	Si effettua questo accorpamento perché le attività svolte sono identiche. \\La superchiave \textbf{partitaIva} è la medesima, perciò non distinguibili senza la presenza della tipologia.
+	\item Le entità Persona Giuridica e Singolo Cittadino vengono eliminate e le loro proprietà vengono aggiunte a Cliente. \\Per distinguerle viene utilizzato come superchiave un unico attributo denominato \textbf{codiceFiscale/partitaIva}, con valore rispettante le caratteristiche di un reale numero di Partita Iva, nel caso in cui si tratta di una persona giuridica, e quelle di un reale Codice Fiscale nel caso in cui si tratta di un singolo cittadino.\\ L'attributo \textbf{tipo} di Persona Giuridica diventa opzionale a seconda della tipologia della superchiave.\\
+	Si effettua questo accorpamento perché le attività svolte sono identiche.
 \end{itemize}
 
-\subsection{Partizionamento /accorpamento}
+%\subsection{Partizionamento /accorpamento}
 
 \subsection{Regole di derivazione}
 \textbf{Tecnico->oreLavorateMensilmente:} attributo derivato che contiene la somma delle ore che un Tecnico ha lavorato nel mese corrente ed è un valore che deve essere maggiore o uguale a zero.\\
