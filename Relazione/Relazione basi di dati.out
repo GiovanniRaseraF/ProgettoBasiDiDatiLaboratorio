@@ -24,39 +24,36 @@
 \BOOKMARK [3][-]{subsubsection.4.4.2}{Tabella delle operazioni}{subsection.4.4}% 24
 \BOOKMARK [3][-]{subsubsection.4.4.3}{Tabella degli accessi in riferimento all'operazione 3}{subsection.4.4}% 25
 \BOOKMARK [3][-]{subsubsection.4.4.4}{Tabella degli accessi in riferimento all'operazione 6}{subsection.4.4}% 26
-\BOOKMARK [3][-]{subsubsection.4.4.5}{Tabella dei volumi}{subsection.4.4}% 27
-\BOOKMARK [3][-]{subsubsection.4.4.6}{Tabella delle operazioni}{subsection.4.4}% 28
-\BOOKMARK [3][-]{subsubsection.4.4.7}{Tabella degli accessi: operazione 1}{subsection.4.4}% 29
-\BOOKMARK [2][-]{subsection.4.5}{Rimozione delle generalizzazioni}{section.4}% 30
-\BOOKMARK [2][-]{subsection.4.6}{Regole di derivazione}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.7}{Vincoli d'integrit\340}{section.4}% 32
-\BOOKMARK [2][-]{subsection.4.8}{Vincoli d'integrit\340 aggiuntivi dello schema E-R ristrutturato}{section.4}% 33
-\BOOKMARK [2][-]{subsection.4.9}{Modello relazionale}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.10}{Regole di derivazione}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.11}{Vincoli d'integrit\340}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.12}{Vincoli d'integrit\340 aggiuntivi del modello relazionale}{section.4}% 37
-\BOOKMARK [2][-]{subsection.4.13}{Normalizzazione}{section.4}% 38
-\BOOKMARK [3][-]{subsubsection.4.13.1}{Prima forma normale\(1FN\)}{subsection.4.13}% 39
-\BOOKMARK [3][-]{subsubsection.4.13.2}{Seconda forma normale\(2FN\)}{subsection.4.13}% 40
-\BOOKMARK [3][-]{subsubsection.4.13.3}{Terza forma normale\(3FN\)}{subsection.4.13}% 41
-\BOOKMARK [1][-]{section.5}{Progettazione fisica}{}% 42
-\BOOKMARK [2][-]{subsection.5.1}{Data Definition Language \(DDL\)}{section.5}% 43
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Clienti}{subsection.5.1}% 44
-\BOOKMARK [2][-]{subsection.5.2}{Indici}{section.5}% 45
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Indici implementati}{subsection.5.2}% 46
-\BOOKMARK [2][-]{subsection.5.3}{UDF}{section.5}% 47
-\BOOKMARK [2][-]{subsection.5.4}{Operazioni}{section.5}% 48
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Operazione 1: inserisci cliente}{subsection.5.4}% 49
-\BOOKMARK [2][-]{subsection.5.5}{Trigger}{section.5}% 50
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Evento 1}{subsection.5.5}% 51
-\BOOKMARK [2][-]{subsection.5.6}{Pulizia}{section.5}% 52
-\BOOKMARK [3][-]{subsubsection.5.6.1}{Implementazione}{subsection.5.6}% 53
-\BOOKMARK [1][-]{section.6}{Implementazione}{}% 54
-\BOOKMARK [2][-]{subsection.6.1}{Hardware e Tecnologie Utilizzate}{section.6}% 55
-\BOOKMARK [2][-]{subsection.6.2}{Popolazione della base di dati}{section.6}% 56
-\BOOKMARK [2][-]{subsection.6.3}{Connessione alla base di dati}{section.6}% 57
-\BOOKMARK [2][-]{subsection.6.4}{Preparazione iniziale}{section.6}% 58
-\BOOKMARK [2][-]{subsection.6.5}{Cliente}{section.6}% 59
-\BOOKMARK [2][-]{subsection.6.6}{Disconnessione dalla base dei dati}{section.6}% 60
-\BOOKMARK [1][-]{section.7}{Analisi dei dati}{}% 61
-\BOOKMARK [1][-]{section.8}{Bibliografia}{}% 62
+\BOOKMARK [2][-]{subsection.4.5}{Rimozione delle generalizzazioni}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.6}{Regole di derivazione}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.7}{Vincoli d'integrit\340}{section.4}% 29
+\BOOKMARK [2][-]{subsection.4.8}{Vincoli d'integrit\340 aggiuntivi dello schema E-R ristrutturato}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.9}{Modello relazionale}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.10}{Regole di derivazione}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.11}{Vincoli d'integrit\340}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.12}{Vincoli d'integrit\340 aggiuntivi del modello relazionale}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.13}{Normalizzazione}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.13.1}{Prima forma normale\(1FN\)}{subsection.4.13}% 36
+\BOOKMARK [3][-]{subsubsection.4.13.2}{Seconda forma normale\(2FN\)}{subsection.4.13}% 37
+\BOOKMARK [3][-]{subsubsection.4.13.3}{Terza forma normale\(3FN\)}{subsection.4.13}% 38
+\BOOKMARK [1][-]{section.5}{Progettazione fisica}{}% 39
+\BOOKMARK [2][-]{subsection.5.1}{Data Definition Language \(DDL\)}{section.5}% 40
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Clienti}{subsection.5.1}% 41
+\BOOKMARK [2][-]{subsection.5.2}{Indici}{section.5}% 42
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Indici implementati}{subsection.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.3}{UDF}{section.5}% 44
+\BOOKMARK [2][-]{subsection.5.4}{Operazioni}{section.5}% 45
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Operazione 1: inserisci cliente}{subsection.5.4}% 46
+\BOOKMARK [2][-]{subsection.5.5}{Trigger}{section.5}% 47
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Evento 1}{subsection.5.5}% 48
+\BOOKMARK [2][-]{subsection.5.6}{Pulizia}{section.5}% 49
+\BOOKMARK [3][-]{subsubsection.5.6.1}{Implementazione}{subsection.5.6}% 50
+\BOOKMARK [1][-]{section.6}{Implementazione}{}% 51
+\BOOKMARK [2][-]{subsection.6.1}{Hardware e Tecnologie Utilizzate}{section.6}% 52
+\BOOKMARK [2][-]{subsection.6.2}{Popolazione della base di dati}{section.6}% 53
+\BOOKMARK [2][-]{subsection.6.3}{Connessione alla base di dati}{section.6}% 54
+\BOOKMARK [2][-]{subsection.6.4}{Preparazione iniziale}{section.6}% 55
+\BOOKMARK [2][-]{subsection.6.5}{Cliente}{section.6}% 56
+\BOOKMARK [2][-]{subsection.6.6}{Disconnessione dalla base dei dati}{section.6}% 57
+\BOOKMARK [1][-]{section.7}{Analisi dei dati}{}% 58
+\BOOKMARK [1][-]{section.8}{Bibliografia}{}% 59

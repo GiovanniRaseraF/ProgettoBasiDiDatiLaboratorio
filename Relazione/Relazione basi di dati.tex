@@ -198,7 +198,12 @@ In questa fase vengono \textbf{tradotte le richieste della consegna in requisiti
 	\begin{itemize}
 		\item \textbf{operazione 1}: date le informazioni di un nuovo cliente, inserirlo nella base di dati --> \textit{19 volte a settimana};
 		\item \textbf{operazione 2}: date le informazioni necessarie fornite da un cliente, aggiungere una richiesta d'assistenza relativa ad una tipologia di problema --> \textit{150 volte a settimana};
-		\item \textbf{operazione 3}: date le informazioni di una richiesta d'assistenza ed i tecnici disponibili, creare un nuovo intervento relativo alla richiesta d'assistenza --> \textit{450 volte a settimana};
+		\item \textbf{operazione 3}: data l'informazione di una richiesta d'assistenza, creare un nuovo intervento relativo ad essa --> \textit{450 volte a settimana};
+		\begin{itemize}
+			\item \textbf{operazione 3.1}: Ricerca e classificazione in base al numero di interventi eseguiti nel mese corrente dei tecnici capaci di risolvere la tipologia di guasto presente nella richiesta di assistenza.
+			\item \textbf{operazione 3.2}: Assegnazione del tecnico all'intervento.
+			\item \textbf{operazione 3.3}: Creazione dell'intervento.
+		\end{itemize}
 		\item \textbf{operazione 4}: date le informazioni di un nuovo dipendente e delle tipologie di gusti che è capace di risolvere, aggiungerlo alla base di dati --> \textit{6 all'anno};
 		\item \textbf{operazione 5}: dato il codice identificativo del cliente, visualizzare le relative richieste d'assistenza effettuate --> \textit{30 a settimana};
 		\item \textbf{operazione 6}: visualizzare il numero di ore mensili di lavoro effettuate da ogni tecnico --> \textit{26 al mese};
@@ -557,11 +562,6 @@ Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le rido
 		\item inoltre, c'è da tenere in considerazione che ogni volta che si effettua l'accesso alla tabella degli Interventi, bisogna filtrare 600.000 righe
 	\end{itemize}
 	
-
-
-\subsubsection{Tabella dei volumi}
-\subsubsection{Tabella delle operazioni}
-\subsubsection{Tabella degli accessi: operazione 1}
 
 \subsection{Rimozione delle generalizzazioni}
 Per tradurre lo schema E-R bisogna rimuovere le varie generalizzazioni:\\

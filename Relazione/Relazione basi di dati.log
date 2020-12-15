@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  10 DEC 2020 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.26)  15 DEC 2020 11:28
 entering extended mode
 **"./Relazione basi di dati.tex"
 ("Relazione basi di dati.tex"
@@ -469,7 +469,7 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/m/it' aliased to
 (Font)              `T1/CormorantGaramond-LF/regular/it' on input line 26.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/regular/it' will be
 (Font)              scaled to size 12.0pt on input line 26.
-<image/Udine.jpg, id=251, 685.56125pt x 255.95625pt>
+<image/Udine.jpg, id=239, 685.56125pt x 255.95625pt>
 File: image/Udine.jpg Graphic file (type jpg)
 <use image/Udine.jpg>
 Package pdftex.def Info: image/Udine.jpg  used on input line 28.
@@ -569,159 +569,159 @@ LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
 (Font)              `T1/CormorantGaramond-LF/bold/n' on input line 181.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
 (Font)              scaled to size 8.0pt on input line 181.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
+ [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
-<image/schema_er.png, id=352, 1335.99126pt x 543.02875pt>
+<image/schema_er.png, id=341, 1335.99126pt x 543.02875pt>
 File: image/schema_er.png Graphic file (type png)
 <use image/schema_er.png>
-Package pdftex.def Info: image/schema_er.png  used on input line 236.
+Package pdftex.def Info: image/schema_er.png  used on input line 241.
 (pdftex.def)             Requested size: 516.73338pt x 210.03201pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 236--237
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 241--242
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/b/n' aliased to
-(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 242.
+(Font)              `T1/CormorantGaramond-LF/bold/n' on input line 247.
 LaTeX Font Info:    Font shape `T1/CormorantGaramond-LF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 242.
-<image/ciclo.png, id=354, 813.0375pt x 462.72874pt>
+(Font)              scaled to size 10.0pt on input line 247.
+<image/ciclo.png, id=343, 813.0375pt x 462.72874pt>
 File: image/ciclo.png Graphic file (type png)
 <use image/ciclo.png>
-Package pdftex.def Info: image/ciclo.png  used on input line 249.
+Package pdftex.def Info: image/ciclo.png  used on input line 254.
 (pdftex.def)             Requested size: 375.80544pt x 213.88159pt.
-<image/generalizzazione.png, id=355, 506.89375pt x 505.89pt>
+<image/generalizzazione.png, id=344, 506.89375pt x 505.89pt>
 File: image/generalizzazione.png Graphic file (type png)
 <use image/generalizzazione.png>
-Package pdftex.def Info: image/generalizzazione.png  used on input line 275.
+Package pdftex.def Info: image/generalizzazione.png  used on input line 280.
 (pdftex.def)             Requested size: 187.89914pt x 187.52373pt.
-<image/entita_debole.png, id=356, 577.15625pt x 246.9225pt>
+<image/entita_debole.png, id=345, 577.15625pt x 246.9225pt>
 File: image/entita_debole.png Graphic file (type png)
 <use image/entita_debole.png>
-Package pdftex.def Info: image/entita_debole.png  used on input line 281.
+Package pdftex.def Info: image/entita_debole.png  used on input line 286.
 (pdftex.def)             Requested size: 187.89914pt x 80.38826pt.
-[8 <./image/schema_er.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 287--294
+[9 <./image/schema_er.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
+Underfull \hbox (badness 10000) in paragraph at lines 300--304
 
  []
 
-[9 <./image/ciclo.png> <./image/generalizzazione.png> <./image/entita_debole.pn
-g>]
-<image/assistGuasto.png, id=376, 402.50375pt x 419.5675pt>
+[10 <./image/ciclo.png> <./image/generalizzazione.png> <./image/entita_debole.p
+ng>]
+<image/assistGuasto.png, id=365, 402.50375pt x 419.5675pt>
 File: image/assistGuasto.png Graphic file (type png)
 <use image/assistGuasto.png>
-Package pdftex.def Info: image/assistGuasto.png  used on input line 303.
+Package pdftex.def Info: image/assistGuasto.png  used on input line 308.
 (pdftex.def)             Requested size: 187.89914pt x 195.86511pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--314
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--321
+Underfull \hbox (badness 10000) in paragraph at lines 320--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--327
+Underfull \hbox (badness 10000) in paragraph at lines 328--332
 
  []
 
-[10 <./image/assistGuasto.png>] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 351--355
+[11 <./image/assistGuasto.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 356--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--355
+Underfull \hbox (badness 10000) in paragraph at lines 356--360
 
  []
 
-<../Parata/Schema Prog. Logica.png, id=388, 188.80537pt x 366.46913pt>
+<../Parata/Schema Prog. Logica.png, id=377, 188.80537pt x 366.46913pt>
 File: ../Parata/Schema Prog. Logica.png Graphic file (type png)
 <use ../Parata/Schema Prog. Logica.png>
 Package pdftex.def Info: ../Parata/Schema Prog. Logica.png  used on input line 
-371.
+376.
 (pdftex.def)             Requested size: 113.81102pt x 220.9009pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--398
+Underfull \hbox (badness 10000) in paragraph at lines 379--403
 
  []
 
-[12 <../Parata/Schema Prog. Logica.png>] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 440--454
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--468
+[13 <../Parata/Schema Prog. Logica.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 445--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--486
+Underfull \hbox (badness 10000) in paragraph at lines 461--473
 
  []
 
 
-Overfull \hbox (35.48903pt too wide) in paragraph at lines 470--486
+Underfull \hbox (badness 10000) in paragraph at lines 475--491
+
+ []
+
+
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 475--491
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--486
-
- []
-
-[14]
-Overfull \hbox (35.48903pt too wide) in paragraph at lines 491--506
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--531
-
- []
-
-
-Overfull \hbox (38.29703pt too wide) in paragraph at lines 516--531
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--531
-
- []
-
-
-Overfull \hbox (35.48903pt too wide) in paragraph at lines 535--550
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 535--550
+Underfull \hbox (badness 10000) in paragraph at lines 475--491
 
  []
 
 [15]
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 496--511
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--536
+
+ []
+
+
+Overfull \hbox (38.29703pt too wide) in paragraph at lines 521--536
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--536
+
+ []
+
+
+Overfull \hbox (35.48903pt too wide) in paragraph at lines 540--555
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--555
+
+ []
+
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 567--570
 
  []
 
-<image/er_ristrutturato.png, id=407, 1245.65375pt x 462.72874pt>
+<image/er_ristrutturato.png, id=396, 1245.65375pt x 462.72874pt>
 File: image/er_ristrutturato.png Graphic file (type png)
 <use image/er_ristrutturato.png>
 Package pdftex.def Info: image/er_ristrutturato.png  used on input line 603.
@@ -809,8 +809,8 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 610--694
 [] 
  []
 
-[16] [17 <./image/er_ristrutturato.png>] [18]
-<Immagini SQL/Clienti.png, id=424, 409.53pt x 173.14688pt>
+[17] [18 <./image/er_ristrutturato.png>] [19]
+<Immagini SQL/Clienti.png, id=414, 409.53pt x 173.14688pt>
 File: Immagini SQL/Clienti.png Graphic file (type png)
 <use Immagini SQL/Clienti.png>
 Package pdftex.def Info: Immagini SQL/Clienti.png  used on input line 719.
@@ -820,25 +820,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 723--724
 
  []
 
-[19 <./Immagini SQL/Clienti.png>]
+[20 <./Immagini SQL/Clienti.png>]
 Overfull \hbox (8.95958pt too wide) in paragraph at lines 757--760
 \T1/CormorantGaramond-LF/regular/n/12 E' im-por-tan-te sot-to-li-nea-re che: $[
 ]$ 
  []
 
-[20] [21] [22] ("Relazione basi di dati.aux")
+[21] [22] [23] ("Relazione basi di dati.aux")
 Package rerunfilecheck Info: File `"Relazione basi di dati".out' has not change
 d.
-(rerunfilecheck)             Checksum: 002D9844C93E8E0AB2FCA84C0E89BEA2;4584.
+(rerunfilecheck)             Checksum: EF1A5E49CD1B240AA44CA5B138AD3C92;4327.
  ) 
 Here is how much of TeX's memory you used:
- 8427 strings out of 480236
- 133679 string characters out of 2880557
- 469451 words of memory out of 3000000
- 24696 multiletter control sequences out of 15000+200000
+ 8422 strings out of 480236
+ 133566 string characters out of 2880557
+ 469454 words of memory out of 3000000
+ 24693 multiletter control sequences out of 15000+200000
  599396 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,66p,635b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,12n,66p,635b,495s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/loris/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cormorantgaramo
 nd/cgrm_v7t4yx.enc}{C:/Users/loris/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
 s/cormorantgaramond/cgrm_xwhmgi.enc}{C:/Users/loris/AppData/Local/Programs/MiKT
@@ -848,9 +848,9 @@ old.pfb><C:/Users/loris/AppData/Local/Programs/MiKTeX/fonts/type1/catharsis/cor
 morantgaramond/CormorantGaramond-Italic.pfb><C:/Users/loris/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pf
 b>
-Output written on "Relazione basi di dati.pdf" (22 pages, 527044 bytes).
+Output written on "Relazione basi di dati.pdf" (23 pages, 526197 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 471 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 518 words of extra memory for PDF output out of 10000 (max. 10000000)
 
