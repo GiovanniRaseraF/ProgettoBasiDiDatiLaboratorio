@@ -744,7 +744,7 @@ Vale sempre che:
 				\caption{Definizione tabella Clienti in SQL}
 				\label{clientesql}
 			\end{figure}
-		fdsa\\
+		Il trigger ha bisogno di una UDF per funzionare, in particolare questa funzione dovrà controllare che il vengano settati gli attributi giusti al variare dell'attributo tipo.\\
 
 	\subsubsection{Capace Di Risolvere}
 		\begin{figure}[h]
@@ -789,9 +789,42 @@ Vale sempre che:
 \newpage		
 \subsection{Indici}
 \subsubsection{Indici implementati}
+\newpage
 \subsection{UDF}
+	\subsubsection{Controllo Inserimento Cliente}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{Immagini SQL/controlloInserimentoCliente}
+			\caption{Controllo Inserimento cliente}
+			\label{controlloInserimentoClientesql}
+		\end{figure}
+		La funzione si occupa di controllare che un cliente sia Singolo Cittadino, Azienda, Entepubblico.\\
+		Nel caso del Singolo Cittadito devo settare anche nome e cognome, invece nel caso di Azienda o Ente Pubblico devo settare il codiceFiscaleReferente.\\
+\newpage
 \subsection{Operazioni}
-\subsubsection{Operazione 1: inserisci cliente}
+	\subsubsection{Operazione 1: inserisci cliente}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.2\linewidth]{Immagini SQL/query1}
+			\caption{InserimentoCliente}
+			\label{InserimentoClientesql}
+		\end{figure}
+		Per l'inserimento viene usata questa query, alposto del  \textbf{\$param} verrà messo il vero e proprio valore da inserire
+\subsubsection{Operazione 2: inserimento richiesta d'assistenza}
+\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.1\linewidth]{Immagini SQL/query2}
+			\caption{ inserimento richiesta d'assistenza}
+			\label{ inserimento richiesta d'assistenza}
+		\end{figure}
+\subsubsection{Operazione 3:}
+\subsubsection{Operazione 4:}
+\subsubsection{Operazione 5:}
+\subsubsection{Operazione 6:}
+\subsubsection{Operazione 7:}
+\subsubsection{Operazione 8:}
+\subsubsection{Operazione 9:}
+
 \subsection{Trigger}
 \subsubsection{Evento 1}
 \subsection{Pulizia}

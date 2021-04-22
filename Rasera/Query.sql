@@ -11,12 +11,12 @@ INSERT INTO cliente
     )
 
 /*Operazione 2*/
-INSERT INTO richiesta_assistenza
+INSERT INTO richiestaDAssistenza
     VALUES(
-        data, /*La data di adesso, il momento dell'esecuzione della query*/
-        codice_richiesta, /*Auto incrementato*/
-        data_fine_assistenza, /*Inizialmente null, verrà impostato alla fine di tutti gli interventi*/
-        $codice_seriale, /*Seriale del sistema di riferimento*/
+        data, 
+        codice_richiesta, 
+        data_fine_assistenza, 
+        $codice_seriale, 
         $id_codice_guasto,
         $id_cliente_richiedente
     )
@@ -43,7 +43,6 @@ INSERT INTO tecnico
         $indirizzo,
         $recap,
         $data_assunzione /*Potrebbe essere now*/
-        
     )
 
 /*Operazione 4.1
