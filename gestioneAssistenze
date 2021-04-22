@@ -1,0 +1,369 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.0
+-- Dumped by pg_dump version 13.0
+
+-- Started on 2021-04-22 22:09:05
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 5 (class 2615 OID 16395)
+-- Name: assistenzaGuasti; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA "assistenzaGuasti";
+
+
+ALTER SCHEMA "assistenzaGuasti" OWNER TO postgres;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 200 (class 1259 OID 16396)
+-- Name: capaceDiRisolvere; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti"."capaceDiRisolvere" (
+    "codiceGuasto" integer NOT NULL,
+    "cfTecnico" character(16) NOT NULL
+);
+
+
+ALTER TABLE "assistenzaGuasti"."capaceDiRisolvere" OWNER TO postgres;
+
+--
+-- TOC entry 201 (class 1259 OID 16399)
+-- Name: clienti; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti".clienti (
+    "codiceFiscale/partitaIva" character varying(16) NOT NULL,
+    indirizzo character varying(20) NOT NULL,
+    "recapitoTelefonico" character varying(14) NOT NULL,
+    tipo character(1),
+    "codiceFiscaleReferente" character(16),
+    nome character varying(20),
+    cognome character varying(20)
+);
+
+
+ALTER TABLE "assistenzaGuasti".clienti OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 16402)
+-- Name: interventi; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti".interventi (
+    "numeroIntervento" integer NOT NULL,
+    data timestamp without time zone NOT NULL,
+    durata integer NOT NULL,
+    modalita character(1) NOT NULL,
+    "codiceRichiesta" integer NOT NULL,
+    "cfTecnico" character(16) NOT NULL
+);
+
+
+ALTER TABLE "assistenzaGuasti".interventi OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 16405)
+-- Name: interventi_numeroIntervento_seq; Type: SEQUENCE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".interventi ALTER COLUMN "numeroIntervento" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME "assistenzaGuasti"."interventi_numeroIntervento_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
+-- TOC entry 204 (class 1259 OID 16407)
+-- Name: richiestedAssistenza; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti"."richiestedAssistenza" (
+    "codiceRichiesta" integer NOT NULL,
+    data timestamp without time zone NOT NULL,
+    seriale character varying(10) NOT NULL,
+    "dataFineAssistenza" date,
+    "codiceCliente" character varying(16) NOT NULL
+);
+
+
+ALTER TABLE "assistenzaGuasti"."richiestedAssistenza" OWNER TO postgres;
+
+--
+-- TOC entry 205 (class 1259 OID 16410)
+-- Name: richiestaDAssistenza_codiceRichiesta_seq; Type: SEQUENCE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti"."richiestedAssistenza" ALTER COLUMN "codiceRichiesta" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME "assistenzaGuasti"."richiestaDAssistenza_codiceRichiesta_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
+-- TOC entry 206 (class 1259 OID 16412)
+-- Name: tecnici; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti".tecnici (
+    "codiceFiscale" character(16) NOT NULL,
+    nome character varying(20) NOT NULL,
+    cognome character varying(20) NOT NULL,
+    indirizzo character varying(50) NOT NULL,
+    "recapitoTelefonico" character varying(14) NOT NULL,
+    "dataAssunzione" timestamp without time zone NOT NULL,
+    "oreLavorateMensilmente" integer DEFAULT 0 NOT NULL
+);
+
+
+ALTER TABLE "assistenzaGuasti".tecnici OWNER TO postgres;
+
+--
+-- TOC entry 207 (class 1259 OID 16416)
+-- Name: tipologieGuasto; Type: TABLE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+CREATE TABLE "assistenzaGuasti"."tipologieGuasto" (
+    "codiceGuasto" integer NOT NULL,
+    descrizione text NOT NULL
+);
+
+
+ALTER TABLE "assistenzaGuasti"."tipologieGuasto" OWNER TO postgres;
+
+--
+-- TOC entry 208 (class 1259 OID 16422)
+-- Name: tipologiaGuasto_codiceGuasto_seq; Type: SEQUENCE; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti"."tipologieGuasto" ALTER COLUMN "codiceGuasto" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME "assistenzaGuasti"."tipologiaGuasto_codiceGuasto_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
+-- TOC entry 2886 (class 2606 OID 16425)
+-- Name: capaceDiRisolvere capaceDiRisolvere_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."capaceDiRisolvere"
+    ADD CONSTRAINT "capaceDiRisolvere_pkey" PRIMARY KEY ("codiceGuasto", "cfTecnico");
+
+
+--
+-- TOC entry 2888 (class 2606 OID 16427)
+-- Name: clienti clienti_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti".clienti
+    ADD CONSTRAINT clienti_pkey PRIMARY KEY ("codiceFiscale/partitaIva");
+
+
+--
+-- TOC entry 2881 (class 2606 OID 16428)
+-- Name: tecnici codiceFiscale; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".tecnici
+    ADD CONSTRAINT "codiceFiscale" CHECK ((char_length(("codiceFiscale")::text) = 16)) NOT VALID;
+
+
+--
+-- TOC entry 2875 (class 2606 OID 16429)
+-- Name: clienti codiceFiscale/partitaIva; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".clienti
+    ADD CONSTRAINT "codiceFiscale/partitaIva" CHECK (((char_length(("codiceFiscale/partitaIva")::text) = 11) OR (char_length(("codiceFiscale/partitaIva")::text) = 16))) NOT VALID;
+
+
+--
+-- TOC entry 2876 (class 2606 OID 16430)
+-- Name: clienti codiceFiscaleReferente; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".clienti
+    ADD CONSTRAINT "codiceFiscaleReferente" CHECK ((char_length(("codiceFiscaleReferente")::text) = 16)) NOT VALID;
+
+
+--
+-- TOC entry 2882 (class 2606 OID 16431)
+-- Name: tecnici cognome; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".tecnici
+    ADD CONSTRAINT cognome CHECK ((char_length((cognome)::text) <= 20)) NOT VALID;
+
+
+--
+-- TOC entry 2890 (class 2606 OID 16433)
+-- Name: interventi interventi_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti".interventi
+    ADD CONSTRAINT interventi_pkey PRIMARY KEY ("codiceRichiesta", "numeroIntervento");
+
+
+--
+-- TOC entry 2878 (class 2606 OID 16434)
+-- Name: interventi modalita; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".interventi
+    ADD CONSTRAINT modalita CHECK (((char_length(modalita) = 1) AND ((modalita = 'P'::bpchar) OR (modalita = 'R'::bpchar)))) NOT VALID;
+
+
+--
+-- TOC entry 3037 (class 0 OID 0)
+-- Dependencies: 2878
+-- Name: CONSTRAINT modalita ON interventi; Type: COMMENT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+COMMENT ON CONSTRAINT modalita ON "assistenzaGuasti".interventi IS 'Controlliamo che la modalità sia in remoto (R) oppure in presenza (P)';
+
+
+--
+-- TOC entry 2883 (class 2606 OID 16435)
+-- Name: tecnici nome; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".tecnici
+    ADD CONSTRAINT nome CHECK ((char_length((nome)::text) <= 20)) NOT VALID;
+
+
+--
+-- TOC entry 2877 (class 2606 OID 16436)
+-- Name: clienti recapitoTelefonico; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".clienti
+    ADD CONSTRAINT "recapitoTelefonico" CHECK ((char_length(("recapitoTelefonico")::text) = 10)) NOT VALID;
+
+
+--
+-- TOC entry 2884 (class 2606 OID 16437)
+-- Name: tecnici recapitoTelefonico; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti".tecnici
+    ADD CONSTRAINT "recapitoTelefonico" CHECK ((char_length(("recapitoTelefonico")::text) = 10)) NOT VALID;
+
+
+--
+-- TOC entry 2892 (class 2606 OID 16439)
+-- Name: richiestedAssistenza richiestaDAssistenza_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."richiestedAssistenza"
+    ADD CONSTRAINT "richiestaDAssistenza_pkey" PRIMARY KEY ("codiceRichiesta");
+
+
+--
+-- TOC entry 2879 (class 2606 OID 16440)
+-- Name: richiestedAssistenza seriale; Type: CHECK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE "assistenzaGuasti"."richiestedAssistenza"
+    ADD CONSTRAINT seriale CHECK (((char_length((seriale)::text) >= 1) AND (char_length((seriale)::text) <= 10))) NOT VALID;
+
+
+--
+-- TOC entry 2894 (class 2606 OID 16442)
+-- Name: tecnici tecnico_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti".tecnici
+    ADD CONSTRAINT tecnico_pkey PRIMARY KEY ("codiceFiscale");
+
+
+--
+-- TOC entry 2896 (class 2606 OID 16444)
+-- Name: tipologieGuasto tipologiaGuasto_pkey; Type: CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."tipologieGuasto"
+    ADD CONSTRAINT "tipologiaGuasto_pkey" PRIMARY KEY ("codiceGuasto");
+
+
+--
+-- TOC entry 2899 (class 2606 OID 16445)
+-- Name: interventi cfTecnico; Type: FK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti".interventi
+    ADD CONSTRAINT "cfTecnico" FOREIGN KEY ("cfTecnico") REFERENCES "assistenzaGuasti".tecnici("codiceFiscale") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2897 (class 2606 OID 16450)
+-- Name: capaceDiRisolvere cfTecnico; Type: FK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."capaceDiRisolvere"
+    ADD CONSTRAINT "cfTecnico" FOREIGN KEY ("cfTecnico") REFERENCES "assistenzaGuasti".tecnici("codiceFiscale") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2901 (class 2606 OID 16455)
+-- Name: richiestedAssistenza codiceCliente; Type: FK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."richiestedAssistenza"
+    ADD CONSTRAINT "codiceCliente" FOREIGN KEY ("codiceCliente") REFERENCES "assistenzaGuasti".clienti("codiceFiscale/partitaIva") ON UPDATE CASCADE;
+
+
+--
+-- TOC entry 2898 (class 2606 OID 16460)
+-- Name: capaceDiRisolvere codiceGuasto; Type: FK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti"."capaceDiRisolvere"
+    ADD CONSTRAINT "codiceGuasto" FOREIGN KEY ("codiceGuasto") REFERENCES "assistenzaGuasti"."tipologieGuasto"("codiceGuasto") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2900 (class 2606 OID 16465)
+-- Name: interventi codiceRichiesta; Type: FK CONSTRAINT; Schema: assistenzaGuasti; Owner: postgres
+--
+
+ALTER TABLE ONLY "assistenzaGuasti".interventi
+    ADD CONSTRAINT "codiceRichiesta" FOREIGN KEY ("codiceRichiesta") REFERENCES "assistenzaGuasti"."richiestedAssistenza"("codiceRichiesta") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+-- Completed on 2021-04-22 22:09:05
+
+--
+-- PostgreSQL database dump complete
+--
+
