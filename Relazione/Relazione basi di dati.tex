@@ -433,9 +433,6 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 \subsection{Carico applicativo}
 E' necessario calcolare il carico applicativo per scegliere tra le varie tipologie di traduzione quale adottare. Esso viene calcolato ed analizzato mediante la tabella dei volumi e la tabella delle operazioni.
 
-\subsubsection{Tabella dei volumi}
-\subsubsection{Tabella delle operazioni}
-
 
 \subsection{Analisi delle ridondanze}
 Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le ridondanze risultano essere utili perché possono essere informazioni più efficienti da ricavare direttamente invece che utilizzare apposite query per la loro determinazione. Essendo quindi derivabili, bisogna tenere aggiornata questa informazione.\\
@@ -449,11 +446,11 @@ Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le rido
 		\hline
 		\multicolumn{3}{|c|}{\textbf{Elementi coinvolti}}\\
 		\hline
-		Tecnico & \centering{E} & 75\\
+		Tecnico & {E} & 75\\
 		\hline
-		gestito da & \centering{R} & 600.000\\
+		gestito da & {R} & 600.000\\
 		\hline
-		Intervento & \centering{E} & 600.000\\
+		Intervento & {E} & 600.000\\
 		\hline
 	\end{tabular}
 	
@@ -692,12 +689,6 @@ Vale sempre che:
 	\hline
 \end{tabular}
 
-\subsection{Regole di derivazione}
-
-\subsection{Vincoli d'integrità}
-
-\subsection{Vincoli d'integrità aggiuntivi del modello relazionale}
-
 \subsection{Normalizzazione}
 \subsubsection{Prima forma normale(1FN)}
 	Per vedere se è in Prima Forma Normale, dobbiamo semplicemente controllare che tutti gli attributi dello schema abbiano domini "atomici", ovvero che non siano composti o multivalore. \\
@@ -712,7 +703,26 @@ Vale sempre che:
 \subsection{Data Definition Language (DDL)}
 	Nell'SQL, la definizione dei dati o DDL è una sintassi per creare e modificare oggetti nel database come tabelle, indici e utenti. Esso è legato alla creazione del dizionario dei dati e l'eventuale definizione delle strutture di memorizzazione e dei metodi di accesso ai dati e rappresenta il primo passo della progettazione fisica.	\\
 	Di seguito elencheremo tutti strutture ottenute tramite DDL:
-	
+	\subsubsection{Collegamento}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\linewidth]{Immagini SQL/collegamento}
+			\caption{Collegamento dal terminale}
+			\label{collegamentobash}
+		\end{figure}
+		Il codice in figura va eseguito da un terminale linux con installato postgressql come servizio di sistema.\\
+		Per controllare se è presente il servizio postgressql basta digitare: \textbf{sudo service postgresql start}, 
+		se il comando da un errore sarà necessario installarlo seguendo questa guida:
+		 \href{https://linuxize.com/post/how-to-install-postgresql-on-debian-10/}{Come installare postgres}.\\
+	\subsubsection{Creazione}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.5\linewidth]{Immagini SQL/creazioneSchemaDatabase}
+			\caption{Creazione Database}
+			\label{creazioneSchemaDatabasesql}
+		\end{figure}
+
+	\subsubsection{Definizione di tipi personalizzati}
 	\subsubsection{Cliente}
 		\begin{figure}[h]
 			\centering
@@ -720,7 +730,22 @@ Vale sempre che:
 			\caption{Definizione tabella Clienti in SQL}
 			\label{clientesql}
 		\end{figure}
-		Di seguito viene effettuata un'analisi del codice. \\
+		Nell'immagine notiamo che alcuni attributi possono essere nulli, questo perchè alcune tipologie di clienti non serve che abbiamo attributi 
+		settati ma, possono averli NULL.
+		La query per la creazione del cliente presenta delle differenze rispetto allo schema ER, 
+		infatti c'è bisogno di aggiungere l'attributo tipo per distinguere la tipologia di cliente a cui ci stiamo riferendo. \\
+		Non basterà solamente aggiungere l'attributo tipo, sarà necessario creare un trigger apposito che, al momento 
+		dell'inserimento, deciderà quali campi lasciare nulli e queli dovranno obbligatoriamente essere assegnati. \\
+		Di seguito viene presentato il trigger per garantire un giusto inserimento del cliente:\\
+		
+		\paragraph{Trigger inserimento cliente}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width=0.9\linewidth]{Immagini SQL/triggerInserimentoCliente}
+				\caption{Definizione tabella Clienti in SQL}
+				\label{clientesql}
+			\end{figure}
+		fdsa\\
 
 	\subsubsection{Capace Di Risolvere}
 		\begin{figure}[h]
@@ -729,7 +754,11 @@ Vale sempre che:
 			\caption{Definizione tabella Capace Di Risolverei in SQL}
 			\label{CapaceDiRisolveresql}
 		\end{figure}
-		Di seguito viene effettuata un'analisi del codice. \\
+		Capace di Risolvere presenta una chiave primaria e due chiavi esterne che 
+		vengono definite come tali nella parte sottostante alla 	dichiarazione degli attributi. \\
+		E' importante definire le chiavi esterne con le caratteristiche di ON UPDATE CASCADE ON DELETE CASCADE
+		così da tenere sempre aggiornate le chiavi esterne in caso di modifiche alle tabelle puntate e, in caso di eliminazione delle tabelle 				puntate, la conseguente eliminazione dalla tabella capaceDiRisolvere.
+
 
 	\subsubsection{Intervento}
 		\begin{figure}[h]
@@ -738,7 +767,7 @@ Vale sempre che:
 			\caption{Definizione tabella intervento in SQL}
 			\label{interventosql}
 		\end{figure}
-		Di seguito viene effettuata un'analisi del codice. \\
+		fdsa \\
 
 	\subsubsection{Tipologia Guasto}
 		\begin{figure}[h]

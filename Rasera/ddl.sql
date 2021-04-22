@@ -1,3 +1,15 @@
+-- Bash
+sudo -i -u postgres
+
+psql
+--
+
+DROP SCHEMA IF EXISTS assistenzaGuasti CASCADE;
+
+CREATE SCHEMA assistenzaGuasti;
+
+SET search_path TO assistenzaGuasti;
+
 CREATE TABLE cliente(
     codiceFiscalePartitaIva     varchar(16)         NOT NULL,
     indirizzo                   varchar(20)         NOT NULL,
@@ -10,6 +22,8 @@ CREATE TABLE cliente(
     CONSTRAINT cliente_pkey            
         PRIMARY KEY             (codiceFiscalePartitaIva)
 );
+
+
 
 
 CREATE TABLE capaceDiRisolvere(
