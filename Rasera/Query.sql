@@ -72,7 +72,7 @@ VIEW ?
 SELECT COUNT(interventi) as numero_interventi
 FROM interventi
 WHERE EXISTS(
-        SELECT richiesta.richiesta_assistenza.id_codice_guasto
+        SELECT *
         FROM richiesta_assistenza
         WHERE richiesta_assistenza.id_codice_guasto = $id_codice_guasto
     )

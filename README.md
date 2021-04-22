@@ -11,7 +11,12 @@ Il progetto riguarda il laboratorio del corso di Basi di dati
 - [RELAZIONE - CORRENTE](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/blob/main/Relazione/Relazione%20basi%20di%20dati.pdf)
 
 # TODO
-- Progetto Logico
+- Aggiungere Trigger
+- Aggiungere foto della creazione tabelle
+- Descrizione dei Trigger
+- Finire query
+- Descrivere query
+- Scrivere popolamento
 
 # Problemi
 - [Issues](https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues)
