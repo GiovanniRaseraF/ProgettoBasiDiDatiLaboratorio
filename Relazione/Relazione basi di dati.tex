@@ -375,6 +375,7 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 		\begin{figure}[ht]
 			\includegraphics[width=4cm]{../Parata/Schema Prog. Logica}
 		\end{figure}
+\newpage
 	\subsection{Tabella dei volumi}
 		In questa sezione andiamo a definire il numero di occorrenze per ogni entità e relazione presente all'interno dello schema ER. Viene ipotizzato che i volumi facciano riferimento all'attività dopo i suoi dieci anni di vita.\\
 		\newline
@@ -401,7 +402,7 @@ I pattern di progetto sono delle soluzioni progettuali a problemi comuni. Si ele
 			Tecnico & E & 75 \\ \hline
 		\end{tabular}
 
-	
+\newpage	
 	\subsection{Tabella delle operazioni}
 	Per ogni operazione indicata precedentemente, andiamo a definire la frequenza con la quale essa viene eseguita e la sua tipologia:
 	\begin{itemize}
@@ -513,7 +514,7 @@ Nello schema ER è presente una singola ridondanza nell'entità Tecnico. Le rido
 	\end{itemize}
 	
 	Come possiamo notare, il costo con la presenza di ridondanza è leggermente maggiore (esattamente del 25\%), ma come vedremo nella prossima operazione, questo ci comporterà un beneficio.
-	
+\newpage
 	\subsubsection{Tabella degli accessi in riferimento all'operazione 6}
 	Il costo di una operazione (calcolato usando una tabella dei volumi) e lo schema di navigazione possono essere riassunti nella tabella degli accessi: \\ 
 	\newline
@@ -572,7 +573,7 @@ Per tradurre lo schema E-R bisogna rimuovere le varie generalizzazioni:\\
 \end{itemize}
 
 %\subsection{Partizionamento /accorpamento}
-
+\newpage
 \subsection{Regole di derivazione}
 \textbf{Tecnico->oreLavorateMensilmente:} attributo derivato che contiene la somma delle ore che un Tecnico ha lavorato nel mese corrente ed è un valore che deve essere maggiore o uguale a zero.\\
 Vale sempre che: 
@@ -594,14 +595,14 @@ Vale sempre che:
 \textbf{Intervento->data} maggiore di \textbf{Richiesta d'Assistenza->dataFineAssistenza}
 \end{enumerate}
 
-\subsection{Vincoli d'integrità aggiuntivi dello schema E-R ristrutturato}
-\begin{figure}[h]
+\subsection{Modello E-R ristrutturato}
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.9\linewidth]{image/er_ristrutturato}
 	\caption{}
 	\label{fig:erristrutturato}
 \end{figure}
-
+\newpage
 
 \subsection{Modello relazionale}
 \begin{tabular}{|p{\textwidth}|}
