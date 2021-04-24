@@ -10,14 +10,18 @@ CREATE SCHEMA assistenzaGuasti;
 
 SET search_path TO assistenzaGuasti;
 
-CREATE TABLE cliente(
-    codiceFiscalePartitaIva     varchar(16)         NOT NULL,
-    indirizzo                   varchar(20)         NOT NULL,
-    recapitoTelefonico          varchar(10)         NOT NULL,
+Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, 
+codiceFiscaleReferente, indirizzo, recapitoTelefonico)
+
+CREATE TABLE Cliente(
     tipo                        character(1)                ,
-    codiceFiscaleReferente      varchar(16)                 ,
+    codiceFiscalePartitaIva     varchar(16)         NOT NULL,
     nome                        varchar(20)                 ,
     cognome                     varchar(20)                 ,
+    ragioneSociale              varchar(50)                 ,
+    codiceFiscaleReferente      varchar(16)                 ,
+    indirizzo                   varchar(20)         NOT NULL,
+    recapitoTelefonico          varchar(10)         NOT NULL,
 
     CONSTRAINT cliente_pkey            
         PRIMARY KEY             (codiceFiscalePartitaIva)
@@ -62,7 +66,7 @@ CREATE TABLE intervento(
         ON DELETE               CASCADE
 );
 
-CREATE TABLE tecnico(
+CREATE TABLE Tecnico(
     codiceFiscale               character(16)       NOT NULL,
     nome                        varchar(20)         NOT NULL,
     cognome                     varchar(20)         NOT NULL,
@@ -70,20 +74,20 @@ CREATE TABLE tecnico(
     recapitoTelefonico          varchar(14)         NOT NULL,
     dataAssunzione              timestamp           NOT NULL,
     oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
-
     CONSTRAINT tecnico_pkey 
-        PRIMARY KEY             (codiceFiscale),
+        PRIMARY KEY             (codiceFiscale) 
 );
 
-CREATE TABLE tipologiaGuasto(
+
+CREATE TABLE TipologiaGuasto(
     codiceGuasto                integer             NOT NULL,
     descrizione                 text                NOT NULL,
     
     CONSTRAINT tipologiaGuasto_pkey 
-        PRIMARY KEY             (codiceGuasto),
+        PRIMARY KEY             (codiceGuasto)
 );
 -- Auto Increment
-ALTER TABLE tipologieGuasto 
+ALTER TABLE TipologiaGuasto 
     ALTER COLUMN codiceGuasto ADD GENERATED ALWAYS AS IDENTITY (
         SEQUENCE    NAME    tipologiaGuasto_codiceGuasto_seq
         START       WITH    1
@@ -93,7 +97,7 @@ ALTER TABLE tipologieGuasto
         CACHE               1
 );
 
-CREATE TABLE richiestaDAssistenza(
+CREATE TABLE RichiestadAssistenza(
     codiceRichiesta             integer             NOT NULL,
     data                        timestamp           NOT NULL,
     seriale                     varchar(10)         NOT NULL,
@@ -105,10 +109,10 @@ CREATE TABLE richiestaDAssistenza(
     CONSTRAINT codiceCliente 
         FOREIGN KEY             (codiceCliente) 
         REFERENCES              cliente(codiceFiscalePartitaIva) 
-        ON UPDATE               CASCADE, 
+        ON UPDATE               CASCADE
 );
 -- Auto Increment
-ALTER TABLE richiestaDAssistenza 
+ALTER TABLE RichiestadAssistenza 
     ALTER COLUMN codiceRichiesta ADD GENERATED ALWAYS AS IDENTITY (
         SEQUENCE    NAME    richiestaDAssistenza_codiceRichiesta_seq
         START       WITH    1
@@ -118,3 +122,38 @@ ALTER TABLE richiestaDAssistenza
         CACHE               1
 );
 
+
+
+insert into Tecnico(nome, cognome, codiceFiscale, indirizzo, 
+    recapitoTelefonico, dataAssunzione)
+values
+    ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago', '84590315584', '04-07-2020'),
+    ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli',  '845590315584', '04-07-2020'),
+    ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio',  '845903155584', '04-07-2020'),
+    ('Rinda','Arcidiacona','ARRRID59I33E601X','Arzene', '865903155584', '04-07-2020'),
+    ('Miroslao','Caporale','CALMIA96R30J564F','Capriva del friuli',  '14590315584', '04-07-2020'),
+    ('Iliana','Diana','DINILA85R07F804T','Udine',  '840315584', '04-07-2020'),
+    ('Cosimino','Alarcio','ALOCOI47G38E715T','Udine',  '80590315584', '04-07-2020'),
+    ('Elfride','Rollo','ROOELR67P13T617P','Porpetto',  '84500315584', '04-07-2020'),
+    ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),
+    ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');
+insert into TipologiaGuasto(descrizione)
+values
+    ('Riparazione sostituzione tubo'),              -- tutti
+    ('Installazione termi'),                        -- 7
+    ('Riparazione caldaia'),                        -- 5
+    ('Riparazione scheda caldaia'),                 -- 3
+    ('Programmazione software caldaia'),            -- 3
+    ('Installazione caldaia SMART');                -- 0
+INSERT INTO Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, codiceFiscaleReferente, indirizzo, recapitoTelefonico) 
+VALUES
+    ('p', 'PEIDEN21G30J090F', 'Desdemona', 'Pettorino', null, null, 'Enemonzo', '12345678'),
+    ('p', 'TUCREN11F13M752T', 'Remondino','Tucci', null, null, 'Enemonzo', '12345678'),
+    ('p', 'MUOFRS18F35O297W', 'Fruttuoso','Muolo', null, null, 'Enemonzo', '12345678'),
+    ('p', 'THJMOA49L12U876Q', 'Moravio','Thiyagarajah', null, null, 'Enemonzo', '12345678'),
+    ('p', 'OGGAUU93M00S379L', 'Aureo','Ogango', null, null, 'Enemonzo', '12345678'),
+    ('a', '08100750010', null, null, 'Apple', 'MASUMR65I22M195F', 'Enemonzo', '12345678'),
+    ('a', '08100550010', null, null, 'Microsoft', 'ROAEVN94I11I357H', 'Enemonzo', '12345678'),
+    ('a', '08130750010', null, null, 'Tecnest', 'LARALR42N28Z423Z', 'Enemonzo', '12345678'),
+    ('e', '08105655001', null, null, 'Comune di venezia', 'TAALAA62Z20N678S', 'venezia', '12345678'),
+    ('e', '18100550010', null, null, 'Convitto Tomadini', 'GAAILL96I16V833I', 'udine', '12345678' );
