@@ -1,9 +1,17 @@
+-- Bash
+sudo -i -u postgres
 
-DROP SCHEMA IF EXISTS assistenzaGuasti CASCADE;
+psql
+--
 
-CREATE SCHEMA assistenzaGuasti;
+DROP SCHEMA IF EXISTS testAssistenza CASCADE;
 
-SET search_path TO assistenzaGuasti;
+CREATE SCHEMA testAssistenza;
+
+SET search_path TO testAssistenza;
+
+Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, 
+codiceFiscaleReferente, indirizzo, recapitoTelefonico)
 
 CREATE TABLE Cliente(
     tipo                        character(1)                ,
@@ -17,36 +25,6 @@ CREATE TABLE Cliente(
 
     CONSTRAINT cliente_pkey            
         PRIMARY KEY             (codiceFiscalePartitaIva)
-);
-
-CREATE TABLE Tecnico(
-    codiceFiscale               character(16)       NOT NULL,
-    nome                        varchar(20)         NOT NULL,
-    cognome                     varchar(20)         NOT NULL,
-    indirizzo                   varchar(50)         NOT NULL,
-    recapitoTelefonico          varchar(14)         NOT NULL,
-    dataAssunzione              timestamp           NOT NULL,
-    oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
-    CONSTRAINT tecnico_pkey 
-        PRIMARY KEY             (codiceFiscale) 
-);
-
-CREATE TABLE TipologiaGuasto(
-    codiceGuasto                integer             NOT NULL,
-    descrizione                 text                NOT NULL,
-    
-    CONSTRAINT tipologiaGuasto_pkey 
-        PRIMARY KEY             (codiceGuasto)
-);
--- Auto Increment
-ALTER TABLE TipologiaGuasto 
-    ALTER COLUMN codiceGuasto ADD GENERATED ALWAYS AS IDENTITY (
-        SEQUENCE    NAME    tipologiaGuasto_codiceGuasto_seq
-        START       WITH    1
-        INCREMENT   BY      1
-        NO                  MINVALUE
-        NO                  MAXVALUE
-        CACHE               1
 );
 
 CREATE TABLE capaceDiRisolvere(
@@ -66,6 +44,7 @@ CREATE TABLE capaceDiRisolvere(
         ON UPDATE               CASCADE
         ON DELETE               CASCADE
 );
+
 
 CREATE TABLE Intervento(
     numeroIntervento            integer             NOT NULL,
@@ -87,6 +66,37 @@ CREATE TABLE Intervento(
 ALTER TABLE Intervento 
     ALTER COLUMN numeroIntervento ADD GENERATED ALWAYS AS IDENTITY (
         SEQUENCE    NAME    intervento_numeroIntervento_seq
+        START       WITH    1
+        INCREMENT   BY      1
+        NO                  MINVALUE
+        NO                  MAXVALUE
+        CACHE               1
+);
+
+CREATE TABLE Tecnico(
+    codiceFiscale               character(16)       NOT NULL,
+    nome                        varchar(20)         NOT NULL,
+    cognome                     varchar(20)         NOT NULL,
+    indirizzo                   varchar(50)         NOT NULL,
+    recapitoTelefonico          varchar(14)         NOT NULL,
+    dataAssunzione              timestamp           NOT NULL,
+    oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
+    CONSTRAINT tecnico_pkey 
+        PRIMARY KEY             (codiceFiscale) 
+);
+
+
+CREATE TABLE TipologiaGuasto(
+    codiceGuasto                integer             NOT NULL,
+    descrizione                 text                NOT NULL,
+    
+    CONSTRAINT tipologiaGuasto_pkey 
+        PRIMARY KEY             (codiceGuasto)
+);
+-- Auto Increment
+ALTER TABLE TipologiaGuasto 
+    ALTER COLUMN codiceGuasto ADD GENERATED ALWAYS AS IDENTITY (
+        SEQUENCE    NAME    tipologiaGuasto_codiceGuasto_seq
         START       WITH    1
         INCREMENT   BY      1
         NO                  MINVALUE
@@ -121,7 +131,6 @@ ALTER TABLE RichiestadAssistenza
 
 
 
--- Valori
 insert into Tecnico(nome, cognome, codiceFiscale, indirizzo, 
     recapitoTelefonico, dataAssunzione)
 values
