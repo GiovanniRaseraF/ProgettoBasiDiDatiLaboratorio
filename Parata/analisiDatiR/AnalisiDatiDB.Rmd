@@ -1,0 +1,40 @@
+---
+title: "BasiDiDati"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library (RPostgreSQL);
+library(ggplot2)
+drv <- dbDriver ("PostgreSQL")
+con <- dbConnect (drv ,
+                  dbname =" progettoDB ",
+                  host =" 127.0.0.1 ",
+                  port =5432 ,
+                  user =" postgres ",
+                  password =" root ")
+res <- dbGetQuery (con , " set search_path TO gestoreAssistenze ")
+```
+
+```{r}
+operazione6 <- dbGetQuery (con ,"select oreLavorateMensilmente from Tecnico")
+hist(operazione6)
+```
+
+```{r}
+operazione7 <- dbGetQuery (con ,"select * from Interventi")
+hist(operazione7)
+```
+
+```{r}
+operazione9 <- dbGetQuery (con ,"select * from Interventi where(select *....) ")
+hist(operazione7)
+```
+
+
+
+
