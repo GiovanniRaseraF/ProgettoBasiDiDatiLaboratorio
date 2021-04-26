@@ -27,6 +27,7 @@ CREATE TABLE Tecnico(
     recapitoTelefonico          varchar(14)         NOT NULL,
     dataAssunzione              timestamp           NOT NULL,
     oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
+
     CONSTRAINT tecnico_pkey 
         PRIMARY KEY             (codiceFiscale) 
 );
@@ -122,9 +123,9 @@ ALTER TABLE RichiestadAssistenza
 
 
 -- Valori
-insert into Tecnico(nome, cognome, codiceFiscale, indirizzo, 
+INSERT INTO Tecnico(nome, cognome, codiceFiscale, indirizzo, 
     recapitoTelefonico, dataAssunzione)
-values
+VALUES
     ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago', '84590315584', '04-07-2020'),
     ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli',  '845590315584', '04-07-2020'),
     ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio',  '845903155584', '04-07-2020'),
@@ -136,8 +137,8 @@ values
     ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),
     ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');
 
-insert into TipologiaGuasto(descrizione)
-values
+INSERT INTO TipologiaGuasto(descrizione)
+VALUES
     ('Riparazione sostituzione tubo'),              -- tutti
     ('Installazione termi'),                        -- 7
     ('Riparazione caldaia'),                        -- 5
@@ -147,19 +148,19 @@ values
 
 INSERT INTO Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, codiceFiscaleReferente, indirizzo, recapitoTelefonico) 
 VALUES
-    ('p', 'PEIDEN21G30J090F', 'Desdemona', 'Pettorino', null, null, 'Enemonzo', '12345678'),
-    ('p', 'TUCREN11F13M752T', 'Remondino','Tucci', null, null, 'Enemonzo', '12345678'),
-    ('p', 'MUOFRS18F35O297W', 'Fruttuoso','Muolo', null, null, 'Enemonzo', '12345678'),
-    ('p', 'THJMOA49L12U876Q', 'Moravio','Thiyagarajah', null, null, 'Enemonzo', '12345678'),
-    ('p', 'OGGAUU93M00S379L', 'Aureo','Ogango', null, null, 'Enemonzo', '12345678'),
-    ('a', '08100750010', null, null, 'Apple', 'MASUMR65I22M195F', 'Enemonzo', '12345678'),
-    ('a', '08100550010', null, null, 'Microsoft', 'ROAEVN94I11I357H', 'Enemonzo', '12345678'),
-    ('a', '08130750010', null, null, 'Tecnest', 'LARALR42N28Z423Z', 'Enemonzo', '12345678'),
-    ('e', '08105655001', null, null, 'Comune di venezia', 'TAALAA62Z20N678S', 'venezia', '12345678'),
-    ('e', '18100550010', null, null, 'Convitto Tomadini', 'GAAILL96I16V833I', 'udine', '12345678' );
+    ('p', 'PEIDEN21G30J090F', 'Desdemona', 'Pettorino', NULL, NULL, 'Enemonzo', '12345678'),
+    ('p', 'TUCREN11F13M752T', 'Remondino','Tucci', NULL, NULL, 'Enemonzo', '12345678'),
+    ('p', 'MUOFRS18F35O297W', 'Fruttuoso','Muolo', NULL, NULL, 'Enemonzo', '12345678'),
+    ('p', 'THJMOA49L12U876Q', 'Moravio','Thiyagarajah', NULL, NULL, 'Enemonzo', '12345678'),
+    ('p', 'OGGAUU93M00S379L', 'Aureo','Ogango', NULL, NULL, 'Enemonzo', '12345678'),
+    ('a', '08100750010', NULL, NULL, 'Apple', 'MASUMR65I22M195F', 'Enemonzo', '12345678'),
+    ('a', '08100550010', NULL, NULL, 'Microsoft', 'ROAEVN94I11I357H', 'Enemonzo', '12345678'),
+    ('a', '08130750010', NULL, NULL, 'Tecnest', 'LARALR42N28Z423Z', 'Enemonzo', '12345678'),
+    ('e', '08105655001', NULL, NULL, 'Comune di venezia', 'TAALAA62Z20N678S', 'venezia', '12345678'),
+    ('e', '18100550010', NULL, NULL, 'Convitto Tomadini', 'GAAILL96I16V833I', 'udine', '12345678' );
 
-insert into capaceDiRisolvere(cfTecnico, codiceGuasto)
-values
+INSERT INTO capaceDiRisolvere(cfTecnico, codiceGuasto)
+VALUES
     ('SOIFIM33U20Q912N', 1),
     ('GROPOT28U08E502Y',1),
     ('TUWQUZ78N29U115A',1),
@@ -190,10 +191,10 @@ values
 
 -- Test di query
 -- Trovare chi sa fare cosa
-select nome, cognome, descrizione 
-from tecnico, capacedirisolvere, tipologiaguasto 
-where 
+SELECT nome, cognome, descrizione 
+FROM tecnico, capacedirisolvere, tipologiaguasto 
+WHERE 
     codiceFiscale = cftecnico 
-    and tipologiaguasto.codiceguasto = capacedirisolvere.codiceguasto;
+    AND tipologiaguasto.codiceguasto = capacedirisolvere.codiceguasto;
 
 -- 
