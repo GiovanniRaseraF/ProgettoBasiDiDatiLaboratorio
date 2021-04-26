@@ -1,17 +1,9 @@
--- Bash
-sudo -i -u postgres
 
-psql
---
+DROP SCHEMA IF EXISTS testassistenzaGuasti CASCADE;
 
-DROP SCHEMA IF EXISTS testAssistenza CASCADE;
+CREATE SCHEMA testassistenzaGuasti;
 
-CREATE SCHEMA testAssistenza;
-
-SET search_path TO testAssistenza;
-
-Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, 
-codiceFiscaleReferente, indirizzo, recapitoTelefonico)
+SET search_path TO testassistenzaGuasti;
 
 CREATE TABLE Cliente(
     tipo                        character(1)                ,
@@ -25,6 +17,36 @@ CREATE TABLE Cliente(
 
     CONSTRAINT cliente_pkey            
         PRIMARY KEY             (codiceFiscalePartitaIva)
+);
+
+CREATE TABLE Tecnico(
+    codiceFiscale               character(16)       NOT NULL,
+    nome                        varchar(20)         NOT NULL,
+    cognome                     varchar(20)         NOT NULL,
+    indirizzo                   varchar(50)         NOT NULL,
+    recapitoTelefonico          varchar(14)         NOT NULL,
+    dataAssunzione              timestamp           NOT NULL,
+    oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
+    CONSTRAINT tecnico_pkey 
+        PRIMARY KEY             (codiceFiscale) 
+);
+
+CREATE TABLE TipologiaGuasto(
+    codiceGuasto                integer             NOT NULL,
+    descrizione                 text                NOT NULL,
+    
+    CONSTRAINT tipologiaGuasto_pkey 
+        PRIMARY KEY             (codiceGuasto)
+);
+-- Auto Increment
+ALTER TABLE TipologiaGuasto 
+    ALTER COLUMN codiceGuasto ADD GENERATED ALWAYS AS IDENTITY (
+        SEQUENCE    NAME    tipologiaGuasto_codiceGuasto_seq
+        START       WITH    1
+        INCREMENT   BY      1
+        NO                  MINVALUE
+        NO                  MAXVALUE
+        CACHE               1
 );
 
 CREATE TABLE capaceDiRisolvere(
@@ -44,7 +66,6 @@ CREATE TABLE capaceDiRisolvere(
         ON UPDATE               CASCADE
         ON DELETE               CASCADE
 );
-
 
 CREATE TABLE Intervento(
     numeroIntervento            integer             NOT NULL,
@@ -66,37 +87,6 @@ CREATE TABLE Intervento(
 ALTER TABLE Intervento 
     ALTER COLUMN numeroIntervento ADD GENERATED ALWAYS AS IDENTITY (
         SEQUENCE    NAME    intervento_numeroIntervento_seq
-        START       WITH    1
-        INCREMENT   BY      1
-        NO                  MINVALUE
-        NO                  MAXVALUE
-        CACHE               1
-);
-
-CREATE TABLE Tecnico(
-    codiceFiscale               character(16)       NOT NULL,
-    nome                        varchar(20)         NOT NULL,
-    cognome                     varchar(20)         NOT NULL,
-    indirizzo                   varchar(50)         NOT NULL,
-    recapitoTelefonico          varchar(14)         NOT NULL,
-    dataAssunzione              timestamp           NOT NULL,
-    oreLavorateMensilmente      integer DEFAULT 0   NOT NULL,
-    CONSTRAINT tecnico_pkey 
-        PRIMARY KEY             (codiceFiscale) 
-);
-
-
-CREATE TABLE TipologiaGuasto(
-    codiceGuasto                integer             NOT NULL,
-    descrizione                 text                NOT NULL,
-    
-    CONSTRAINT tipologiaGuasto_pkey 
-        PRIMARY KEY             (codiceGuasto)
-);
--- Auto Increment
-ALTER TABLE TipologiaGuasto 
-    ALTER COLUMN codiceGuasto ADD GENERATED ALWAYS AS IDENTITY (
-        SEQUENCE    NAME    tipologiaGuasto_codiceGuasto_seq
         START       WITH    1
         INCREMENT   BY      1
         NO                  MINVALUE
@@ -131,6 +121,7 @@ ALTER TABLE RichiestadAssistenza
 
 
 
+-- Valori
 insert into Tecnico(nome, cognome, codiceFiscale, indirizzo, 
     recapitoTelefonico, dataAssunzione)
 values
@@ -144,6 +135,7 @@ values
     ('Elfride','Rollo','ROOELR67P13T617P','Porpetto',  '84500315584', '04-07-2020'),
     ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),
     ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');
+
 insert into TipologiaGuasto(descrizione)
 values
     ('Riparazione sostituzione tubo'),              -- tutti
@@ -152,6 +144,7 @@ values
     ('Riparazione scheda caldaia'),                 -- 3
     ('Programmazione software caldaia'),            -- 3
     ('Installazione caldaia SMART');                -- 0
+
 INSERT INTO Cliente(tipo, codiceFiscalePartitaIva, nome, cognome, ragioneSociale, codiceFiscaleReferente, indirizzo, recapitoTelefonico) 
 VALUES
     ('p', 'PEIDEN21G30J090F', 'Desdemona', 'Pettorino', null, null, 'Enemonzo', '12345678'),
@@ -164,3 +157,32 @@ VALUES
     ('a', '08130750010', null, null, 'Tecnest', 'LARALR42N28Z423Z', 'Enemonzo', '12345678'),
     ('e', '08105655001', null, null, 'Comune di venezia', 'TAALAA62Z20N678S', 'venezia', '12345678'),
     ('e', '18100550010', null, null, 'Convitto Tomadini', 'GAAILL96I16V833I', 'udine', '12345678' );
+
+insert into capaceDiRisolvere(cfTecnico, codiceGuasto)
+values
+    ('SOIFIM33U20Q912N', 1),
+    ('GROPOT28U08E502Y',1),
+    ('TUWQUZ78N29U115A',1),
+    ('ARRRID59I33E601X',1),
+    ('CALMIA96R30J564F',1),
+    ('DINILA85R07F804T',1),
+    ('ALOCOI47G38E715T',1),
+    ('ROOELR67P13T617P',1),
+    ('ANIGRD30N04O833O',1),
+    ('ANNSAN04M30V992Y',1),
+
+    ('SOIFIM33U20Q912N', 2),
+    ('GROPOT28U08E502Y',2),
+    ('TUWQUZ78N29U115A',2),
+    ('ARRRID59I33E601X',2),
+    ('CALMIA96R30J564F',2),
+    ('DINILA85R07F804T',2),
+    ('ANNSAN04M30V992Y',2),
+
+    ('SOIFIM33U20Q912N', 3),
+    ('TUWQUZ78N29U115A',3),
+    ('ARRRID59I33E601X',3),
+    
+    ('SOIFIM33U20Q912N', 4),
+    ('GROPOT28U08E502Y',4),
+    ('CALMIA96R30J564F',4);
