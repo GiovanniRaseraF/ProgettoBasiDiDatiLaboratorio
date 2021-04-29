@@ -1,9 +1,9 @@
 
-DROP SCHEMA IF EXISTS assistenzaGuasti CASCADE;
+DROP SCHEMA IF EXISTS test_2904assistenzaGuasti CASCADE;
 
-CREATE SCHEMA assistenzaGuasti;
+CREATE SCHEMA test_2904assistenzaGuasti;
 
-SET search_path TO assistenzaGuasti;
+SET search_path TO test_2904assistenzaGuasti;
 
 CREATE TABLE Cliente(
     tipo                        character(1)                ,
@@ -101,13 +101,19 @@ CREATE TABLE RichiestadAssistenza(
     seriale                     varchar(10)         NOT NULL,
     dataFineAssistenza          date                        ,
     codiceCliente               varchar(16)         NOT NULL,
+    inerente                    integer             NOT NULL,             
 
     CONSTRAINT richiestaDAssistenza_pkey 
         PRIMARY KEY             (codiceRichiesta),
     CONSTRAINT codiceCliente 
         FOREIGN KEY             (codiceCliente) 
         REFERENCES              cliente(codiceFiscalePartitaIva) 
+        ON UPDATE               CASCADE,
+    CONSTRAINT fcinerente            
+        FOREIGN KEY             (inerente)
+        REFERENCES              tipologiaGuasto(codiceGuasto)
         ON UPDATE               CASCADE
+        ON DELETE               CASCADE
 );
 -- Auto Increment
 ALTER TABLE RichiestadAssistenza 
@@ -126,16 +132,16 @@ ALTER TABLE RichiestadAssistenza
 INSERT INTO Tecnico(nome, cognome, codiceFiscale, indirizzo, 
     recapitoTelefonico, dataAssunzione)
 VALUES
-    ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago', '84590315584', '04-07-2020'),
-    ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli',  '845590315584', '04-07-2020'),
-    ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio',  '845903155584', '04-07-2020'),
-    ('Rinda','Arcidiacona','ARRRID59I33E601X','Arzene', '865903155584', '04-07-2020'),
-    ('Miroslao','Caporale','CALMIA96R30J564F','Capriva del friuli',  '14590315584', '04-07-2020'),
-    ('Iliana','Diana','DINILA85R07F804T','Udine',  '840315584', '04-07-2020'),
-    ('Cosimino','Alarcio','ALOCOI47G38E715T','Udine',  '80590315584', '04-07-2020'),
-    ('Elfride','Rollo','ROOELR67P13T617P','Porpetto',  '84500315584', '04-07-2020'),
-    ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),
-    ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');
+    ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago', '84590315584', '04-07-2020'),-- 1 2 3 4
+    ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli',  '845590315584', '04-07-2020'),-- 1 2 3 4
+    ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio',  '845903155584', '04-07-2020'),--1 2 3
+    ('Rinda','Arcidiacona','ARRRID59I33E601X','Arzene', '865903155584', '04-07-2020'),-- 1 2 3
+    ('Miroslao','Caporale','CALMIA96R30J564F','Capriva del friuli',  '14590315584', '04-07-2020'),-- 1 2 3
+    ('Iliana','Diana','DINILA85R07F804T','Udine',  '840315584', '04-07-2020'),-- 1 2
+    ('Cosimino','Alarcio','ALOCOI47G38E715T','Udine',  '80590315584', '04-07-2020'),--1
+    ('Elfride','Rollo','ROOELR67P13T617P','Porpetto',  '84500315584', '04-07-2020'),--1
+    ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),--1
+    ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');--1 2
 
 INSERT INTO TipologiaGuasto(descrizione)
 VALUES
@@ -189,6 +195,70 @@ VALUES
     ('CALMIA96R30J564F',4);
 
 
+INSERT INTO RichiestadAssistenza (
+    data, -- yyyy-mm-dd
+    seriale  ,
+    dataFineAssistenza ,
+    codiceCliente,
+    inerente 
+)
+VALUES
+( '2021-01-08', 'aa0_mack', null, 'PEIDEN21G30J090F', 1),
+( '2021-01-08', 'aa0_mack', null, 'TUCREN11F13M752T', 1),
+( '2021-01-11', 'bb0_selll', null, '08100750010', 3),
+( '2021-01-12', 'aa0_mack', null, '08100550010', 4),
+( '2021-01-13', 'aa12_mack', null, '08130750010', 1),
+( '2021-01-14', 'aa0_mack', null, '08100550010', 2),
+( '2021-01-14', 'aa0_m12k', null, '18100550010', 3),
+( '2021-01-16', 'aa0_mack', null, '08100550010', 5),
+( '2021-01-18', 'aa0_mack', null, '18100550010', 1),
+( '2021-01-19', 'aa0_mack', null, 'PEIDEN21G30J090F', 2),
+
+( '2021-01-20', 'aa0_mack', null, 'OGGAUU93M00S379L', 3),
+( '2021-01-21', 'aa0_mack', null, 'OGGAUU93M00S379L', 3),
+( '2021-01-22', 'bb0_selll', null, '08100750010', 1),
+( '2021-01-23', 'aa0_mack', null, '08130750010', 2),
+( '2021-01-25', 'aa12_mack', null, '08130750010', 3),
+( '2021-01-26', 'aa0_mack', null, '08130750010', 4),
+( '2021-01-27', 'aa0_m12k', null, '08105655001', 1),
+( '2021-02-01', 'aa0_mack', null, '08130750010', 2),
+( '2021-02-02', 'aa0_mack', null, '08105655001', 3),
+( '2021-02-03', 'aa0_mack', null, 'PEIDEN21G30J090F', 5),
+
+( '2021-02-04', 'aa0_mack', null, 'MUOFRS18F35O297W', 1),
+( '2021-02-05', 'aa0_mack', null, 'MUOFRS18F35O297W', 2),
+( '2021-02-06', 'bb0_selll', null, '08100550010', 3),
+( '2021-02-08', 'aa0_mack', null, '08100550010', 3),
+( '2021-02-09', 'aa12_mack', null, '08130750010', 1),
+( '2021-02-10', 'aa0_mack', null, '08100550010', 2),
+( '2021-02-11', 'aa0_m12k', null, '18100550010', 3),
+( '2021-02-12', 'aa0_mack', null, '08100550010', 4),
+( '2021-02-13', 'aa0_mack', null, '18100550010', 1),
+( '2021-02-19', 'aa0_mack', null, 'MUOFRS18F35O297W', 2),
+( '2021-02-23', 'aa0_mack', null, 'MUOFRS18F35O297W', 6);
+
+insert into Intervento(
+    data,
+    durata,
+    modalita,
+    codiceRichiesta,
+    cfTecnico)
+VALUES
+('2021-01-08', 2, 'r', 1, 'SOIFIM33U20Q912N'),
+('2021-01-09', 5, 'r', 1, 'GROPOT28U08E502Y'),
+('2021-01-08', 6, 's', 2, 'TUWQUZ78N29U115A'),
+('2021-01-09', 1, 's', 2, 'TUWQUZ78N29U115A'),
+
+('2021-01-11', 2, 'r', 3, 'CALMIA96R30J564F'),
+('2021-01-12', 5, 'r', 3, 'ARRRID59I33E601X'),
+('2021-01-12', 6, 's', 4, 'GROPOT28U08E502Y'),
+('2021-01-13', 1, 's', 4, 'GROPOT28U08E502Y'),
+
+('2021-01-14', 2, 'r', 5, 'ANNSAN04M30V992Y'),
+('2021-01-14', 6, 's', 6, 'DINILA85R07F804T'),
+('2021-02-13', 1, 's', 7, 'CALMIA96R30J564F');
+
+
 -- Test di query
 -- Trovare chi sa fare cosa
 SELECT nome, cognome, descrizione 
@@ -198,3 +268,33 @@ WHERE
     AND tipologiaguasto.codiceguasto = capacedirisolvere.codiceguasto;
 
 -- 
+-- Conta per ogni richiesta il numero di interventi assegnati
+select richiestadassistenza.codiceRichiesta, count(*) 
+from richiestadassistenza, intervento 
+where 
+    richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+group by richiestadassistenza.codiceRichiesta 
+order by richiestadassistenza.codiceRichiesta;
+
+
+-- Per ogni guasto il numero di interventi eseguiti
+select tipologiaGuasto.descrizione, tipologiaGuasto.codiceGuasto, count(*) 
+from tipologiaGuasto, richiestadassistenza, intervento 
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+    and richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+group by tipologiaGuasto.descrizione, tipologiaguasto.codiceGuasto
+order by tipologiaGuasto.codiceGuasto;
+
+select tipologiaGuasto.descrizione, tipologiaGuasto.codiceGuasto
+from tipologiaGuasto, richiestadassistenza, intervento
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+    and richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+order by descrizione;
+
+select tipologiaGuasto.descrizione, codiceRichiesta
+from tipologiaGuasto, richiestadassistenza
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+ 
+order by descrizione;
+-- Per ogni guasto il numero di ore lavorate su di esso
+
