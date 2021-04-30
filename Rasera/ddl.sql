@@ -132,16 +132,16 @@ ALTER TABLE RichiestadAssistenza
 INSERT INTO Tecnico(nome, cognome, codiceFiscale, indirizzo, 
     recapitoTelefonico, dataAssunzione)
 VALUES
-    ('Fidarma','Solombrino','SOIFIM33U20Q912N','Maniago', '84590315584', '04-07-2020'),-- 1 2 3 4
-    ('Portos','Greco','GROPOT28U08E502Y','Cervignano del friuli',  '845590315584', '04-07-2020'),-- 1 2 3 4
-    ('Quinzia','Tunwal','TUWQUZ78N29U115A','Travesio',  '845903155584', '04-07-2020'),--1 2 3
-    ('Rinda','Arcidiacona','ARRRID59I33E601X','Arzene', '865903155584', '04-07-2020'),-- 1 2 3
-    ('Miroslao','Caporale','CALMIA96R30J564F','Capriva del friuli',  '14590315584', '04-07-2020'),-- 1 2 3
-    ('Iliana','Diana','DINILA85R07F804T','Udine',  '840315584', '04-07-2020'),-- 1 2
-    ('Cosimino','Alarcio','ALOCOI47G38E715T','Udine',  '80590315584', '04-07-2020'),--1
-    ('Elfride','Rollo','ROOELR67P13T617P','Porpetto',  '84500315584', '04-07-2020'),--1
-    ('Gradita','Anastasio','ANIGRD30N04O833O','Spilimbergo',  '122254315584', '04-07-2020'),--1
-    ('Sabina','Ananika','ANNSAN04M30V992Y','Aviano',  '845903145584', '04-07-2020');--1 2
+    ('Fidarma', 'Solombrino',   'SOIFIM33U20Q912N', 'Maniago',      '84590315584',  '04-07-2020'),--1 2 3 4
+    ('Portos',  'Greco',        'GROPOT28U08E502Y', 'Cervignano del friuli',  '845590315584', '04-07-2020'),--1 2 3 4
+    ('Quinzia', 'Tunwal',       'TUWQUZ78N29U115A', 'Travesio',     '845903155584', '04-07-2020'),--1 2 3
+    ('Rinda',   'Arcidiacona',  'ARRRID59I33E601X', 'Arzene',       '865903155584', '04-07-2020'),--1 2 3
+    ('Miroslao','Caporale',     'CALMIA96R30J564F', 'Capriva del friuli',  '14590315584', '04-07-2020'),--1 2 3
+    ('Iliana',  'Diana',        'DINILA85R07F804T', 'Udine',        '840315584',    '04-07-2020'),--1 2
+    ('Cosimino','Alarcio',      'ALOCOI47G38E715T', 'Udine',        '80590315584',  '04-07-2020'),--1
+    ('Elfride', 'Rollo',        'ROOELR67P13T617P', 'Porpetto',     '84500315584',  '04-07-2020'),--1
+    ('Gradita', 'Anastasio',    'ANIGRD30N04O833O', 'Spilimbergo',  '122254315584', '04-07-2020'),--1
+    ('Sabina',  'Ananika',      'ANNSAN04M30V992Y', 'Aviano',       '845903145584', '04-07-2020');--1 2
 
 INSERT INTO TipologiaGuasto(descrizione)
 VALUES
@@ -167,32 +167,32 @@ VALUES
 
 INSERT INTO capaceDiRisolvere(cfTecnico, codiceGuasto)
 VALUES
-    ('SOIFIM33U20Q912N', 1),
-    ('GROPOT28U08E502Y',1),
-    ('TUWQUZ78N29U115A',1),
-    ('ARRRID59I33E601X',1),
-    ('CALMIA96R30J564F',1),
-    ('DINILA85R07F804T',1),
-    ('ALOCOI47G38E715T',1),
-    ('ROOELR67P13T617P',1),
-    ('ANIGRD30N04O833O',1),
-    ('ANNSAN04M30V992Y',1),
+    ('SOIFIM33U20Q912N',    1),
+    ('GROPOT28U08E502Y',    1),
+    ('TUWQUZ78N29U115A',    1),
+    ('ARRRID59I33E601X',    1),
+    ('CALMIA96R30J564F',    1),
+    ('DINILA85R07F804T',    1),
+    ('ALOCOI47G38E715T',    1),
+    ('ROOELR67P13T617P',    1),
+    ('ANIGRD30N04O833O',    1),
+    ('ANNSAN04M30V992Y',    1),
 
-    ('SOIFIM33U20Q912N', 2),
-    ('GROPOT28U08E502Y',2),
-    ('TUWQUZ78N29U115A',2),
-    ('ARRRID59I33E601X',2),
-    ('CALMIA96R30J564F',2),
-    ('DINILA85R07F804T',2),
-    ('ANNSAN04M30V992Y',2),
+    ('SOIFIM33U20Q912N',    2),
+    ('GROPOT28U08E502Y',    2),
+    ('TUWQUZ78N29U115A',    2),
+    ('ARRRID59I33E601X',    2),
+    ('CALMIA96R30J564F',    2),
+    ('DINILA85R07F804T',    2),
+    ('ANNSAN04M30V992Y',    2),
 
-    ('SOIFIM33U20Q912N', 3),
-    ('TUWQUZ78N29U115A',3),
-    ('ARRRID59I33E601X',3),
+    ('SOIFIM33U20Q912N',    3),
+    ('TUWQUZ78N29U115A',    3),
+    ('ARRRID59I33E601X',    3),
     
-    ('SOIFIM33U20Q912N', 4),
-    ('GROPOT28U08E502Y',4),
-    ('CALMIA96R30J564F',4);
+    ('SOIFIM33U20Q912N',    4),
+    ('GROPOT28U08E502Y',    4),
+    ('CALMIA96R30J564F',    4);
 
 
 INSERT INTO RichiestadAssistenza (
@@ -203,39 +203,39 @@ INSERT INTO RichiestadAssistenza (
     inerente 
 )
 VALUES
-( '2021-01-08', 'aa0_mack', null, 'PEIDEN21G30J090F', 1),
-( '2021-01-08', 'aa0_mack', null, 'TUCREN11F13M752T', 1),
-( '2021-01-11', 'bb0_selll', null, '08100750010', 3),
-( '2021-01-12', 'aa0_mack', null, '08100550010', 4),
-( '2021-01-13', 'aa12_mack', null, '08130750010', 1),
-( '2021-01-14', 'aa0_mack', null, '08100550010', 2),
-( '2021-01-14', 'aa0_m12k', null, '18100550010', 3),
-( '2021-01-16', 'aa0_mack', null, '08100550010', 5),
-( '2021-01-18', 'aa0_mack', null, '18100550010', 1),
-( '2021-01-19', 'aa0_mack', null, 'PEIDEN21G30J090F', 2),
+( '2021-01-08', 'aa0_mack',     null, 'PEIDEN21G30J090F',   1),
+( '2021-01-08', 'aa0_mack',     null, 'TUCREN11F13M752T',   1),
+( '2021-01-11', 'bb0_selll',    null, '08100750010',        3),
+( '2021-01-12', 'aa0_mack',     null, '08100550010',        4),
+( '2021-01-13', 'aa12_mack',    null, '08130750010',        1),
+( '2021-01-14', 'aa0_mack',     null, '08100550010',        2),
+( '2021-01-14', 'aa0_m12k',     null, '18100550010',        3),
+( '2021-01-16', 'aa0_mack',     null, '08100550010',        5),
+( '2021-01-18', 'aa0_mack',     null, '18100550010',        1),
+( '2021-01-19', 'aa0_mack',     null, 'PEIDEN21G30J090F',   2),
 
-( '2021-01-20', 'aa0_mack', null, 'OGGAUU93M00S379L', 3),
-( '2021-01-21', 'aa0_mack', null, 'OGGAUU93M00S379L', 3),
-( '2021-01-22', 'bb0_selll', null, '08100750010', 1),
-( '2021-01-23', 'aa0_mack', null, '08130750010', 2),
-( '2021-01-25', 'aa12_mack', null, '08130750010', 3),
-( '2021-01-26', 'aa0_mack', null, '08130750010', 4),
-( '2021-01-27', 'aa0_m12k', null, '08105655001', 1),
-( '2021-02-01', 'aa0_mack', null, '08130750010', 2),
-( '2021-02-02', 'aa0_mack', null, '08105655001', 3),
-( '2021-02-03', 'aa0_mack', null, 'PEIDEN21G30J090F', 5),
+( '2021-01-20', 'aa0_mack',     null, 'OGGAUU93M00S379L',   3),
+( '2021-01-21', 'aa0_mack',     null, 'OGGAUU93M00S379L',   3),
+( '2021-01-22', 'bb0_selll',    null, '08100750010',        1),
+( '2021-01-23', 'aa0_mack',     null, '08130750010',        2),
+( '2021-01-25', 'aa12_mack',    null, '08130750010',        3),
+( '2021-01-26', 'aa0_mack',     null, '08130750010',        4),
+( '2021-01-27', 'aa0_m12k',     null, '08105655001',        1),
+( '2021-02-01', 'aa0_mack',     null, '08130750010',        2),
+( '2021-02-02', 'aa0_mack',     null, '08105655001',        3),
+( '2021-02-03', 'aa0_mack',     null, 'PEIDEN21G30J090F',   5),
 
-( '2021-02-04', 'aa0_mack', null, 'MUOFRS18F35O297W', 1),
-( '2021-02-05', 'aa0_mack', null, 'MUOFRS18F35O297W', 2),
-( '2021-02-06', 'bb0_selll', null, '08100550010', 3),
-( '2021-02-08', 'aa0_mack', null, '08100550010', 3),
-( '2021-02-09', 'aa12_mack', null, '08130750010', 1),
-( '2021-02-10', 'aa0_mack', null, '08100550010', 2),
-( '2021-02-11', 'aa0_m12k', null, '18100550010', 3),
-( '2021-02-12', 'aa0_mack', null, '08100550010', 4),
-( '2021-02-13', 'aa0_mack', null, '18100550010', 1),
-( '2021-02-19', 'aa0_mack', null, 'MUOFRS18F35O297W', 2),
-( '2021-02-23', 'aa0_mack', null, 'MUOFRS18F35O297W', 6);
+( '2021-02-04', 'aa0_mack',     null, 'MUOFRS18F35O297W',   1),
+( '2021-02-05', 'aa0_mack',     null, 'MUOFRS18F35O297W',   2),
+( '2021-02-06', 'bb0_selll',    null, '08100550010',        3),
+( '2021-02-08', 'aa0_mack',     null, '08100550010',        3),
+( '2021-02-09', 'aa12_mack',    null, '08130750010',        1),
+( '2021-02-10', 'aa0_mack',     null, '08100550010',        2),
+( '2021-02-11', 'aa0_m12k',     null, '18100550010',        3),
+( '2021-02-12', 'aa0_mack',     null, '08100550010',        4),
+( '2021-02-13', 'aa0_mack',     null, '18100550010',        1),
+( '2021-02-19', 'aa0_mack',     null, 'MUOFRS18F35O297W',   2),
+( '2021-02-23', 'aa0_mack',     null, 'MUOFRS18F35O297W',   6);
 
 insert into Intervento(
     data,
