@@ -77,7 +77,7 @@ CREATE TABLE Intervento(
     cfTecnico                   varchar(16)         NOT NULL,
 
     CONSTRAINT interventi_pkey         
-        PRIMARY KEY             (codiceRichiesta, numeroIntervento),
+        PRIMARY KEY             (codiceRichiesta, data),
     CONSTRAINT cfTecnico               
         FOREIGN KEY             (cfTecnico)
         REFERENCES              tecnico(codiceFiscale)
@@ -350,7 +350,7 @@ LANGUAGE plpgsql AS $$
 
         tecnico_selezionato = tecnico_con_minornumero_di_ore(tipologia_guasto, new.data);
         new.cfTecnico = tecnico_selezionato.codiceFiscale;
-        
+
         return new;
     END;
 $$;
