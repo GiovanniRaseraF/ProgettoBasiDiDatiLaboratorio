@@ -186,3 +186,47 @@ values
     ('SOIFIM33U20Q912N', 4),
     ('GROPOT28U08E502Y',4),
     ('CALMIA96R30J564F',4);
+
+
+
+    
+
+
+
+
+-- Test di query
+-- Trovare chi sa fare cosa
+SELECT nome, cognome, descrizione 
+FROM tecnico, capacedirisolvere, tipologiaguasto 
+WHERE 
+    codiceFiscale = cftecnico 
+    AND tipologiaguasto.codiceguasto = capacedirisolvere.codiceguasto;
+
+-- Conta per ogni richiesta il numero di interventi assegnati
+select richiestadassistenza.codiceRichiesta, count(*) 
+from richiestadassistenza, intervento 
+where 
+    richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+group by richiestadassistenza.codiceRichiesta 
+order by richiestadassistenza.codiceRichiesta;
+
+-- Per ogni guasto il numero di interventi eseguiti
+select tipologiaGuasto.descrizione, tipologiaGuasto.codiceGuasto, count(*) 
+from tipologiaGuasto, richiestadassistenza, intervento 
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+    and richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+group by tipologiaGuasto.descrizione, tipologiaguasto.codiceGuasto
+order by tipologiaGuasto.codiceGuasto;
+
+select tipologiaGuasto.descrizione, tipologiaGuasto.codiceGuasto
+from tipologiaGuasto, richiestadassistenza, intervento
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+    and richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
+order by descrizione;
+
+select tipologiaGuasto.descrizione, codiceRichiesta
+from tipologiaGuasto, richiestadassistenza
+where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
+order by descrizione;
+
+-- Per ogni guasto il numero di ore lavorate su di esso
