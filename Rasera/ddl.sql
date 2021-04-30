@@ -259,6 +259,153 @@ VALUES
 ('2021-02-13', 1, 's', 7, 'CALMIA96R30J564F');
 
 
+-- Operazione 3
+/*
+1 - prendere il codice guasto -> cod_g
+2 - da cod_g trovare quali Tecnici sanno risolvere cod_g -> sanno_risolvere_ma_disponibili?
+3 - da sanno_risolvere_ma_disponibili? controllare su Intervento se in una data quel tecnico è libero -> tecnici_capaci_e_liberi
+4 - da tecnici_capaci_e_liberi trovo quello che in questo ha lavorato meno -> tecnico_scelto
+5 - tecnico_scelto lo assegno all'intervento 
+    5.1 - aggiornamento delle ore lavorate in tecnico
+6 - chiudo la transazione
+*/
+-- DROP FUNCTION tecnico_sarisolvere_libero(integer,date);
+
+-- La funzione ritorna i tecnici disponibili che sanno 
+-- risolvere un certo problema e che sono disponibili in una certa data
+CREATE OR REPLACE FUNCTION tecnico_sarisolvere_libero(
+    codice_guasto           integer, 
+    data_nuovo_intervento   timestamp
+)
+RETURNS SETOF tecnico
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+        RETURN QUERY
+        SELECT tecnico.* 
+        FROM capacedirisolvere JOIN tecnico 
+            ON capaceDiRisolvere.cftecnico = tecnico.codiceFiscale
+        WHERE 
+            -- Tecnici che sanno risolvere il problema
+            capacedirisolvere.codiceGuasto = codice_guasto
+            AND
+            -- Tecnici che sono liberi per quel giorno
+            NOT EXISTS (
+                SELECT * 
+                FROM intervento
+                WHERE
+                    intervento.cftecnico = tecnico.codiceFiscale
+                    AND
+                    intervento.data = data_nuovo_intervento
+            )
+        ORDER BY tecnico.codiceFiscale;
+    END;
+$$;
+
+-- La funzione ritorna il tecnico con il numero di ore minori 
+-- che sa risolvere il problema e che è disponibile
+CREATE OR REPLACE FUNCTION tecnico_con_minornumero_di_ore(
+    codice_guasto           integer, 
+    data_nuovo_intervento   timestamp
+)
+RETURNS SETOF tecnico
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+        return query
+        SELECT tecnico.*
+        FROM tecnico
+        WHERE
+            -- Tecnici che sono disponibili e sanno risolvere
+            EXISTS(
+                SELECT *
+                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
+                WHERE 
+                    tecnico.codiceFiscale = result.codiceFiscale
+            )
+            AND 
+            -- Tecnici che hanno lavorato meno
+            NOT EXISTS(
+                SELECT *
+                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
+                WHERE
+                    result.oreLavorateMensilmente < tecnico.oreLavorateMensilmente
+            )
+        -- Il Tecnico selezionato
+        LIMIT 1;
+    END;
+$$;
+
+CREATE OR REPLACE FUNCTION inserisci_intervento_per_richiesta()
+RETURNS TRIGGER
+LANGUAGE plpgsql AS $$
+    DECLARE
+        tecnico_selezionato tecnico%rowtype;
+        tipologia_guasto    integer;
+    BEGIN
+        select richiestadassistenza.inerente into tipologia_guasto 
+        from richiestadassistenza
+        where 
+            richiestadassistenza.codiceRichiesta = new.codiceRichiesta;
+
+        tecnico_selezionato = tecnico_con_minornumero_di_ore(tipologia_guasto, new.data);
+        new.cfTecnico = tecnico_selezionato.codiceFiscale;
+        
+        return new;
+    END;
+$$;
+
+create trigger insert_intervento
+before insert on intervento 
+for each row 
+    execute procedure  inserisci_intervento_per_richiesta();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- Test di query
 -- Trovare chi sa fare cosa
 SELECT nome, cognome, descrizione 
@@ -267,7 +414,6 @@ WHERE
     codiceFiscale = cftecnico 
     AND tipologiaguasto.codiceguasto = capacedirisolvere.codiceguasto;
 
--- 
 -- Conta per ogni richiesta il numero di interventi assegnati
 select richiestadassistenza.codiceRichiesta, count(*) 
 from richiestadassistenza, intervento 
@@ -275,7 +421,6 @@ where
     richiestadassistenza.codiceRichiesta = intervento.codiceRichiesta 
 group by richiestadassistenza.codiceRichiesta 
 order by richiestadassistenza.codiceRichiesta;
-
 
 -- Per ogni guasto il numero di interventi eseguiti
 select tipologiaGuasto.descrizione, tipologiaGuasto.codiceGuasto, count(*) 
@@ -294,7 +439,6 @@ order by descrizione;
 select tipologiaGuasto.descrizione, codiceRichiesta
 from tipologiaGuasto, richiestadassistenza
 where tipologiaGuasto.codiceGuasto = richiestadassistenza.inerente 
- 
 order by descrizione;
--- Per ogni guasto il numero di ore lavorate su di esso
 
+-- Per ogni guasto il numero di ore lavorate su di esso
