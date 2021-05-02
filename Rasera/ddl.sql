@@ -355,7 +355,8 @@ LANGUAGE plpgsql AS $$
         update tecnico 
         set orelavoratemensilmente = orelavoratemensilmente + new.durata
         where codiceFiscale = tecnico_selezionato.codiceFiscale; 
-        -- Questo non va bene come spiegato nella issue: https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/9
+        -- Questo non va bene come spiegato nella issue:
+        --  https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/9
         
         return new;
     END;

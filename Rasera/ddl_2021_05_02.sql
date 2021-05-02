@@ -32,6 +32,35 @@ CREATE TABLE Tecnico(
         PRIMARY KEY             (codiceFiscale) 
 );
 
+CREATE TABLE Orelavoratemensilmente(
+    cfTecnico                   character(16)       NOT NULL,
+    data                        timestamp           NOT NULL,
+    oreLavorate                 integer DEFAULT 0   NOT NULL,
+
+    CONSTRAINT orelavoratemensilmente_pkey         
+        PRIMARY KEY             (cfTecnico, data),
+    CONSTRAINT cfTecnico               
+        FOREIGN KEY             (cfTecnico)
+        REFERENCES              tecnico(codiceFiscale)
+        ON UPDATE               CASCADE
+        ON DELETE               CASCADE
+);
+
+CREATE OR REPLACE FUNCTION inserisci_ore_lavorate_mensilmente()
+RETURNS TRIGGER
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+         
+    END;
+$$;
+
+create trigger insert_orelavorate
+before insert on Orelavoratemensilmente 
+for each row 
+    execute procedure  inserisci_ore_lavorate_mensilmente();
+
+
 CREATE TABLE TipologiaGuasto(
     codiceGuasto                integer             NOT NULL,
     descrizione                 text                NOT NULL,
