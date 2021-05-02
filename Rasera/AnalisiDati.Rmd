@@ -1,0 +1,30 @@
+---
+title: "BasiDiDati"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library (RPostgreSQL);
+library(ggplot2)
+drv <- dbDriver ("PostgreSQL")
+con <- dbConnect (drv ,
+                  dbname    = "postgres",
+                  host      = "172.16.151.252",
+                  port      = 5432,
+                  user      = "postgres",
+                  password  = "fdsa")
+res <- dbGetQuery (con , "set search_path TO test_2904assistenzaguasti")
+```
+
+```{r}
+operazione6 <- dbGetQuery (con ,"SELECT * FROM tecnico")
+operazione6
+#hist(operazione6)
+```
+
+```{r}
+```

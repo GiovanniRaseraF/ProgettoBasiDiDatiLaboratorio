@@ -351,6 +351,8 @@ LANGUAGE plpgsql AS $$
         tecnico_selezionato = tecnico_con_minornumero_di_ore(tipologia_guasto, new.data);
         new.cfTecnico = tecnico_selezionato.codiceFiscale;
 
+        -- Ora devo aggiungere il numero di ore
+        
         return new;
     END;
 $$;
