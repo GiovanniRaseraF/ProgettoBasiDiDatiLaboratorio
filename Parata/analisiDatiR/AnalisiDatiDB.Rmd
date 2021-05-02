@@ -12,16 +12,16 @@ library (RPostgreSQL);
 library(ggplot2)
 drv <- dbDriver ("PostgreSQL")
 con <- dbConnect (drv ,
-                  dbname =" progettoDB ",
-                  host =" 127.0.0.1 ",
-                  port =5432 ,
-                  user =" postgres ",
-                  password =" root ")
+                  dbname ="postgres",
+                  host ="172.16.151.252",
+                  port =5432,
+                  user ="postgres",
+                  password ="fdsa")
 res <- dbGetQuery (con , " set search_path TO gestoreAssistenze ")
 ```
 
 ```{r}
-operazione6 <- dbGetQuery (con ,"select oreLavorateMensilmente from Tecnico")
+operazione6 <- dbGetQuery (con ,"SELECT * FROM assistenzaguasti.tecnico")
 hist(operazione6)
 ```
 
