@@ -71,10 +71,11 @@ CREATE TABLE capaceDiRisolvere(
 CREATE TABLE Intervento(
     numeroIntervento            integer             NOT NULL,
     data                        timestamp           NOT NULL,
-    durata                      integer             NOT NULL,
+    durata                      integer         DEFAULT NULL,
     modalita                    character(1)        NOT NULL,
     codiceRichiesta             integer             NOT NULL,
     cfTecnico                   varchar(16)         NOT NULL,
+
 
     CONSTRAINT interventi_pkey         
         PRIMARY KEY             (codiceRichiesta, data),
@@ -125,6 +126,148 @@ ALTER TABLE RichiestadAssistenza
         NO                  MAXVALUE
         CACHE               1
 );
+
+
+
+
+
+
+-- Operazione 3
+/*
+1 - prendere il codice guasto -> cod_g
+2 - da cod_g trovare quali Tecnici sanno risolvere cod_g -> sanno_risolvere_ma_disponibili?
+3 - da sanno_risolvere_ma_disponibili? controllare su Intervento se in una data quel tecnico è libero -> tecnici_capaci_e_liberi
+4 - da tecnici_capaci_e_liberi trovo quello che in questo ha lavorato meno -> tecnico_scelto
+5 - tecnico_scelto lo assegno all'intervento 
+    5.1 - aggiornamento delle ore lavorate in tecnico
+6 - chiudo la transazione
+*/
+-- DROP FUNCTION tecnico_sarisolvere_libero(integer,date);
+
+-- La funzione ritorna i tecnici disponibili che sanno 
+-- risolvere un certo problema e che sono disponibili in una certa data
+CREATE OR REPLACE FUNCTION tecnico_sarisolvere_libero(
+    codice_guasto           integer, 
+    data_nuovo_intervento   timestamp
+)
+RETURNS SETOF tecnico
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+        RETURN QUERY
+        SELECT tecnico.* 
+        FROM capacedirisolvere JOIN tecnico 
+            ON capaceDiRisolvere.cftecnico = tecnico.codiceFiscale
+        WHERE 
+            -- Tecnici che sanno risolvere il problema
+            capacedirisolvere.codiceGuasto = codice_guasto
+            AND
+            -- Tecnici che sono liberi per quel giorno
+            NOT EXISTS (
+                SELECT * 
+                FROM intervento
+                WHERE
+                    intervento.cftecnico = tecnico.codiceFiscale
+                    AND
+                    intervento.data = data_nuovo_intervento
+            )
+        ORDER BY tecnico.codiceFiscale;
+    END;
+$$;
+
+-- La funzione ritorna il tecnico con il numero di ore minori 
+-- che sa risolvere il problema e che è disponibile
+CREATE OR REPLACE FUNCTION tecnico_con_minornumero_di_ore(
+    codice_guasto           integer, 
+    data_nuovo_intervento   timestamp
+)
+RETURNS SETOF tecnico
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+        return query
+        SELECT tecnico.*
+        FROM tecnico
+        WHERE
+            -- Tecnici che sono disponibili e sanno risolvere
+            EXISTS(
+                SELECT *
+                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
+                WHERE 
+                    tecnico.codiceFiscale = result.codiceFiscale
+            )
+            AND 
+            -- Tecnici che hanno lavorato meno
+            NOT EXISTS(
+                SELECT *
+                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
+                WHERE
+                    result.oreLavorateMensilmente < tecnico.oreLavorateMensilmente
+            )
+        -- Ne estraggo uno in modo randomico
+        ORDER BY RANDOM()
+        -- Il Tecnico selezionato
+        LIMIT 1;
+    END;
+$$;
+
+CREATE OR REPLACE FUNCTION inserisci_intervento_per_richiesta()
+RETURNS TRIGGER
+LANGUAGE plpgsql AS $$
+    DECLARE
+        tecnico_selezionato tecnico%rowtype;
+        tipologia_guasto    integer;
+    BEGIN
+        select richiestadassistenza.inerente into tipologia_guasto 
+        from richiestadassistenza
+        where 
+            richiestadassistenza.codiceRichiesta = new.codiceRichiesta;
+
+        tecnico_selezionato = tecnico_con_minornumero_di_ore(tipologia_guasto, new.data);
+        new.cfTecnico = tecnico_selezionato.codiceFiscale;
+
+        return new;
+    END;
+$$;
+
+-- Aggiornamento
+CREATE OR REPLACE FUNCTION update_intervento_per_richiesta()
+RETURNS TRIGGER
+LANGUAGE plpgsql AS $$
+    DECLARE
+    BEGIN
+        -- Se viene aggiornato il numero di ore impiegate allora aggiorno
+        -- le ore lavorate mensilmente dal tecnico
+        IF  new.durata > 0 THEN
+            update tecnico 
+            set oreLavorateMensilmente = oreLavorateMensilmente + new.durata
+            where codiceFiscale = old.cfTecnico;
+            
+            return new;
+        END IF;
+
+        return old;
+    END;
+$$;
+
+
+-- Trigger per Intervento
+create trigger insert_intervento
+before insert on intervento 
+for each row 
+    execute procedure  inserisci_intervento_per_richiesta();
+
+
+create trigger update_intervento
+before update on intervento
+for each row 
+    execute procedure update_intervento_per_richiesta();
+
+
+
+
+
+
 
 
 
@@ -237,132 +380,26 @@ VALUES
 ( '2021-02-19', 'aa0_mack',     null, 'MUOFRS18F35O297W',   2),
 ( '2021-02-23', 'aa0_mack',     null, 'MUOFRS18F35O297W',   6);
 
+/*
 insert into Intervento(
     data,
-    durata,
     modalita,
     codiceRichiesta,
     cfTecnico)
 VALUES
-('2021-01-08', 2, 'r', 1, 'SOIFIM33U20Q912N'),
-('2021-01-09', 5, 'r', 1, 'GROPOT28U08E502Y'),
-('2021-01-08', 6, 's', 2, 'TUWQUZ78N29U115A'),
-('2021-01-09', 1, 's', 2, 'TUWQUZ78N29U115A'),
+('2021-01-08',  'r', 1, 'SOIFIM33U20Q912N'),
+('2021-01-09',  'r', 1, 'GROPOT28U08E502Y'),
+('2021-01-08',  's', 2, 'TUWQUZ78N29U115A'),
+('2021-01-09',  's', 2, 'TUWQUZ78N29U115A'),
 
-('2021-01-11', 2, 'r', 3, 'CALMIA96R30J564F'),
-('2021-01-12', 5, 'r', 3, 'ARRRID59I33E601X'),
-('2021-01-12', 6, 's', 4, 'GROPOT28U08E502Y'),
-('2021-01-13', 1, 's', 4, 'GROPOT28U08E502Y'),
+('2021-01-11',  'r', 3, 'CALMIA96R30J564F'),
+('2021-01-12',  'r', 3, 'ARRRID59I33E601X'),
+('2021-01-12',  's', 4, 'GROPOT28U08E502Y'),
+('2021-01-13',  's', 4, 'GROPOT28U08E502Y'),
 
-('2021-01-14', 2, 'r', 5, 'ANNSAN04M30V992Y'),
-('2021-01-14', 6, 's', 6, 'DINILA85R07F804T'),
-('2021-02-13', 1, 's', 7, 'CALMIA96R30J564F');
-
-
--- Operazione 3
-/*
-1 - prendere il codice guasto -> cod_g
-2 - da cod_g trovare quali Tecnici sanno risolvere cod_g -> sanno_risolvere_ma_disponibili?
-3 - da sanno_risolvere_ma_disponibili? controllare su Intervento se in una data quel tecnico è libero -> tecnici_capaci_e_liberi
-4 - da tecnici_capaci_e_liberi trovo quello che in questo ha lavorato meno -> tecnico_scelto
-5 - tecnico_scelto lo assegno all'intervento 
-    5.1 - aggiornamento delle ore lavorate in tecnico
-6 - chiudo la transazione
+('2021-01-14',  'r', 5, 'ANNSAN04M30V992Y'),
+('2021-01-14',  's', 6, 'DINILA85R07F804T'),
+('2021-02-13',  's', 7, 'CALMIA96R30J564F');
 */
--- DROP FUNCTION tecnico_sarisolvere_libero(integer,date);
 
--- La funzione ritorna i tecnici disponibili che sanno 
--- risolvere un certo problema e che sono disponibili in una certa data
-CREATE OR REPLACE FUNCTION tecnico_sarisolvere_libero(
-    codice_guasto           integer, 
-    data_nuovo_intervento   timestamp
-)
-RETURNS SETOF tecnico
-LANGUAGE plpgsql AS $$
-    DECLARE
-    BEGIN
-        RETURN QUERY
-        SELECT tecnico.* 
-        FROM capacedirisolvere JOIN tecnico 
-            ON capaceDiRisolvere.cftecnico = tecnico.codiceFiscale
-        WHERE 
-            -- Tecnici che sanno risolvere il problema
-            capacedirisolvere.codiceGuasto = codice_guasto
-            AND
-            -- Tecnici che sono liberi per quel giorno
-            NOT EXISTS (
-                SELECT * 
-                FROM intervento
-                WHERE
-                    intervento.cftecnico = tecnico.codiceFiscale
-                    AND
-                    intervento.data = data_nuovo_intervento
-            )
-        ORDER BY tecnico.codiceFiscale;
-    END;
-$$;
 
--- La funzione ritorna il tecnico con il numero di ore minori 
--- che sa risolvere il problema e che è disponibile
-CREATE OR REPLACE FUNCTION tecnico_con_minornumero_di_ore(
-    codice_guasto           integer, 
-    data_nuovo_intervento   timestamp
-)
-RETURNS SETOF tecnico
-LANGUAGE plpgsql AS $$
-    DECLARE
-    BEGIN
-        return query
-        SELECT tecnico.*
-        FROM tecnico
-        WHERE
-            -- Tecnici che sono disponibili e sanno risolvere
-            EXISTS(
-                SELECT *
-                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
-                WHERE 
-                    tecnico.codiceFiscale = result.codiceFiscale
-            )
-            AND 
-            -- Tecnici che hanno lavorato meno
-            NOT EXISTS(
-                SELECT *
-                FROM tecnico_sarisolvere_libero(codice_guasto, data_nuovo_intervento) as result
-                WHERE
-                    result.oreLavorateMensilmente < tecnico.oreLavorateMensilmente
-            )
-        -- Il Tecnico selezionato
-        LIMIT 1;
-    END;
-$$;
-
-CREATE OR REPLACE FUNCTION inserisci_intervento_per_richiesta()
-RETURNS TRIGGER
-LANGUAGE plpgsql AS $$
-    DECLARE
-        tecnico_selezionato tecnico%rowtype;
-        tipologia_guasto    integer;
-    BEGIN
-        select richiestadassistenza.inerente into tipologia_guasto 
-        from richiestadassistenza
-        where 
-            richiestadassistenza.codiceRichiesta = new.codiceRichiesta;
-
-        tecnico_selezionato = tecnico_con_minornumero_di_ore(tipologia_guasto, new.data);
-        new.cfTecnico = tecnico_selezionato.codiceFiscale;
-
-        -- Ora devo aggiungere il numero di ore
-        update tecnico 
-        set orelavoratemensilmente = orelavoratemensilmente + new.durata
-        where codiceFiscale = tecnico_selezionato.codiceFiscale; 
-        -- Questo non va bene come spiegato nella issue:
-        --  https://github.com/GiovanniRaseraF/ProgettoBasiDiDatiLaboratorio/issues/9
-        
-        return new;
-    END;
-$$;
-
-create trigger insert_intervento
-before insert on intervento 
-for each row 
-    execute procedure  inserisci_intervento_per_richiesta();
